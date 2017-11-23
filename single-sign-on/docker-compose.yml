@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  mysql-service:
+    image: mysql-img
+    container_name: mysql-svc
+    build: ./mysql-setup
+    ports:
+      - 3306:3306
