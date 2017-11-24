@@ -37,7 +37,7 @@
     <remoteInstance url="https://localhost"> 
        <id>gov</id>
        <dbConfig>govregistry</dbConfig>
-       <cacheId>root@jdbc:mysql://mysql-service:3306/registrydb</cacheId>
+       <cacheId>root@jdbc:mysql://10.20.30.42:3306/registrydb</cacheId>
        <readOnly>false</readOnly>
        <enableCache>true</enableCache>
        <registryRoot>/</registryRoot>

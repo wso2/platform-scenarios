@@ -17,7 +17,7 @@
         "audienceRestrictionsEnabled":"true",
         "responseSigningEnabled":"true",
         "assertionSigningEnabled":"true",
-        "keyStoreName" :"/tmp/wso2/wso2is-km-5.3.0/repository/resources/security/wso2carbon.jks",
+        "keyStoreName" :"/wso2/wso2am-2.1.0/repository/resources/security/wso2carbon.jks",
         "signRequests" : "true",
         //"passive" : "false",
 	    "assertionEncryptionEnabled" : "false",
