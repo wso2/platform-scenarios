@@ -1,7 +1,7 @@
 # Dockerized Presales Demos
 The following repository contains the dockerized version of most commonly used demos needed for WSO2 pre-sales. 
 ## Demo scenarios
-* [API Manager - Key Manager - SSO setup](tree/master/apim-keymanager-sso)
+* [API Manager - Key Manager - SSO setup](apim-keymanager-sso)
 
 ## How to dockerize your demo
 Make sure you follow the below standards when dockerizing your demo.
