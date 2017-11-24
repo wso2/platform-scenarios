@@ -7,3 +7,11 @@ services:
     build: ./mysql-setup
     ports:
       - 3306:3306
+  apim-service:
+    image: apim-img
+    container_name: apim-svc
+    build:
+      context: ./apim-setup
+    ports:
+      - 9443:9443
+      - 9763:9763
