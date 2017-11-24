@@ -16,7 +16,7 @@ This docker setup demonstrate the Single Sign On integration between API Manager
     ## Below command will build and run the full setup.
     docker-compose up
     ```
-    **Optional**
+    **Optional**  
     If you need to start the services as background processes execute the following command.
     ```bash
     docker-compose up -d
