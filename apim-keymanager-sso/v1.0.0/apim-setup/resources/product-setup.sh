@@ -12,3 +12,4 @@ mv -f /tmp/resources/conf/authenticators.xml /wso2/wso2am-2.1.0/repository/conf/
 mv -f /tmp/resources/conf/master-datasources.xml /wso2/wso2am-2.1.0/repository/conf/datasources/master-datasources.xml
 mv -f /tmp/resources/conf/pub-site.json /wso2/wso2am-2.1.0/repository/deployment/server/jaggeryapps/publisher/site/conf/site.json
 mv -f /tmp/resources/conf/store-site.json /wso2/wso2am-2.1.0/repository/deployment/server/jaggeryapps/store/site/conf/site.json
+mv /tmp/resources/api/* /wso2/wso2am-2.1.0/repository/deployment/server/synapse-configs/default/api/

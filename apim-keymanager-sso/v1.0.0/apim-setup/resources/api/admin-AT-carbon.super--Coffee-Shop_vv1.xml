@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin-AT-carbon.super--Coffee-Shop"
+     context="/coffee-shop/v1"
+     version="v1"
+     version-type="context">
+   <resource methods="GET" url-mapping="/order/pending" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <send>
+            <endpoint name="admin-AT-carbon.super--Coffee-Shop_APIproductionEndpoint_0">
+               <http uri-template="http://localhost"/>
+               <property name="ENDPOINT_ADDRESS" value="http://localhost"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/payment" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <send>
+            <endpoint name="admin-AT-carbon.super--Coffee-Shop_APIproductionEndpoint_1">
+               <http uri-template="http://localhost"/>
+               <property name="ENDPOINT_ADDRESS" value="http://localhost"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET" uri-template="/order/{orderId}" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <send>
+            <endpoint name="admin-AT-carbon.super--Coffee-Shop_APIproductionEndpoint_2">
+               <http uri-template="http://localhost"/>
+               <property name="ENDPOINT_ADDRESS" value="http://localhost"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/order" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <send>
+            <endpoint name="admin-AT-carbon.super--Coffee-Shop_APIproductionEndpoint_3">
+               <http uri-template="http://localhost"/>
+               <property name="ENDPOINT_ADDRESS" value="http://localhost"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/payment/{orderId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <send>
+            <endpoint name="admin-AT-carbon.super--Coffee-Shop_APIproductionEndpoint_4">
+               <http uri-template="http://localhost"/>
+               <property name="ENDPOINT_ADDRESS" value="http://localhost"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+   </handlers>
+</api>
