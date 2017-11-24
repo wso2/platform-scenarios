@@ -1,5 +1,5 @@
 # API Manager - Key Manager - SSO setup
-This docker setup demonstrate the configurations of Single Sign On integration between API Manager Publisher and Store applications. Identity Server is configured as the Key Manager. 
+This docker setup demonstrate the Single Sign On integration between API Manager Publisher and Store applications. Identity Server is configured as the Key Manager. 
 
 ## Versions
 * [**v1.0.0**](v1.0.0) - Setup using MySQL v5.7, wso2-am-2.1.0, wso2is-km-5.3.0
