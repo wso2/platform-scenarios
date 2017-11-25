@@ -37,3 +37,5 @@ This docker setup demonstrate the Single Sign On integration between API Manager
     ```bash
     docker-compose down
     ```
+## Setup 
+![Setup Diagram](https://docs.wso2.com/download/attachments/46893234/image2015-7-20%2012%3A36%3A1.png?version=1&modificationDate=1437420950000&api=v2 "Setup Diagram")
