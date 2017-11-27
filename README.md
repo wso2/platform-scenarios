@@ -35,7 +35,8 @@ Make sure you follow the below standards when dockerizing your demo.
     │       │   ├── db-dump.sql
     │       │   ├── Dockerfile
     │       │   └── my.cnf
-    │       └── docker-compose.yml
+    │       ├── docker-compose.yml
+    │       └── other-resources
     └── README.md
    ```
    * Give a meaning full name to the demo scenario and add a README to describe it and how to make use of it. Make the README as descriptive as possible including any setup diagrams and documentations. 
@@ -47,6 +48,7 @@ Make sure you follow the below standards when dockerizing your demo.
    * Try to reduce the size of the setup scripts and resources as much as possible. (**Ex:** Libraries such as 'mysql-connector-java-5.1.44.jar' has been downloaded from web using 'wget' in the product-setup.sh script. Product distribution is not included in the folder structure. It's rather instructed to the user to copy the WUM updated pack into the folder structure before running the scripts. However, keep the user setup steps as minimal as possible for easy deployment)
    * When you need to replicate a database along with the demo data into the docker container, as an example for MySQL db, take the **mysql-setup** scripts from an existing demo [apim-keymanager-sso] and replace the **db-dump.sql**)
    * Create the docker-composer.yml to automate the docker build process. Make sure to add the service dependencies to maintain the build order. Give proper names to services, images and containers for identification. 
+   * Use **other-resources** folder to store any resources that doesn't go into the containers but used indirecly to create the setup. As an example MSF4J Java code. Only the jar file is needed for the container, therefore store the java code in other-resources. 
 4. Reduce the steps in Dockerfile as much as possible because number of steps will create respective docker image caches at the build.
    * Use the **product-setup.sh** script to conigure the settings within the docker container.
 5. Once you have prepared the dockerized demo, get it reviewed by the SA team and fine tune according to the feedback.
