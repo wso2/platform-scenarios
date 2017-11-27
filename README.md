@@ -47,7 +47,7 @@ Make sure you follow the below standards when dockerizing your demo.
    * When you need to replicate a database along with the demo data into the docker container, as an example for MySQL db, take the **mysql-setup** scripts from an existing demo [apim-keymanager-sso] and replace the **db-dump.sql**)
    * Create the docker-composer.yml to automate the docker build process. Make sure to add the service dependencies to maintain the build order. Give proper names to services, images and containers for identification. 
 4. Reduce the steps in Dockerfile as much as possible because number of steps will create respective docker image caches at the build.
-   * Use the product-setup.sh script to conigure the settings within the docker container.
+   * Use the **product-setup.sh** script to conigure the settings within the docker container.
 5. Once you have prepared the dockerized demo, get it reviewed by the SA team and fine tune according to the feedback.
 6. Update the main repo README (this) file with the demo scenario name.
 6. Send a pull request to the master repo and get it reviewed and merged.
