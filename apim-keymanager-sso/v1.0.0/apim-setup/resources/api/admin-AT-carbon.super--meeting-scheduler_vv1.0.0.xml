@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin-AT-carbon.super--meeting-scheduler"
+     context="/meeting-scheduler/v1.0.0"
+     version="v1.0.0"
+     version-type="context">
+   <resource methods="GET" url-mapping="/*" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <send>
+            <endpoint name="admin-AT-carbon.super--meeting-scheduler_APIproductionEndpoint_0">
+               <http uri-template="http://localhost"/>
+               <property name="ENDPOINT_ADDRESS" value="http://localhost"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+   </handlers>
+</api>
