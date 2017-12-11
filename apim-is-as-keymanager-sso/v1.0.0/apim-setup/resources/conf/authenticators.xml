@@ -28,16 +28,15 @@
     </Authenticator>
 
     <!-- Authenticator Configurations for SAML2SSOAuthenticator -->
-    <Authenticator name="SAML2SSOAuthenticator" disabled="false">
-        <!--Priority>10</Priority-->
+    <Authenticator name="SAML2SSOAuthenticator" disabled="true">
         <Priority>0</Priority>
         <Config>
             <Parameter name="LoginPage">/carbon/admin/login.jsp</Parameter>
-            <Parameter name="ServiceProviderID">carbonServer1</Parameter>
-            <Parameter name="IdentityProviderSSOServiceURL">https://keymanager-service:9444/samlsso&lt;</Parameter>
+            <Parameter name="ServiceProviderID">carbonServer</Parameter>
+            <Parameter name="IdentityProviderSSOServiceURL">https://localhost:9444/samlsso</Parameter>
             <Parameter name="NameIDPolicyFormat">urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</Parameter>
-            <!--Parameter name="AssertionConsumerServiceURL">https://localhost:9444/acs</Parameter-->
-            <!--Parameter name="AssertionSignatureValidationEnabled">true</Parameter-->
+            <Parameter name="AssertionConsumerServiceURL">https://localhost:9444/acs</Parameter>
+            <Parameter name="AssertionSignatureValidationEnabled">true</Parameter>
 
             <!-- <Parameter name="IdPCertAlias">wso2carbon</Parameter> -->
             <!-- <Parameter name="ResponseSignatureValidationEnabled">false</Parameter> -->

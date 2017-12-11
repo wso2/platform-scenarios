@@ -1,11 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 apt-get update
 apt-get install -y unzip 
 apt-get install -y wget 
 unzip /tmp/wso2am-2.1.0.zip -d /wso2
 
-# mv /tmp/resources/lib/mysql-connector-java-5.1.44-bin.jar /wso2/wso2am-2.1.0/repository/components/lib/
 wget -O /wso2/wso2am-2.1.0/repository/components/lib/mysql-connector-java-5.1.44.jar http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar
 
 mv -f /tmp/resources/conf/api-manager.xml /wso2/wso2am-2.1.0/repository/conf/api-manager.xml

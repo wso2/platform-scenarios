@@ -31,34 +31,34 @@
         <dataSource>jdbc/WSO2CarbonDB</dataSource>
     </dbConfig>
 
-    <dbConfig name="govregistry">
-        <dataSource>jdbc/WSO2REG_DB</dataSource>
-    </dbConfig>
-
-    <remoteInstance url="https://localhost">	
-        <id>gov</id>
-        <dbConfig>govregistry</dbConfig>
-		<cacheId>apiuser@jdbc:mysql://mysql-service:3306/registry</cacheId>
-        <readOnly>false</readOnly>
-        <enableCache>true</enableCache>
-        <registryRoot>/</registryRoot>
-    </remoteInstance>
-
-    <mount path="/_system/governance" overwrite="true">
-        <instanceId>gov</instanceId>
-        <targetPath>/_system/governance</targetPath>
-    </mount>
-
-    <mount path="/_system/config" overwrite="true">
-       <instanceId>gov</instanceId>
-       <targetPath>/_system/config</targetPath>
-    </mount>
-
    <handler class="org.wso2.carbon.identity.entitlement.policy.finder.registry.RegistryPolicyHandler">
  <filter class="org.wso2.carbon.identity.entitlement.policy.finder.registry.RegistryPolicyMediaTypeMatcher">
  <property name="mediaType">application/xacml-policy+xml</property>
  </filter>
  </handler>
+
+<dbConfig name="govregistry">
+        <dataSource>jdbc/WSO2REG_DB</dataSource>
+</dbConfig>
+ 
+<remoteInstance url="https://localhost"> 
+        <id>gov</id>
+        <dbConfig>govregistry</dbConfig>
+        <cacheId>root@jdbc:mysql://mysql-service:3306/registry</cacheId>
+        <readOnly>false</readOnly>
+        <enableCache>true</enableCache>
+        <registryRoot>/</registryRoot>
+</remoteInstance>
+ 
+<mount path="/_system/governance" overwrite="true">
+        <instanceId>gov</instanceId>
+        <targetPath>/_system/governance</targetPath>
+</mount>
+ 
+<mount path="/_system/config" overwrite="true">
+       <instanceId>gov</instanceId>
+       <targetPath>/_system/config</targetPath>
+</mount>
 
  <!--<handler class="org.wso2.carbon.registry.extensions.handlers.SynapseRepositoryHandler">
         <filter class="org.wso2.carbon.registry.core.jdbc.handlers.filters.MediaTypeMatcher">
@@ -155,9 +155,4 @@
         <versioningTags>true</versioningTags>
         <versioningRatings>true</versioningRatings>
     </staticConfiguration>
-
-    
-
 </wso2registry>
-
-
