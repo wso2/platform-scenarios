@@ -46,8 +46,7 @@
         <ConsumerDialectURI>http://wso2.org/claims</ConsumerDialectURI>
 
         <!-- Signature algorithm. Accepts "SHA256withRSA" or "NONE". To disable signing explicitly specify "NONE". -->
-        <!-- SignatureAlgorithm>SHA256withRSA</SignatureAlgorithm -->
-        <SignatureAlgorithm>NONE</SignatureAlgorithm>
+        <SignatureAlgorithm>SHA256withRSA</SignatureAlgorithm>
 
         <!-- This parameter specifies which implementation should be used for generating the Token. JWTGenerator is the
 	     default implementation provided. -->

@@ -30,28 +30,28 @@
         <dataSource>jdbc/WSO2CarbonDB</dataSource>
     </dbConfig>
 
-    <dbConfig name="govregistry">
-       <dataSource>jdbc/WSO2REG_DB</dataSource>
-    </dbConfig>
+<dbConfig name="govregistry">
+        <dataSource>jdbc/WSO2REG_DB</dataSource>
+</dbConfig>
  
-    <remoteInstance url="https://localhost"> 
-       <id>gov</id>
-       <dbConfig>govregistry</dbConfig>
-       <cacheId>root@jdbc:mysql://10.20.30.42:3306/registrydb</cacheId>
-       <readOnly>false</readOnly>
-       <enableCache>true</enableCache>
-       <registryRoot>/</registryRoot>
-    </remoteInstance>
+<remoteInstance url="https://localhost"> 
+        <id>gov</id>
+        <dbConfig>govregistry</dbConfig>
+        <cacheId>root@jdbc:mysql://mysql-service:3306/registry</cacheId>
+        <readOnly>false</readOnly>
+        <enableCache>true</enableCache>
+        <registryRoot>/</registryRoot>
+</remoteInstance>
  
-    <mount path="/_system/governance" overwrite="true">
-       <instanceId>gov</instanceId>
-       <targetPath>/_system/governance</targetPath>
-    </mount>
+<mount path="/_system/governance" overwrite="true">
+        <instanceId>gov</instanceId>
+        <targetPath>/_system/governance</targetPath>
+</mount>
  
-    <mount path="/_system/config" overwrite="true">
+<mount path="/_system/config" overwrite="true">
        <instanceId>gov</instanceId>
        <targetPath>/_system/config</targetPath>
-    </mount>
+</mount>
 
     <!-- This handler provides the feature to add a simlink to a given resource -->
 
