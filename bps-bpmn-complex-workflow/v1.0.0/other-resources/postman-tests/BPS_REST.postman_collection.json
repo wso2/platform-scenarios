@@ -1,0 +1,206 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BPS_REST",
+		"_postman_id": "a5203a45-b4e0-b2fe-6ceb-2fb548dd86e8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start process",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/process-instances",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"variables\": [\n      {\n        \"name\":\"title\",\n        \"value\":\"Document title\"\n      },\n      {\n        \"name\":\"docId\",\n        \"value\":\"123456\"\n      },\n      {\n        \"name\":\"state\",\n        \"value\":\"init\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Start process with all data",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/process-instances",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"variables\": [\n      {\n        \"name\":\"title\",\n        \"value\":\"Document title\"\n      },\n      {\n        \"name\":\"docId\",\n        \"value\":\"123456\"\n      },\n      {\n        \"name\":\"state\",\n        \"value\":\"init\"\n      },\n      {\n        \"name\":\"summary\",\n        \"value\":\"Document summery\"\n      },\n      {\n        \"name\":\"agenda\",\n        \"value\":\"This is agenda\"\n      },\n      {\n        \"name\":\"author\",\n        \"value\":\"Amal\"\n      },\n      {\n        \"name\":\"contentType\",\n        \"value\":\"text\"\n      },\n      {\n        \"name\":\"dateToPublish\",\n        \"value\":\"25-09-2017\"\n      },\n      {\n        \"name\":\"email\",\n        \"value\":\"amalg@wso2.com\"\n      },\n      {\n        \"name\":\"url\",\n        \"value\":\"http://msf4j-service:8080/service/get-approvers\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update message - stage1",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/receive",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"messageName\":\"UpdateMessage\",\n   \"action\":\"messageEventReceived\",\n   \"correlationVariables\":\n  [\n    {\n        \"name\":\"docId\",\n        \"value\":\"123456\",\n        \"type\": \"string\"\n      }\n  ],\n   \"variables\": [\n      {\n        \"name\":\"title\",\n        \"value\":\"Document title updated\"\n      },\n      {\n        \"name\":\"summary\",\n        \"value\":\"Document summery\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update message - stage2",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/receive",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"messageName\":\"UpdateMessage\",\n   \"action\":\"messageEventReceived\",\n   \"correlationVariables\":\n  [\n    {\n        \"name\":\"docId\",\n        \"value\":\"123456\",\n        \"type\": \"string\"\n      }\n  ],\n   \"variables\": [\n      {\n        \"name\":\"agenda\",\n        \"value\":\"This is agenda\"\n      },\n      {\n        \"name\":\"author\",\n        \"value\":\"Amal\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update message - stage3",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/receive",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"messageName\":\"UpdateMessage\",\n   \"action\":\"messageEventReceived\",\n   \"correlationVariables\":\n  [\n    {\n        \"name\":\"docId\",\n        \"value\":\"123456\",\n        \"type\": \"string\"\n      }\n  ],\n   \"variables\": [\n      {\n        \"name\":\"agenda\",\n        \"value\":\"This is updated agenda\"\n      },\n      {\n        \"name\":\"contentType\",\n        \"value\":\"text\"\n      },\n      {\n        \"name\":\"dateToPublish\",\n        \"value\":\"25-09-2017\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Promote message",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/receive",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"messageName\":\"UpdateMessage\",\n   \"action\":\"messageEventReceived\",\n   \"correlationVariables\":\n  [\n    {\n        \"name\":\"docId\",\n        \"value\":\"123456\",\n        \"type\": \"string\"\n      }\n  ],\n   \"variables\": [\n      {\n        \"name\":\"action\",\n        \"value\":\"promote\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Demote message",
+			"request": {
+				"url": "https://localhost:9445/bpmn/runtime/receive",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"processDefinitionKey\":\"cppWorkflow\",\n   \"tenantId\": \"-1234\",\n   \"messageName\":\"UpdateMessage\",\n   \"action\":\"messageEventReceived\",\n   \"correlationVariables\":\n  [\n    {\n        \"name\":\"docId\",\n        \"value\":\"123456\",\n        \"type\": \"string\"\n      }\n  ],\n   \"variables\": [\n      {\n        \"name\":\"action\",\n        \"value\":\"demote\"\n      }\n   ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Mock-service",
+			"request": {
+				"url": "http://localhost:8080/service/get-approvers",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"docId\": \"${docId}\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

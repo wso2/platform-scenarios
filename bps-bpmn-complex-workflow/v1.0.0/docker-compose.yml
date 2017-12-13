@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  mysql-service:
+    image: mysql-img
+    container_name: mysql-svc
+    build: ./mysql-setup
+    ports:
+      - 3306:3306
+  msf4j-service:
+    image: msf4j-img
+    container_name: msf4j-svc
+    build: ./msf4j-setup
+    ports:
+      - 8080:8080
+  bps-service:
+    image: bps-img
+    container_name: bps-svc
+    build:
+      context: ./bps-setup
+    depends_on: 
+      - mysql-service
+      - msf4j-service
+    ports:
+      - 9445:9445
+      - 9765:9765
