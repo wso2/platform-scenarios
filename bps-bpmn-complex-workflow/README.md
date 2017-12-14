@@ -49,8 +49,11 @@ This docker setup demonstrate most of the commonly used features in BPS BPMN lan
     ```
 ## Setup 
 * Main workflow.
+
 ![Main Workflow](v1.0.0/other-resources/diagrams/main-workflow.png)
 * Service call template workflow.
+
 ![Main Workflow](v1.0.0/other-resources/diagrams/service-call-template.png)
 * Approval process workflow.
+
 ![Main Workflow](v1.0.0/other-resources/diagrams/approval-process.png)
