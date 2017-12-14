@@ -7,7 +7,7 @@ This docker setup demonstrate the Single Sign On integration between API Manager
 
 ## How to run
 1. Install docker into your setup environment.
-2. Clone this Git repository. If you only need to download this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
+2. Clone this Git repository. If you need to download **only** this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
 3. Depending on the demo verison you choose to run, download the desired **wso2am-x.x.x.zip** and **wso2is-km-x.x.x.zip** WUM updated zip files.
 4. Copy the **wso2am-x.x.x.zip** file into **presales-demos/apim-is-as-keymanager-sso/vX.X.X/apim-setup/** location.
 5. Copy the **wso2is-km-x.x.x.zip** file into **presales-demos/apim-is-as-keymanager-sso/vX.X.X/keymanager-setup** location.
