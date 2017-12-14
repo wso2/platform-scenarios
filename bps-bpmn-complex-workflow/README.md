@@ -1,17 +1,27 @@
-# API Manager - Key Manager - SSO setup
-This docker setup demonstrate the Single Sign On integration between API Manager Publisher and Store applications. Identity Server is configured as the Key Manager. 
+# BPS BPMN Complex workflow setup
+This docker setup demonstrate most of the commonly used features in BPS BPMN language. The demo setup covers follwoing aspects. 
+* BPMN workflow ochestrations using different gateways. 
+* Calling an external REST service (MSF4J Service) from BPMN.
+* Creating sub processes in BPMN. 
+* Linking two or more BPMN diagrams using Call activity.
+* BPMN correlation using message listeners.
+* BPMN signaling events.
+* BPMN user task.
+* BPMN mail tasks.
+* BPMN scripting task.
+* BPMN process error handling. 
+* BPMN multi instance capabilities.
 
 ## Versions
-* [**v1.0.0**](v1.0.0) - Setup using MySQL v5.7, wso2-am-2.1.0, wso2is-km-5.3.0
-  * Documentations: [Configuring WSO2 Identity Server as a Key Manager](https://docs.wso2.com/display/AM210/Configuring+WSO2+Identity+Server+as+a+Key+Manager), [Configuring Identity Server as IdP for SSO](https://docs.wso2.com/display/AM200/Configuring+Identity+Server+as+IdP+for+SSO)
+* [**v1.0.0**](v1.0.0) - Setup using MySQL v5.6, wso2-ie-6.1.1
+  * Documentations: [Business Process Management](https://docs.wso2.com/display/EI611/Business+Process+Management).
 
 ## How to run
 1. Install docker into your setup environment.
-2. Clone this Git repository.
-3. Depending on the demo verison you choose to run, download the desired **wso2am-x.x.x.zip** and **wso2is-km-x.x.x.zip** WUM updated zip files.
-4. Copy the **wso2am-x.x.x.zip** file into **presales-demos/apim-keymanager-sso/vX.X.X/apim-setup/** location.
-5. Copy the **wso2is-km-x.x.x.zip** file into **presales-demos/apim-keymanager-sso/vX.X.X/keymanager-setup** location.
-6. Go to **presales-demos/apim-keymanager-sso/vX.X.X/** location and run the following commands.
+2. Clone this Git repository. If you only need to download this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
+3. Depending on the demo verison you choose to run, download the desired **wso2ei-x.x.x.zip** WUM updated zip file.
+4. Copy the **wso2ei-x.x.x.zip** file into **presales-demos/bps-bpmn-complex-workflow/vX.X.X/bps-setup/** location.
+6. Go to **presales-demos/bps-bpmn-complex-workflow/vX.X.X/** location and run the following commands.
     ```bash
     ## Below command will build and run the full setup.
     docker-compose up
@@ -24,18 +34,23 @@ This docker setup demonstrate the Single Sign On integration between API Manager
     If you need to build the images individually you can execute the commands in-order as following.
     ```bash
     docker-compose build mysql-service
-    docker-compose build keymanager-service
-    docker-compose build apim-service
+    docker-compose build msf4j-service
+    docker-compose build bps-service
     ```
     To run the services individually you can execute the commands in-order as following.
     ```bash
     docker-compose up mysql-service
-    docker-compose up keymanager-service
-    docker-compose up apim-service
+    docker-compose up msf4j-service
+    docker-compose up bps-service
     ```
 7. To stop the services execute the following command. 
     ```bash
     docker-compose down
     ```
 ## Setup 
-![Setup Diagram](https://docs.wso2.com/download/attachments/46893234/image2015-7-20%2012%3A36%3A1.png?version=1&modificationDate=1437420950000&api=v2 "Setup Diagram")
+* Main workflow.
+![Main Workflow](v1.0.0/other-resources/diagrams/main-workflow.png)
+* Service call template workflow.
+![Main Workflow](v1.0.0/other-resources/diagrams/service-call-template.png)
+* Approval process workflow.
+![Main Workflow](v1.0.0/other-resources/diagrams/approval-process.png)

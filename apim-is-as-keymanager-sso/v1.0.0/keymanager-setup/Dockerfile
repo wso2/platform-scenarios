@@ -1,6 +1,6 @@
 FROM airdock/oracle-jdk:1.8
 
-COPY wso2is-km-5.3.0.zip /tmp
+COPY wso2is-km-5.3.0*.zip /tmp
 ADD resources /tmp/resources
 
 RUN chmod +x /tmp/resources/product-setup.sh && /tmp/resources/product-setup.sh
