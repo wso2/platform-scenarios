@@ -1,4 +1,4 @@
-# BPS BPMN Complex workflow setup
+# BPS BPMN complex workflow setup
 This docker setup demonstrate most of the commonly used features in BPS BPMN language. The demo setup covers follwoing aspects. 
 * BPMN workflow ochestrations using different gateways. 
 * Calling an external REST service (MSF4J Service) from BPMN.
