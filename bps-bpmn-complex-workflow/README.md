@@ -24,6 +24,7 @@ This docker setup demonstrate most of the commonly used features in BPS BPMN lan
 6. Go to **presales-demos/bps-bpmn-complex-workflow/vX.X.X/** location and run the following commands.
     ```bash
     ## Below command will build and run the full setup.
+    docker-compose build
     docker-compose up
     ```
     **Optional**  

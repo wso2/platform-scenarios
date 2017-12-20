@@ -14,6 +14,7 @@ This docker setup demonstrate the Single Sign On integration between API Manager
 6. Go to **presales-demos/apim-is-as-keymanager-sso/vX.X.X/** location and run the following commands.
     ```bash
     ## Below command will build and run the full setup.
+    docker-compose build
     docker-compose up
     ```
     **Optional**  

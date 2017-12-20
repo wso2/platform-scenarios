@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  mysql-service:
+    image: mysql-img
+    container_name: mysql-svc
+    build: ./mysql-setup
+    ports:
+      - 3306:3306
+  apim-bps-service:
+    image: apim-bps-img
+    container_name: apim-bps-svc
+    build:
+      context: ./apim-bps-setup
+    depends_on: 
+      - mysql-service
+    ports:
+      - 9443:9443
+      - 9763:9763
+      - 8280:8280
+      - 8243:8243
+      - 9445:9445
+      - 9765:9765
