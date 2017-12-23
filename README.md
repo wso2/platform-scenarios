@@ -4,6 +4,7 @@ The following repository contains the dockerized version of most commonly used d
 * [API Manager - IS as Key Manager - SSO setup](apim-is-as-keymanager-sso)
 * [API Manager approval workflow with BPS server](apim-bps-approval-workflow)
 * [BPS BPMN complex workflow setup](bps-bpmn-complex-workflow)
+* [API Manager Analytics setup](apim-analytics)
 
 
 ## How to dockerize your demo
