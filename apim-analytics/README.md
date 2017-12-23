@@ -37,5 +37,3 @@ This docker setup demonstrate the apim analytics and log analytics functionality
     ```bash
     docker-compose down
     ```
-## Setup 
-![Setup Diagram]
