@@ -5,7 +5,7 @@ apt-get install -y unzip
 apt-get install -y wget 
 apt-get install -y netcat 
 
-unzip /tmp/wso2am-2.1.0.zip -d /wso2
+unzip /tmp/wso2am-2.1.0*.zip -d /wso2
 
 wget -O /wso2/wso2am-2.1.0/repository/components/lib/mysql-connector-java-5.1.44.jar http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar
 
