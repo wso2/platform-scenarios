@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  mysql-service:
+    image: mysql-img
+    container_name: mysql-svc
+    build: ./mysql-setup
+    ports:
+      - 3306:3306
+  analytics-service:
+    image: analytics-img
+    container_name: analytics-svc
+    build:
+      context: ./analytics-setup
+    depends_on: 
+      - mysql-service
+    ports:
+      - 9444:9444
+      - 9764:9764
+  apim-service:
+    image: apim-img
+    container_name: apim-svc
+    build:
+      context: ./apim-setup
+    depends_on: 
+      - mysql-service
+      - analytics-service
+    ports:
+      - 9443:9443
+      - 9763:9763
+      - 8280:8280
+      - 8243:8243
