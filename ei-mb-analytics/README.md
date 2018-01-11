@@ -1,7 +1,7 @@
 # EI - MB - Analytics - setup
 This docker setup demonstrate a DLC and analytics capabilities of using an EI-MB-Analytics setup.
 
-##Versions
+## Versions
 * [**v1.0.0**](v1.0.0) - Setup using EI 6.1.1
 
 ## How to run
