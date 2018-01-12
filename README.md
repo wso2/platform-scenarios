@@ -5,6 +5,8 @@ The following repository contains the dockerized version of most commonly used d
 * [API Manager approval workflow with BPS server](apim-bps-approval-workflow)
 * [BPS BPMN complex workflow setup](bps-bpmn-complex-workflow)
 * [API Manager Analytics setup](apim-analytics)
+* [EI - MB - Analytics - setup](ei-mb-analytics)
+* [EI Quick Start Guide setup](ei-quick-start-guide)
 
 
 ## How to dockerize your demo

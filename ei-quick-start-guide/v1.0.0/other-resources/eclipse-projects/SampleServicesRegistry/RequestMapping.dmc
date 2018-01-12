@@ -1,0 +1,26 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+outputroot =  {};
+outputroot.patient =  {};
+outputroot.patient.name = inputroot.name;
+outputroot.patient.dob = inputroot.dob;
+outputroot.patient.ssn = inputroot.ssn;
+outputroot.patient.address = inputroot.address;
+outputroot.patient.phone = inputroot.phone;
+outputroot.patient.email = inputroot.email;
+outputroot.doctor = inputroot.doctor;
+outputroot.hospital = inputroot.hospital;
+outputroot.appointment_date = inputroot.appointment_date;
+return outputroot;
+};
+
+
+
+
+
+
+
+
+
+

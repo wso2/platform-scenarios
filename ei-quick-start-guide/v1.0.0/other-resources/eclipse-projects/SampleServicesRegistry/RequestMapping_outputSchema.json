@@ -1,0 +1,50 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "patient" : {
+      "id" : "http://wso2jsonschema.org/patient",
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "id" : "http://wso2jsonschema.org/patient/name",
+          "type" : "string"
+        },
+        "dob" : {
+          "id" : "http://wso2jsonschema.org/patient/dob",
+          "type" : "string"
+        },
+        "ssn" : {
+          "id" : "http://wso2jsonschema.org/patient/ssn",
+          "type" : "string"
+        },
+        "address" : {
+          "id" : "http://wso2jsonschema.org/patient/address",
+          "type" : "string"
+        },
+        "phone" : {
+          "id" : "http://wso2jsonschema.org/patient/phone",
+          "type" : "string"
+        },
+        "email" : {
+          "id" : "http://wso2jsonschema.org/patient/email",
+          "type" : "string"
+        }
+      }
+    },
+    "doctor" : {
+      "id" : "http://wso2jsonschema.org/doctor",
+      "type" : "string"
+    },
+    "hospital" : {
+      "id" : "http://wso2jsonschema.org/hospital",
+      "type" : "string"
+    },
+    "appointment_date" : {
+      "id" : "http://wso2jsonschema.org/appointment_date",
+      "type" : "string"
+    }
+  }
+}
