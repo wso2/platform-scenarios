@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  integrator-service:
+    image: integrator-img
+    container_name: integrator-svc
+    build: ./ei-setup
+    depends_on:
+      - analytics-service
+      - mb-service
+    ports:
+      - 9443:9443
+      - 8243:8243
+      - 8280:8280
+
+  analytics-service:
+    image: analytics-img
+    container_name: analytics-svc
+    build: ./ei-analytics-setup
+    ports:
+      - 9444:9444
+      - 7712:7712
+      - 7612:7612
+      - 9161:9161
+
+  mb-service:
+    image: mb-img
+    container_name: mb-svc
+    build: ./ei-mb-setup
+    ports:
+      - 5675:5675
+      - 9446:9446
+      - 9766:9766
+      - 8675:8675
+      - 1886:1886
+      - 8836:8836
+      - 7614:7614
+
+  msf4j-mock-service:
+    image: msf4j-mock-img
+    container_name: msf4j-mock-svc
+    build: ./msf4j-mock-application
+    ports:
+      - 8080:8080
+
