@@ -7,7 +7,7 @@ This docker setup demonstrate the apim analytics and log analytics functionality
 
 ## How to run
 1. Install docker into your setup environment.
-2. Clone this Git repository.
+2. Clone this Git repository. If you need to download **only** this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
 3. Depending on the demo verison you choose to run, download the desired **wso2am-x.x.x.zip** and **wso2am-analytics-x.x.x.zip** WUM updated zip files.
 4. Copy the **wso2am-x.x.x.zip** file into **presales-demos/apim-analytics/vX.X.X/apim-setup/** location.
 5. Copy the **wso2am-analytics-x.x.x.zip** file into **presales-demos/apim-analytics/vX.X.X/analytics-setup** location.
