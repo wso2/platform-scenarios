@@ -2,13 +2,13 @@
 This docker setup demonstrate the API Manager application creation and subscription workflow approval setup using the Business Process Server humantask capabilities. 
 
 ## Versions
-* [**v1.0.0**](v1.0.0) - Setup using MySQL v5.6, wso2-am-2.1.0, wso2bps-3.6.0
+* [**v1.0.0**](v1.0.0) - Setup using MySQL v5.6, wso2am-2.1.0, wso2bps-3.6.0
   * Documentations: [Adding an Application Creation Workflow](https://docs.wso2.com/display/AM210/Adding+an+Application+Creation+Workflow), [Adding an API Subscription Workflow](https://docs.wso2.com/display/AM210/Adding+an+API+Subscription+Workflow)
 
 ## How to run
 1. Install docker into your setup environment.
 2. Clone this Git repository. If you need to download **only** this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
-3. Depending on the demo version you choose to run, download the desired **wso2am-x.x.x.zip** and **wso2is-km-x.x.x.zip** WUM updated zip files.
+3. Depending on the demo version you choose to run, download the desired **wso2am-x.x.x.zip** and **wso2bps-x.x.x.zip** WUM updated zip files.
 4. Copy the **wso2am-x.x.x.zip** and **wso2bps-x.x.x.zip** file into **presales-demos/apim-bps-approval-workflow/vX.X.X/apim-bps-setup/** location.
 5. Go to **presales-demos/apim-bps-approval-workflow/vX.X.X/** location and run the following commands.
     ```bash

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="QueryDoctorEP" groupId="com.example.SampleServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/QueryDoctorEP.xml</file>
+    </artifact>
+    <artifact name="GrandOakEP" groupId="com.example.SampleServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GrandOakEP.xml</file>
+    </artifact>
+    <artifact name="ClemencyEP" groupId="com.example.SampleServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ClemencyEP.xml</file>
+    </artifact>
+    <artifact name="PineValleyEP" groupId="com.example.SampleServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/PineValleyEP.xml</file>
+    </artifact>
+    <artifact name="HealthcareAPI" groupId="com.example.SampleServices.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/HealthcareAPI.xml</file>
+    </artifact>
+    <artifact name="ChannelingFeeEP" groupId="com.example.SampleServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ChannelingFeeEP.xml</file>
+    </artifact>
+    <artifact name="SettlePaymentEP" groupId="com.example.SampleServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SettlePaymentEP.xml</file>
+    </artifact>
+    <artifact name="PaymentRequestMessageStore" groupId="com.example.SampleServices.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/PaymentRequestMessageStore.xml</file>
+    </artifact>
+    <artifact name="PaymentRequestProcessingSequence" groupId="com.example.SampleServices.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/PaymentRequestProcessingSequence.xml</file>
+    </artifact>
+    <artifact name="PaymentRequestProcessor" groupId="com.example.SampleServices.message-processors" version="1.0.0" type="synapse/message-processors" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-processors/PaymentRequestProcessor.xml</file>
+    </artifact>
+    <artifact name="PaymentRequestJMSMessageStore" groupId="com.example.SampleServices.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/PaymentRequestJMSMessageStore.xml</file>
+    </artifact>
+    <artifact name="gmail-connector" groupId="com.example.SampleServices.lib" version="3.0.4" type="synapse/lib" serverRole="EnterpriseServiceBus">
+        <file>gmail-connector-3.0.4.zip</file>
+    </artifact>
+    <artifact name="gmail-connector" groupId="com.example.SampleServices.lib" version="3.0.4" type="synapse/lib" serverRole="EnterpriseServiceBus">
+        <file>gmail-connector-3.0.4.zip</file>
+    </artifact>
+</artifacts>
