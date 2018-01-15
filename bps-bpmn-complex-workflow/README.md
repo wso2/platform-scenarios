@@ -18,7 +18,7 @@ This docker setup demonstrate most of the commonly used features in BPS BPMN lan
 
 ## How to run
 1. Install docker into your setup environment.
-2. Clone this Git repository. If you only need to download this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
+2. Clone this Git repository. If you need to download **only** this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
 3. Depending on the demo verison you choose to run, download the desired **wso2ei-x.x.x.zip** WUM updated zip file.
 4. Copy the **wso2ei-x.x.x.zip** file into **presales-demos/bps-bpmn-complex-workflow/vX.X.X/bps-setup/** location.
 6. Go to **presales-demos/bps-bpmn-complex-workflow/vX.X.X/** location and run the following commands.

@@ -6,7 +6,7 @@ This docker setup demonstrate a DLC and analytics capabilities of using an EI-MB
 
 ## How to run
 1. Install docker into your setup environment
-2. Clone this Git repository
+2. Clone this Git repository. If you need to download **only** this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
 3. Depending on the demo version you choose to run, download the desired **wso2ei-x.x.x.zip**
 4. Copy the **wso2ei-x.x.x.zip** file into **presales-demos/ei-mb-analytics/vX.X.X/ei-setup/** location
 5. Copy the **wso2ei-x.x.x.zip** file into **presales-demos/ei-mb-analytics/vX.X.X/ei-mb-setup/** location
