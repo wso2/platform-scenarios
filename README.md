@@ -1,5 +1,5 @@
-# Dockerized Presales Demos
-The following repository contains the dockerized version of most commonly used demos needed for WSO2 pre-sales. 
+# Dockerized Platform Scenarios
+The following repository contains the dockerized version of most commonly used platform scenarios. 
 ## Demo scenarios
 * [API Manager - IS as Key Manager - SSO setup](apim-is-as-keymanager-sso)
 * [API Manager approval workflow with BPS server](apim-bps-approval-workflow)
