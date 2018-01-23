@@ -26,17 +26,17 @@
     <!--
        Product Name
     -->
-    <Name>WSO2 Identity Server</Name>
+    <Name>WSO2 API Manager</Name>
 
     <!--
        machine readable unique key to identify each product
     -->
-    <ServerKey>IS</ServerKey>
+    <ServerKey>AM</ServerKey>
 
     <!--
        Product Version
     -->
-    <Version>5.3.0</Version>
+    <Version>2.1.0</Version>
 
     <!--
        Host name or IP address of the machine hosting this server
@@ -44,12 +44,12 @@
        This is will become part of the End Point Reference of the
        services deployed on this server instance.
     -->
-    <HostName>localhost</HostName>
+    <!--HostName>www.wso2.org</HostName-->
 
     <!--
     Host name to be used for the Carbon management console
     -->
-    <MgtHostName>localhost</MgtHostName>
+    <!--MgtHostName>mgt.wso2.org</MgtHostName-->
 
     <!--
         The URL of the back end server. This is where the admin services are hosted and
@@ -58,7 +58,7 @@
        -->
     <ServerURL>local:/${carbon.context}/services/</ServerURL>
     <!--
-    <ServerURL>https://localhost:${carbon.management.port}${carbon.context}/services/</ServerURL>
+    <ServerURL>https://${carbon.local.ip}:${carbon.management.port}${carbon.context}/services/</ServerURL>
     -->
      <!--
      The URL of the index page. This is where the user will be redirected after signing in to the
@@ -73,7 +73,7 @@
     Ex : <Role>.*</Role> means this server can act any role
     -->
     <ServerRoles>
-        <Role>IdentityServer</Role>
+        <Role>APIManager</Role>
     </ServerRoles>
 
     <!-- uncommnet this line to subscribe to a bam instance automatically -->
@@ -124,7 +124,7 @@
          the define value + Offset.
          e.g. Offset=2 and HTTPS port=9443 will set the effective HTTPS port to 9445
          -->
-        <Offset>1</Offset>
+        <Offset>100</Offset>
 
         <!-- The JMX Ports -->
         <JMX>
@@ -429,13 +429,11 @@
 	<!--Option to disable storing of tokens issued by STS-->
 	<DisableTokenStore>false</DisableTokenStore>
 
- <STSCallBackHandlerName>org.wso2.carbon.identity.provider.AttributeCallbackHandler</STSCallBackHandlerName>
-
 	<!--
 	 Security token store class name. If this is not set, default class will be
 	 org.wso2.carbon.security.util.SecurityTokenStore
 	-->
-	<TokenStoreClassName>org.wso2.carbon.identity.sts.store.DBTokenStore</TokenStoreClassName>
+	<!--TokenStoreClassName>org.wso2.carbon.identity.sts.store.DBTokenStore</TokenStoreClassName-->
 
         <XSSPreventionConfig>
             <Enabled>true</Enabled>
@@ -445,11 +443,13 @@
             </Patterns>
         </XSSPreventionConfig>
     </Security>
-<HideMenuItemIds>
-<HideMenuItemId>claim_mgt_menu</HideMenuItemId>
-<HideMenuItemId>identity_mgt_emailtemplate_menu</HideMenuItemId>
-<HideMenuItemId>identity_security_questions_menu</HideMenuItemId>
-</HideMenuItemIds>
+                                           
+    <!--Hide unnecessary menu Items-->                                           
+    <HideMenuItemIds>                                           
+        <HideMenuItemId>claim_mgt_menu</HideMenuItemId>                                           
+        <HideMenuItemId>identity_mgt_emailtemplate_menu</HideMenuItemId>                                           
+        <HideMenuItemId>identity_security_questions_menu</HideMenuItemId>                                           
+    </HideMenuItemIds>
 
     <!--
        The temporary work directory

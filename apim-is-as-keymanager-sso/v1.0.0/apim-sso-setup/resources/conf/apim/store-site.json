@@ -10,7 +10,7 @@
     "ssoConfiguration" : {
         "enabled" : "true",
         "issuer" : "API_STORE",
-        "identityProviderURL" : "https://localhost:9444/samlsso",
+        "identityProviderURL" : "https://localhost:9544/samlsso",
         "keyStorePassword" : "wso2carbon",
         "identityAlias" : "wso2carbon",
         "responseSigningEnabled":"true",
@@ -42,7 +42,7 @@
         "responseType" : "code",
         "authorizationType" : "authorization_code",
         "scope" : "phone email address openid profile",
-        "redirectURI" : "https://localhost:9443/store/jagg/jaggery_oidc_acs.jag",
+        "redirectURI" : "https://localhost:9543/store/jagg/jaggery_oidc_acs.jag",
         "clientAlgorithm" : "RS256"
       }
     },
