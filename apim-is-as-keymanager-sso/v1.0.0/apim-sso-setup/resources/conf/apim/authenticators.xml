@@ -33,9 +33,9 @@
         <Config>
             <Parameter name="LoginPage">/carbon/admin/login.jsp</Parameter>
             <Parameter name="ServiceProviderID">carbonServer</Parameter>
-            <Parameter name="IdentityProviderSSOServiceURL">https://keymanager-service:9444/samlsso</Parameter>
+            <Parameter name="IdentityProviderSSOServiceURL">https://localhost:9544/samlsso</Parameter>
             <Parameter name="NameIDPolicyFormat">urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</Parameter>
-            <Parameter name="AssertionConsumerServiceURL">https://keymanager-service:9444/acs</Parameter>
+            <Parameter name="AssertionConsumerServiceURL">https://localhost:9544/acs</Parameter>
             <Parameter name="AssertionSignatureValidationEnabled">true</Parameter>
 
             <!-- <Parameter name="IdPCertAlias">wso2carbon</Parameter> -->

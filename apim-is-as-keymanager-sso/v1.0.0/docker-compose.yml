@@ -7,26 +7,18 @@ services:
     build: ./mysql-setup
     ports:
       - 3306:3306
-  keymanager-service:
-    image: keymanager-img
-    container_name: keymanager-svc
+
+  apim-sso-service:
+    image: apim-sso-img
+    container_name: apim-sso-svc
     build:
-      context: ./keymanager-setup
+      context: ./apim-sso-setup
     depends_on: 
       - mysql-service
     ports:
-      - 9444:9444
-      - 9764:9764
-  apim-service:
-    image: apim-img
-    container_name: apim-svc
-    build:
-      context: ./apim-setup
-    depends_on: 
-      - mysql-service
-      - keymanager-service
-    ports:
-      - 9443:9443
-      - 9763:9763
-      - 8280:8280
-      - 8243:8243
+      - 9544:9544
+      - 9864:9864
+      - 9543:9543
+      - 9863:9863
+      - 8380:8380
+      - 8343:8343
