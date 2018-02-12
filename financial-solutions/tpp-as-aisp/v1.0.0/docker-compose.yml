@@ -1,0 +1,98 @@
+version: '2'
+
+services:
+  demo-base:
+    image: demo-base
+    build:
+      context: .
+      dockerfile: ./demo-base/Dockerfile
+  mysql-service:
+    image: mysql-img
+    container_name: mysql-svc
+    build:
+      context: .
+      dockerfile: ./mysql/Dockerfile
+    ports:
+      - 3306:3306
+  bank-apim-service:
+    image: bank-apim-img
+    container_name: bank-apim-svc
+    build:
+      context: .
+      dockerfile: ./bank-apim/Dockerfile
+    depends_on:
+      - demo-base
+    ports:
+      - 9443
+      - 9763
+      - 8280
+      - 8243
+  tpp-is-km-service:
+    image: tpp-is-km-img
+    container_name: tpp-is-km-svc
+    build:
+      context: .
+      dockerfile: ./tpp-is-km/Dockerfile
+    depends_on:
+      - demo-base
+      - mysql-service
+    ports:
+      - 9443
+      - 9763
+  tpp-ei-service:
+    image: tpp-ei-img
+    container_name: tpp-ei-svc
+    build:
+      context: .
+      dockerfile: ./tpp-ei/Dockerfile
+    depends_on:
+      - demo-base
+    ports:
+      - 9443
+      - 9763
+      - 8280
+      - 8243
+  tpp-apim-service:
+    image: tpp-apim-img
+    container_name: tpp-apim-svc
+    build:
+      context: .
+      dockerfile: ./tpp-apim/Dockerfile
+    depends_on:
+      - demo-base
+      - mysql-service
+      - tpp-is-km-service
+    ports:
+      - 9443
+      - 9763
+      - 8280
+      - 8243
+  tpp-webapp:
+    image: tpp-webapp
+    container_name: tpp-webapp
+    build:
+      context: .
+      dockerfile: ./tpp-webapp/Dockerfile
+    depends_on:
+      - bank-apim-service
+      - tpp-is-km-service
+      - tpp-ei-service
+      - tpp-apim-service
+    ports:
+      - 8080
+  nginx-service:
+    image: nginx-img
+    container_name: nginx-svc
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    depends_on:
+      - bank-apim-service
+      - tpp-is-km-service
+      - tpp-ei-service
+      - tpp-apim-service
+      - tpp-webapp
+    ports:
+      - 443:443
+      - 8280:8280
+      - 8243:8243
