@@ -5,4 +5,4 @@ cp -f /tmp/resources/security/client-truststore.jks /wso2/wso2am-2.1.0/repositor
 
 cp -rf /tmp/resources/conf/* /wso2/wso2am-2.1.0/repository/conf/
 
-wget -O /wso2/wso2am-2.1.0/repository/components/lib/mysql-connector-java-5.1.44.jar http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar
+wget -qc -O /wso2/wso2am-2.1.0/repository/components/lib/mysql-connector-java-5.1.44.jar http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar

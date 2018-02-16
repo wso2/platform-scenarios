@@ -12,6 +12,7 @@ RUN rm -rf /etc/nginx/sites-enabled/default
 RUN mv /tmp/resources/ssl /etc/nginx/ssl
 RUN mv /tmp/resources/servers/* /etc/nginx/sites-enabled/
 
+EXPOSE 80
 EXPOSE 443
 EXPOSE 8280
 EXPOSE 8243

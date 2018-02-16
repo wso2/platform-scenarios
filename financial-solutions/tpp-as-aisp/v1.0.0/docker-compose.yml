@@ -93,6 +93,7 @@ services:
       - tpp-apim-service
       - tpp-webapp
     ports:
+      - 80:80
       - 443:443
       - 8280:8280
       - 8243:8243
