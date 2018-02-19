@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/transaction" name="transactionAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/status/{+messageId}">
+        <inSequence>
+            <log level="full"/>
+            <log level="custom">
+                <property name="text1" value="** Getting transaction status**"/>
+            </log>
+            <property expression="get-property('uri.var.messageId')" name="messageId" scope="default" type="STRING"/>
+            <property expression="get-property('registry', 'conf:/transactionstatus')" name="regContent" scope="default" type="STRING"/>
+            <payloadFactory media-type="json">
+                <format>                {  "messageID": "$1" ,"Current_Status": "$2"   }    </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:messageId"/>
+                    <arg evaluator="xml" expression="$ctx:regContent"/>
+                </args>
+            </payloadFactory>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

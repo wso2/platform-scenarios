@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/quote" name="stockAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/store">
+        <inSequence>
+            <log level="full"/>
+            <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+            <property expression="get-property('MessageID')" name="MESSAGE_ID" scope="default" type="STRING"/>
+            <script language="js"><![CDATA[importPackage(Packages.org.apache.synapse.config);    mc.getConfiguration().getRegistry().newResource("conf:/transactionstatus",false);    mc.getConfiguration().getRegistry().updateResource(                  "conf:/transactionstatus", "Begin");]]></script>
+            <log level="custom">
+                <property name="text1" value="** Adding quote info to  database and queue**"/>
+            </log>
+            <transaction action="new"/>
+            <dbreport useTransaction="true">
+                <connection>
+                    <pool>
+                        <dsName>jdbc/STOCKDB</dsName>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[INSERT into company values (?,'c4',?)]]></sql>
+                    <parameter expression="//m0:return/m0:symbol/child::text()" type="VARCHAR" xmlns:m0="http://services.samples/xsd" xmlns:m1="http://services.samples" xmlns:ns="http://org.apache.synapse/xsd"/>
+                    <parameter expression="//m0:return/m0:price/child::text()" type="DOUBLE" xmlns:m0="http://services.samples/xsd" xmlns:m1="http://services.samples" xmlns:ns="http://org.apache.synapse/xsd"/>
+                </statement>
+            </dbreport>
+            <callout serviceURL="jms:/ActiveMQPublisher1?transport.jms.ConnectionFactoryJNDIName=XAConnectionFactory&amp;java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://activemq-service:61616&amp;transport.jms.DestinationType=queue">
+                <source type="envelope"/>
+                <target xmlns:s11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s12="http://www.w3.org/2003/05/soap-envelope" xpath="s11:Body/child::*[fn:position()=1] | s12:Body/child::*[fn:position()=1]"/>
+            </callout>
+            <callout serviceURL="jms:/ActiveMQPublisher2?transport.jms.ConnectionFactoryJNDIName=XAConnectionFactory&amp;java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://activemq-service:61616&amp;transport.jms.DestinationType=queue;transport.jms.TransactionCommand=end">
+                <source type="envelope"/>
+                <target xmlns:s11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s12="http://www.w3.org/2003/05/soap-envelope" xpath="s11:Body/child::*[fn:position()=1] | s12:Body/child::*[fn:position()=1]"/>
+            </callout>
+            <transaction action="commit"/>
+            <script language="js"><![CDATA[importPackage(Packages.org.apache.synapse.config);    mc.getConfiguration().getRegistry().newResource("conf:/transactionstatus",false);    mc.getConfiguration().getRegistry().updateResource(                  "conf:/transactionstatus", "End");]]></script>
+            <property expression="$ctx:REST_URL_PREFIX" name="prefixuri" scope="default" type="STRING"/>
+            <property name="param1" scope="default" type="STRING" value="/transaction/status/"/>
+            <property expression="fn:concat($ctx:prefixuri, $ctx:param1, $ctx:MESSAGE_ID)" name="httpendpointurl" scope="default" type="STRING"/>
+            <payloadFactory media-type="json">
+                <format>                {    "url": "$1"   }    </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:httpendpointurl"/>
+                </args>
+            </payloadFactory>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence>
+            <log level="custom">
+                <property name="text" value="** Rollback Transaction**"/>
+            </log>
+            <script language="js"><![CDATA[importPackage(Packages.org.apache.synapse.config);    mc.getConfiguration().getRegistry().newResource("conf:/transactionstatus",false);    mc.getConfiguration().getRegistry().updateResource(                  "conf:/transactionstatus", "Fault");]]></script>
+            <property expression="$ctx:REST_URL_PREFIX" name="prefixuri" scope="default" type="STRING"/>
+            <property name="param1" scope="default" type="STRING" value="/transaction/status/"/>
+            <property expression="fn:concat($ctx:prefixuri, $ctx:param1, $ctx:MESSAGE_ID)" name="httpendpointurl" scope="default" type="STRING"/>
+            <payloadFactory media-type="json">
+                <format>                {    "url": "$1"   }    </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:httpendpointurl"/>
+                </args>
+            </payloadFactory>
+            <callout serviceURL="jms:/ActiveMQPublisherFault?transport.jms.ConnectionFactoryJNDIName=XAConnectionFactory&amp;java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://activemq-service:61616&amp;transport.jms.DestinationType=queue;transport.jms.TransactionCommand=rollback">
+                <source type="envelope"/>
+                <target xmlns:s11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s12="http://www.w3.org/2003/05/soap-envelope" xpath="s11:Body/child::*[fn:position()=1] | s12:Body/child::*[fn:position()=1]"/>
+            </callout>
+            <transaction action="rollback"/>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <respond/>
+        </faultSequence>
+    </resource>
+</api>

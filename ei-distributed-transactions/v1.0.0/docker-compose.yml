@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  mysql-service:
+    image: mysql-img
+    container_name: mysql-svc
+    build: ./mysql-setup
+    ports:
+      - 3306:3306
+
+  activemq-service:
+    image: activemq-img
+    container_name: activemq-svc
+    build: ./activemq-setup
+    ports:
+      - 61616:61616
+      - 8161:8161
+
+  ei-service:
+    image: ei-img
+    container_name: ei-svc
+    build:
+      context: ./ei-setup
+    depends_on: 
+      - mysql-service
+      - activemq-service
+    ports:
+      - 9443:9443
+      - 9446:9446
+      - 8243:8243
+      - 8280:8280
