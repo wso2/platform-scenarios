@@ -8,7 +8,7 @@ This docker setup demonstrates performing distributed transactions in EI. The de
 
 ##Versions
 
-v1.0.0 - Setup using Mysql 5.7.21,ActiveMQ 5.8.0 and WSO2ei- 6.1.1
+* [**v1.0.0**](v1.0.0) - Setup using Mysql 5.7.21,ActiveMQ 5.8.0 and WSO2ei- 6.1.1
 
 ##How to run
 
@@ -59,4 +59,5 @@ In here, [DOCKER_HOST] refers to hostname or IP of the host machine on top of wh
 
 ##Setup
 
+![Sequence Diagram](v1.0.0/other-resources/diagrams/distributedTransactions.png "Sequence Diagram")
 
