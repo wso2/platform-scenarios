@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.18, for osx10.12 (x86_64)
 --
--- Host: mysql-service    Database: userstore
+-- Host: 127.0.0.1    Database: userstore
 -- ------------------------------------------------------
 -- Server version	5.6.39
 
@@ -14,9 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-CREATE DATABASE `userstore`;
-USE `userstore`;
 
 --
 -- Table structure for table `REG_ASSOCIATION`
@@ -652,7 +649,7 @@ CREATE TABLE `UM_HYBRID_REMEMBER_ME` (
 
 LOCK TABLES `UM_HYBRID_REMEMBER_ME` WRITE;
 /*!40000 ALTER TABLE `UM_HYBRID_REMEMBER_ME` DISABLE KEYS */;
-INSERT INTO `UM_HYBRID_REMEMBER_ME` VALUES (1,'admin','5f4eb218-08b2-484c-83ea-4320eebad042','2018-02-16 07:21:00',-1234);
+INSERT INTO `UM_HYBRID_REMEMBER_ME` VALUES (1,'admin','15d5c54b-d498-47ab-abb6-3a3a6c3d0556','2018-02-25 18:05:57',-1234);
 /*!40000 ALTER TABLE `UM_HYBRID_REMEMBER_ME` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -668,7 +665,7 @@ CREATE TABLE `UM_HYBRID_ROLE` (
   `UM_ROLE_NAME` varchar(255) DEFAULT NULL,
   `UM_TENANT_ID` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`UM_ID`,`UM_TENANT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -677,7 +674,7 @@ CREATE TABLE `UM_HYBRID_ROLE` (
 
 LOCK TABLES `UM_HYBRID_ROLE` WRITE;
 /*!40000 ALTER TABLE `UM_HYBRID_ROLE` DISABLE KEYS */;
-INSERT INTO `UM_HYBRID_ROLE` VALUES (1,'everyone',-1234),(2,'publisher',-1234),(3,'creator',-1234),(4,'subscriber',-1234),(5,'Application/aisp_app',-1234);
+INSERT INTO `UM_HYBRID_ROLE` VALUES (1,'everyone',-1234),(2,'publisher',-1234),(3,'creator',-1234),(4,'subscriber',-1234),(5,'Application/aisp_app',-1234),(6,'Application/admin_AISP_APP_PRODUCTION',-1234);
 /*!40000 ALTER TABLE `UM_HYBRID_ROLE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -700,7 +697,7 @@ CREATE TABLE `UM_HYBRID_USER_ROLE` (
   KEY `UM_DOMAIN_ID` (`UM_DOMAIN_ID`,`UM_TENANT_ID`),
   CONSTRAINT `UM_HYBRID_USER_ROLE_ibfk_1` FOREIGN KEY (`UM_ROLE_ID`, `UM_TENANT_ID`) REFERENCES `UM_HYBRID_ROLE` (`UM_ID`, `UM_TENANT_ID`) ON DELETE CASCADE,
   CONSTRAINT `UM_HYBRID_USER_ROLE_ibfk_2` FOREIGN KEY (`UM_DOMAIN_ID`, `UM_TENANT_ID`) REFERENCES `UM_DOMAIN` (`UM_DOMAIN_ID`, `UM_TENANT_ID`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -709,7 +706,7 @@ CREATE TABLE `UM_HYBRID_USER_ROLE` (
 
 LOCK TABLES `UM_HYBRID_USER_ROLE` WRITE;
 /*!40000 ALTER TABLE `UM_HYBRID_USER_ROLE` DISABLE KEYS */;
-INSERT INTO `UM_HYBRID_USER_ROLE` VALUES (1,'admin',2,-1234,1),(2,'admin',3,-1234,1),(3,'admin',4,-1234,1),(4,'admin',5,-1234,1);
+INSERT INTO `UM_HYBRID_USER_ROLE` VALUES (1,'admin',2,-1234,1),(2,'admin',3,-1234,1),(3,'admin',4,-1234,1),(4,'admin',5,-1234,1),(5,'admin',6,-1234,1);
 /*!40000 ALTER TABLE `UM_HYBRID_USER_ROLE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -777,7 +774,7 @@ CREATE TABLE `UM_PERMISSION` (
   `UM_MODULE_ID` int(11) DEFAULT '0',
   PRIMARY KEY (`UM_ID`,`UM_TENANT_ID`),
   KEY `INDEX_UM_PERMISSION_UM_RESOURCE_ID_UM_ACTION` (`UM_RESOURCE_ID`,`UM_ACTION`,`UM_TENANT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -786,7 +783,7 @@ CREATE TABLE `UM_PERMISSION` (
 
 LOCK TABLES `UM_PERMISSION` WRITE;
 /*!40000 ALTER TABLE `UM_PERMISSION` DISABLE KEYS */;
-INSERT INTO `UM_PERMISSION` VALUES (1,'/permission','ui.execute',-1234,0),(2,'/','http://www.wso2.org/projects/registry/actions/get',-1234,0),(3,'/','http://www.wso2.org/projects/registry/actions/add',-1234,0),(4,'/','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(5,'/','authorize',-1234,0),(6,'/_system/governance/apimgt/externalstores/external-api-stores.xml','http://www.wso2.org/projects/registry/actions/get',-1234,0),(7,'/_system/governance/apimgt/statistics/ga-config.xml','http://www.wso2.org/projects/registry/actions/get',-1234,0),(8,'/_system/governance/apimgt/applicationdata/icons','http://www.wso2.org/projects/registry/actions/get',-1234,0),(9,'/permission/admin/login','ui.execute',-1234,0),(10,'/permission/admin/manage/api/publish','ui.execute',-1234,0),(11,'/_system/governance/repository/components/org.wso2.carbon.governance/lifecycles/history','http://www.wso2.org/projects/registry/actions/get',-1234,0),(12,'/_system/governance/repository/components/org.wso2.carbon.governance/lifecycles/history','http://www.wso2.org/projects/registry/actions/add',-1234,0),(13,'/_system/governance/repository/components/org.wso2.carbon.governance/lifecycles/history','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(14,'/_system/governance/apimgt/applicationdata','http://www.wso2.org/projects/registry/actions/get',-1234,0),(15,'/_system/governance/apimgt/applicationdata','http://www.wso2.org/projects/registry/actions/add',-1234,0),(16,'/_system/governance/apimgt/applicationdata','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(17,'/permission/admin/manage/api/create','ui.execute',-1234,0),(18,'/_system/governance/trunk','http://www.wso2.org/projects/registry/actions/get',-1234,0),(19,'/_system/governance/trunk','http://www.wso2.org/projects/registry/actions/add',-1234,0),(20,'/_system/governance/trunk','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(21,'/permission/admin/configure/governance','ui.execute',-1234,0),(22,'/permission/admin/manage/resources/govern','ui.execute',-1234,0),(23,'/permission/admin/manage/api/subscribe','ui.execute',-1234,0),(24,'/_system/config/repository/components/org.wso2.carbon.captcha-images','http://www.wso2.org/projects/registry/actions/get',-1234,0),(25,'/_system/config/repository/components/org.wso2.carbon.captcha-images','http://www.wso2.org/projects/registry/actions/add',-1234,0),(26,'/_system/config/repository/components/org.wso2.carbon.captcha-images','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(27,'/_system/config/repository/components/org.wso2.carbon.captcha-images','authorize',-1234,0),(28,'/_system/governance/repository/components/org.wso2.carbon.all-themes','http://www.wso2.org/projects/registry/actions/get',-1234,0),(29,'/_system/governance/repository/components/org.wso2.carbon.all-themes','http://www.wso2.org/projects/registry/actions/add',-1234,0),(30,'/_system/governance/repository/components/org.wso2.carbon.all-themes','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(31,'/_system/governance/repository/components/org.wso2.carbon.all-themes','authorize',-1234,0),(32,'/_system/governance/forumtopics','http://www.wso2.org/projects/registry/actions/get',-1234,0),(33,'/_system/governance/forumtopics','http://www.wso2.org/projects/registry/actions/add',-1234,0),(34,'/_system/config/ues/dashboards/log-analyzer','read',-1234,0),(35,'event/queues/jms/tmp_172_18_0_6_48092_1','consume',-1234,0),(36,'event/topics/throttleData','subscribe',-1234,0),(37,'event/topics/throttleData','publish',-1234,0),(38,'event/topics/throttleData','changePermission',-1234,0);
+INSERT INTO `UM_PERMISSION` VALUES (1,'/permission','ui.execute',-1234,0),(2,'/','http://www.wso2.org/projects/registry/actions/get',-1234,0),(3,'/','http://www.wso2.org/projects/registry/actions/add',-1234,0),(4,'/','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(5,'/','authorize',-1234,0),(6,'/_system/governance/apimgt/externalstores/external-api-stores.xml','http://www.wso2.org/projects/registry/actions/get',-1234,0),(7,'/_system/governance/apimgt/statistics/ga-config.xml','http://www.wso2.org/projects/registry/actions/get',-1234,0),(8,'/_system/governance/apimgt/applicationdata/icons','http://www.wso2.org/projects/registry/actions/get',-1234,0),(9,'/permission/admin/login','ui.execute',-1234,0),(10,'/permission/admin/manage/api/publish','ui.execute',-1234,0),(11,'/_system/governance/repository/components/org.wso2.carbon.governance/lifecycles/history','http://www.wso2.org/projects/registry/actions/get',-1234,0),(12,'/_system/governance/repository/components/org.wso2.carbon.governance/lifecycles/history','http://www.wso2.org/projects/registry/actions/add',-1234,0),(13,'/_system/governance/repository/components/org.wso2.carbon.governance/lifecycles/history','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(14,'/_system/governance/apimgt/applicationdata','http://www.wso2.org/projects/registry/actions/get',-1234,0),(15,'/_system/governance/apimgt/applicationdata','http://www.wso2.org/projects/registry/actions/add',-1234,0),(16,'/_system/governance/apimgt/applicationdata','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(17,'/permission/admin/manage/api/create','ui.execute',-1234,0),(18,'/_system/governance/trunk','http://www.wso2.org/projects/registry/actions/get',-1234,0),(19,'/_system/governance/trunk','http://www.wso2.org/projects/registry/actions/add',-1234,0),(20,'/_system/governance/trunk','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(21,'/permission/admin/configure/governance','ui.execute',-1234,0),(22,'/permission/admin/manage/resources/govern','ui.execute',-1234,0),(23,'/permission/admin/manage/api/subscribe','ui.execute',-1234,0),(24,'/_system/config/repository/components/org.wso2.carbon.captcha-images','http://www.wso2.org/projects/registry/actions/get',-1234,0),(25,'/_system/config/repository/components/org.wso2.carbon.captcha-images','http://www.wso2.org/projects/registry/actions/add',-1234,0),(26,'/_system/config/repository/components/org.wso2.carbon.captcha-images','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(27,'/_system/config/repository/components/org.wso2.carbon.captcha-images','authorize',-1234,0),(28,'/_system/governance/repository/components/org.wso2.carbon.all-themes','http://www.wso2.org/projects/registry/actions/get',-1234,0),(29,'/_system/governance/repository/components/org.wso2.carbon.all-themes','http://www.wso2.org/projects/registry/actions/add',-1234,0),(30,'/_system/governance/repository/components/org.wso2.carbon.all-themes','http://www.wso2.org/projects/registry/actions/delete',-1234,0),(31,'/_system/governance/repository/components/org.wso2.carbon.all-themes','authorize',-1234,0),(32,'/_system/governance/forumtopics','http://www.wso2.org/projects/registry/actions/get',-1234,0),(33,'/_system/governance/forumtopics','http://www.wso2.org/projects/registry/actions/add',-1234,0),(35,'event/queues/jms/tmp_172_18_0_6_48092_1','consume',-1234,0),(36,'event/topics/throttleData','subscribe',-1234,0),(37,'event/topics/throttleData','publish',-1234,0),(38,'event/topics/throttleData','changePermission',-1234,0),(39,'/_system/config/ues/dashboards/log-analyzer','read',-1234,0),(40,'event/queues/jms/tmp_172_18_0_5_57610_1','consume',-1234,0),(41,'/_system/governance/repository/components/org.wso2.carbon.governance/types/provider.rxt','http://www.wso2.org/projects/registry/actions/get',-1234,0),(42,'/_system/governance/repository/components/org.wso2.carbon.governance/types/api.rxt','http://www.wso2.org/projects/registry/actions/get',-1234,0),(43,'/_system/governance/repository/components/org.wso2.carbon.governance/types/documentation.rxt','http://www.wso2.org/projects/registry/actions/get',-1234,0),(44,'/_system/governance/apimgt/applicationdata/provider/admin/AccountInfomationAPI/1.0.0/api','http://www.wso2.org/projects/registry/actions/get',-1234,0),(45,'/_system/governance/apimgt/applicationdata/provider/admin/AccountInfomationAPI/1.0.0/swagger.json','http://www.wso2.org/projects/registry/actions/get',-1234,0),(46,'/_system/governance/repository/components/org.wso2.carbon.governance','http://www.wso2.org/projects/registry/actions/get',-1234,0);
 /*!40000 ALTER TABLE `UM_PERMISSION` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -864,7 +861,7 @@ CREATE TABLE `UM_ROLE_PERMISSION` (
   KEY `UM_DOMAIN_ID` (`UM_DOMAIN_ID`,`UM_TENANT_ID`),
   CONSTRAINT `UM_ROLE_PERMISSION_ibfk_1` FOREIGN KEY (`UM_PERMISSION_ID`, `UM_TENANT_ID`) REFERENCES `UM_PERMISSION` (`UM_ID`, `UM_TENANT_ID`) ON DELETE CASCADE,
   CONSTRAINT `UM_ROLE_PERMISSION_ibfk_2` FOREIGN KEY (`UM_DOMAIN_ID`, `UM_TENANT_ID`) REFERENCES `UM_DOMAIN` (`UM_DOMAIN_ID`, `UM_TENANT_ID`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -873,7 +870,7 @@ CREATE TABLE `UM_ROLE_PERMISSION` (
 
 LOCK TABLES `UM_ROLE_PERMISSION` WRITE;
 /*!40000 ALTER TABLE `UM_ROLE_PERMISSION` DISABLE KEYS */;
-INSERT INTO `UM_ROLE_PERMISSION` VALUES (1,1,'admin',1,-1234,1),(2,2,'admin',1,-1234,1),(3,3,'admin',1,-1234,1),(4,4,'admin',1,-1234,1),(5,5,'admin',1,-1234,1),(6,2,'everyone',1,-1234,3),(7,6,'everyone',0,-1234,3),(8,7,'everyone',0,-1234,3),(9,8,'wso2.anonymous.role',1,-1234,2),(10,9,'publisher',1,-1234,3),(11,10,'publisher',1,-1234,3),(12,11,'publisher',1,-1234,3),(13,12,'publisher',1,-1234,3),(14,13,'publisher',1,-1234,3),(15,14,'publisher',1,-1234,3),(16,15,'publisher',1,-1234,3),(17,16,'publisher',1,-1234,3),(18,9,'creator',1,-1234,3),(19,17,'creator',1,-1234,3),(20,11,'creator',1,-1234,3),(21,12,'creator',1,-1234,3),(22,13,'creator',1,-1234,3),(23,18,'creator',1,-1234,3),(24,19,'creator',1,-1234,3),(25,20,'creator',1,-1234,3),(26,14,'creator',1,-1234,3),(27,15,'creator',1,-1234,3),(28,16,'creator',1,-1234,3),(29,21,'creator',1,-1234,3),(30,22,'creator',1,-1234,3),(31,9,'subscriber',1,-1234,3),(32,23,'subscriber',1,-1234,3),(33,24,'wso2.anonymous.role',1,-1234,2),(34,25,'wso2.anonymous.role',0,-1234,2),(35,26,'wso2.anonymous.role',0,-1234,2),(36,27,'wso2.anonymous.role',0,-1234,2),(37,28,'wso2.anonymous.role',1,-1234,2),(38,29,'wso2.anonymous.role',0,-1234,2),(39,30,'wso2.anonymous.role',0,-1234,2),(40,31,'wso2.anonymous.role',0,-1234,2),(41,32,'wso2.anonymous.role',1,-1234,2),(42,32,'everyone',1,-1234,3),(43,33,'everyone',1,-1234,3),(44,34,'everyone',0,-1234,3),(45,35,'admin',1,-1234,1),(46,36,'admin',1,-1234,1),(47,37,'admin',1,-1234,1),(48,38,'admin',1,-1234,1);
+INSERT INTO `UM_ROLE_PERMISSION` VALUES (1,1,'admin',1,-1234,1),(2,2,'admin',1,-1234,1),(3,3,'admin',1,-1234,1),(4,4,'admin',1,-1234,1),(5,5,'admin',1,-1234,1),(6,2,'everyone',1,-1234,3),(7,6,'everyone',0,-1234,3),(8,7,'everyone',0,-1234,3),(9,8,'wso2.anonymous.role',1,-1234,2),(10,9,'publisher',1,-1234,3),(11,10,'publisher',1,-1234,3),(12,11,'publisher',1,-1234,3),(13,12,'publisher',1,-1234,3),(14,13,'publisher',1,-1234,3),(15,14,'publisher',1,-1234,3),(16,15,'publisher',1,-1234,3),(17,16,'publisher',1,-1234,3),(18,9,'creator',1,-1234,3),(19,17,'creator',1,-1234,3),(20,11,'creator',1,-1234,3),(21,12,'creator',1,-1234,3),(22,13,'creator',1,-1234,3),(23,18,'creator',1,-1234,3),(24,19,'creator',1,-1234,3),(25,20,'creator',1,-1234,3),(26,14,'creator',1,-1234,3),(27,15,'creator',1,-1234,3),(28,16,'creator',1,-1234,3),(29,21,'creator',1,-1234,3),(30,22,'creator',1,-1234,3),(31,9,'subscriber',1,-1234,3),(32,23,'subscriber',1,-1234,3),(33,24,'wso2.anonymous.role',1,-1234,2),(34,25,'wso2.anonymous.role',0,-1234,2),(35,26,'wso2.anonymous.role',0,-1234,2),(36,27,'wso2.anonymous.role',0,-1234,2),(37,28,'wso2.anonymous.role',1,-1234,2),(38,29,'wso2.anonymous.role',0,-1234,2),(39,30,'wso2.anonymous.role',0,-1234,2),(40,31,'wso2.anonymous.role',0,-1234,2),(41,32,'wso2.anonymous.role',1,-1234,2),(42,32,'everyone',1,-1234,3),(43,33,'everyone',1,-1234,3),(45,35,'admin',1,-1234,1),(46,36,'admin',1,-1234,1),(47,37,'admin',1,-1234,1),(48,38,'admin',1,-1234,1),(49,39,'everyone',0,-1234,3),(50,40,'admin',1,-1234,1),(51,41,'wso2.anonymous.role',1,-1234,2),(52,42,'wso2.anonymous.role',1,-1234,2),(53,43,'wso2.anonymous.role',1,-1234,2),(54,44,'everyone',1,-1234,3),(55,44,'wso2.anonymous.role',1,-1234,2),(56,45,'everyone',1,-1234,3),(57,45,'wso2.anonymous.role',1,-1234,2),(58,46,'wso2.anonymous.role',1,-1234,2);
 /*!40000 ALTER TABLE `UM_ROLE_PERMISSION` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1147,4 +1144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-16  7:21:46
+-- Dump completed on 2018-02-26  0:47:04

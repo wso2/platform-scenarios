@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.18, for osx10.12 (x86_64)
 --
--- Host: 192.168.49.113    Database: aggregator_mgtdb
+-- Host: 127.0.0.1    Database: aggregator_mgtdb
 -- ------------------------------------------------------
--- Server version	5.5.56-log
+-- Server version	5.6.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -15,8 +15,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE `aggregator_mgtdb`;
-USE `aggregator_mgtdb`;
 --
 -- Table structure for table `ACCESS_TOKENS`
 --
@@ -148,4 +146,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-16 14:18:21
+-- Dump completed on 2018-02-26  0:46:27

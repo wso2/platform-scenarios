@@ -36,6 +36,9 @@
 # Update /etc/hosts with hostnames
 ${INSTALL_DIRECTORY}/add-hosts.sh
 
+#Start Backend service
+java -jar /wso2/open-banking-backend-1.0.0.jar > /wso2/backend.log 2>&1 &
+
 JVM_MEM_OPTS="-Xms256m -Xmx512m -XX:MaxPermSize=256m"
 
 cygwin=false;

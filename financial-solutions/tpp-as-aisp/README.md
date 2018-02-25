@@ -24,7 +24,7 @@ for TPPs in Open Banking.
 ## How to run
 1. Add the following host entries in your local machine (i.e. Host Machine).
 ```
-127.0.0.1       api.xyzbank.com
+127.0.0.1       api.silverbank.com
 127.0.0.1       identity.tpp.com
 127.0.0.1       integration.tpp.com
 127.0.0.1       api.tpp.com
@@ -82,4 +82,4 @@ for TPPs in Open Banking.
 access particular URLs. You can fix that by accepting the certificate to your browser.
     - **Note**: You will have to do this for the Gateway below Gateway URLs as well
       - https://api.tpp.com:8243/
-      - https://api.xyzbank.com:8243/
+      - https://api.silverbank.com:8243/

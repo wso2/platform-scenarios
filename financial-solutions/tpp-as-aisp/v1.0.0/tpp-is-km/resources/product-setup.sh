@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cp -f /tmp/resources/bin/wso2server.sh /wso2/wso2is-km-5.3.0/bin/wso2server.sh
-cp -f /tmp/resources/security/client-truststore.jks /wso2/wso2is-km-5.3.0/repository/resources/security/client-truststore.jks
+cp -f /wso2/client-truststore.jks /wso2/wso2is-km-5.3.0/repository/resources/security/client-truststore.jks
 
 cp -rf /tmp/resources/conf/* /wso2/wso2is-km-5.3.0/repository/conf/
 

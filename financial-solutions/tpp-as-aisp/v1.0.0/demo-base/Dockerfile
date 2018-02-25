@@ -35,6 +35,7 @@ RUN mkdir -p ${INSTALL_DIRECTORY} && \
     chmod a+x ${INSTALL_DIRECTORY}/add-hosts.sh && \
     cp /tmp/resources/mysql-wait.sh ${INSTALL_DIRECTORY}/ && \
     chmod a+x ${INSTALL_DIRECTORY}/mysql-wait.sh && \
+    cp /tmp/resources/client-truststore.jks ${INSTALL_DIRECTORY}/ && \
     rm -rf /tmp/resources
 
 ENV INSTALL_DIRECTORY=${INSTALL_DIRECTORY}
