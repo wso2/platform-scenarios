@@ -1,5 +1,5 @@
 # WSO2 Financial Solutions Demonstration for TPPs
-This docker setup demonstrate the capabilities of that WSO2 Platform providers
+This docker setup demonstrates the capabilities that WSO2 Platform provides
 for TPPs in Open Banking.
 
 ## Demo Flow
@@ -25,6 +25,7 @@ for TPPs in Open Banking.
 1. Add the following host entries in your local machine (i.e. Host Machine).
 ```
 127.0.0.1       api.silverbank.com
+127.0.0.1       api.goldbank.com
 127.0.0.1       identity.tpp.com
 127.0.0.1       integration.tpp.com
 127.0.0.1       api.tpp.com
@@ -34,7 +35,7 @@ for TPPs in Open Banking.
 
 3. Clone this Git repository. If you need to download **only** this demo scenario follow [this blog](http://amalg-blogs.blogspot.com/2017/12/github-clone-only-sub-directory-of.html).
 
-4. Depending on the demo verison you choose to run, download the desired **wso2am-x.x.x.zip** , **wso2is-km-x.x.x.zip** and **wso2ei-x.x.x.zip** WUM updated zip files.
+4. Depending on the demo version you choose to run, download the desired **wso2am-x.x.x.zip** , **wso2is-km-x.x.x.zip** and **wso2ei-x.x.x.zip** WUM updated zip files.
 
 5. Copy the above zip file into **presales-demos/finacial-solutions/tpp-demo/vX.X.X/packs/** location.
 
@@ -53,6 +54,7 @@ for TPPs in Open Banking.
     ```bash
     docker-compose build demo-base
     docker-compose build mysql-service
+    docker-compose build bank-apim-service
     docker-compose build tpp-is-service
     docker-compose build tpp-ei-service
     docker-compose build tpp-apim-service
@@ -64,6 +66,7 @@ for TPPs in Open Banking.
     docker-compose up demo-base
     docker-compose up mysql-service
     docker-compose up tpp-is-service
+    docker-compose up bank-apim-service
     docker-compose up tpp-ei-service
     docker-compose up tpp-apim-service
     docker-compose up tpp-webapp
@@ -71,7 +74,13 @@ for TPPs in Open Banking.
     ```
 7. To access the TPP AISP app, go to https://aisp.tpp.com/
 
-8. To stop the services execute the following command.
+8. You will be redirected to TPP Identity server and there you have the option to use the federated login from 
+    Silver Bank Identity Provider (i.e api.silverbank.com). Credentials are;
+    ```
+    username : tomer
+    password : tomer
+    ```
+9. To stop the services execute the following command.
     ```bash
     docker-compose down
     ```
@@ -80,6 +89,6 @@ for TPPs in Open Banking.
 
 1. The setup use self signed certificates for all the host names. Hence there will be warnings in the browser when you 
 access particular URLs. You can fix that by accepting the certificate to your browser.
-    - **Note**: You will have to do this for the Gateway below Gateway URLs as well
+    - **Note**: You will have to do this for below Gateway URLs as well
       - https://api.tpp.com:8243/
       - https://api.silverbank.com:8243/
