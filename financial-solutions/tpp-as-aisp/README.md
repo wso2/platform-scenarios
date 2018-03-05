@@ -72,18 +72,55 @@ for TPPs in Open Banking.
     docker-compose up tpp-webapp
     docker-compose up nginx
     ```
-7. To access the TPP AISP app, go to https://aisp.tpp.com/
+7. To stop the services execute the following command.
+    ```bash
+    docker-compose down
+    ```    
+## AISP Login demo
+    
+1. To access the TPP AISP app, go to https://aisp.tpp.com/
 
-8. You will be redirected to TPP Identity server and there you have the option to use the federated login from 
+2. You will be redirected to TPP Identity server and there you have the option to use the federated login from 
     Silver Bank Identity Provider (i.e api.silverbank.com). Credentials are;
     ```
     username : tomer
     password : tomer
-    ```
-9. To stop the services execute the following command.
-    ```bash
-    docker-compose down
-    ```
+    ``` 
+## How to Invoke the APIs
+There are two backend APIs as described in the above image. Silver Banks API is exposed via an APIM with OAuth2 and
+ OpenBanking standard. Gold Banks API has their own standard with Username/Password security. More information on the
+ payload transformations can be found in the appendix 
+  
+Both these can be invoked from the TPP API Store which can be accessed by https://api.tpp.com/store 
+ (i.e AccountInformationAPI - 1.0.0). 
+ 
+**Note:** You will have to generate a new access token for the AISP_APP before invoking the APIs
+
+### Sample values to be used in API Calls
+
+#### POST /account-requests 
+
+- body
+```
+{
+  "Data": {
+    "Permissions": [
+      "ReadAccountsBasic"
+    ],
+    "ExpirationDateTime": "2018-03-05T08:47:29.170Z",
+    "TransactionFromDateTime": "2018-03-05T08:47:29.170Z",
+    "TransactionToDateTime": "2018-03-05T08:47:29.170Z"
+  },
+  "Risk": {}
+}
+```
+#### Common for POST /account-requests, GET /accounts, GET /accounts/{AccountID}
+
+- x-fapi-financial-id : ```2134```
+- x-fapi-interaction-id : ```85bac548-d2de-4546-b106-880a5018460c```
+- authorization: ```Bearer <GENERATED_TOKEN>```
+- x-jws-signature : ```eyJhbGciOiJSUzI1NiJ9.ewogICJEYXRhIjogewogICAgIkluaXRpYXRpb24iOiB7CiAgICAgICJJbnN0cnV.SNwqXIAoR```
+- x-bank-code : ```SILVER``` or ```GOLD```
 
 ## Troubleshooting
 
@@ -92,3 +129,223 @@ access particular URLs. You can fix that by accepting the certificate to your br
     - **Note**: You will have to do this for below Gateway URLs as well
       - https://api.tpp.com:8243/
       - https://api.silverbank.com:8243/
+
+# Appendix
+
+## API Transformations for GOLD bank APIs
+
+### Conversion of the payload when invoking Gold Banks API for ***POST /account-requests***
+
+**Request**
+        
+From;
+       
+        
+        {
+           "Data":{
+              "Permissions":[
+                 "ReadAccountsBasic"
+              ],
+              "ExpirationDateTime":"2018-03-05T08:47:29.170Z",
+              "TransactionFromDateTime":"2018-03-05T08:47:29.170Z",
+              "TransactionToDateTime":"2018-03-05T08:47:29.170Z"
+           },
+           "Risk":{
+        
+           }
+        }
+        
+        
+To;
+       
+        
+        {
+           "AccessInformation":{
+              "RequestedPermissions":[
+                 "ReadAccountsBasic"
+              ],
+              "Expiration":"2018-03-05T08:47:29.170Z",
+              "TransactionFrom":"2018-03-05T08:47:29.170Z",
+              "TransactionTo":"2018-03-05T08:47:29.170Z"
+           }
+        }
+        
+
+**Response**
+        
+From;
+       
+        
+        {
+           "AccessInformation":{
+              "AccessId":"3146",
+              "Status":"Pending",
+              "CreatedOn":"Mon Mar 05 09:15:51 UTC 2018",
+              "AccessPermissions":[
+                 "ReadAccountsBasic",
+                 "ReadAccountsDetail",
+                 "ReadTransactionsDetail",
+                 "ReadTransactionsCredits",
+                 "ReadTransactionsDebits",
+                 "ReadStandingOrdersDetail",
+                 "ReadBeneficiariesDetail",
+                 "ReadDirectDebits",
+                 "ReadProducts",
+                 "ReadBalances"
+              ]
+           }
+        }
+        
+        
+To;
+       
+        
+        {
+           "Data":{
+              "AccountRequestId":"3146",
+              "Status":"Pending",
+              "CreationDateTime":"Mon Mar 05 09:15:51 UTC 2018",
+              "Permissions":[
+                 "ReadAccountsBasic",
+                 "ReadAccountsDetail",
+                 "ReadTransactionsDetail",
+                 "ReadTransactionsCredits",
+                 "ReadTransactionsDebits",
+                 "ReadStandingOrdersDetail",
+                 "ReadBeneficiariesDetail",
+                 "ReadDirectDebits",
+                 "ReadProducts",
+                 "ReadBalances"
+              ],
+              "self":"/account-requests/3146"
+           },
+           "Meta":{
+              "copyright":"open-banking copyright",
+              "totalPages":1
+           }
+        }
+        
+        
+### Conversion of the payload when invoking Gold Banks API for ***GET /accounts***
+    
+**Response**
+        
+From;
+       
+        
+        {
+           "Accounts":[
+              {
+                 "AccountId":"34568",
+                 "Currency":"GBP",
+                 "Nickname":"Bills",
+                 "Account":{
+                    "SchemeName":"BBAN",
+                    "Identification":"10203345",
+                    "Name":"Mr Tom",
+                    "SecondaryIdentification":"00021"
+                 }
+              },
+              {
+                 "AccountId":"41825",
+                 "Currency":"GBP",
+                 "Nickname":"Household",
+                 "Account":{
+                    "SchemeName":"BBAN",
+                    "Identification":"10203348",
+                    "Name":"Mr Tom"
+                 }
+              }
+           ]
+        }
+        
+        
+To;
+       
+        
+        {
+           "Data":{
+              "Account":[
+                 {
+                    "Account":{
+                       "SecondaryIdentification":"00021",
+                       "SchemeName":"BBAN",
+                       "Identification":"10203345",
+                       "Name":"Mr Tom"
+                    },
+                    "AccountId":"34568",
+                    "Currency":"GBP",
+                    "Nickname":"Bills"
+                 },
+                 {
+                    "Account":{
+                       "SchemeName":"BBAN",
+                       "Identification":"10203348",
+                       "Name":"Mr Tom"
+                    },
+                    "AccountId":"41825",
+                    "Currency":"GBP",
+                    "Nickname":"Household"
+                 }
+              ]
+           },
+           "Links":{
+              "self":"/accounts/"
+           },
+           "Meta":{
+              "copyright":"open-banking copyright",
+              "totalPages":1
+           }
+        }
+        
+        
+### Conversion of the payload when invoking Gold Banks API for ***GET /accounts/{AccountID}***
+    
+**Response**
+        
+From;
+       
+        
+        {
+           "Account":{
+              "AccountId":"34568",
+              "Currency":"EURO",
+              "Nickname":"Bills",
+              "Account":{
+                 "SchemeName":"BBAN",
+                 "Identification":"10203345",
+                 "Name":"Mr Tom",
+                 "SecondaryIdentification":"00021"
+              }
+           }
+        }
+        
+        
+To;
+        
+        
+        {
+           "Data":{
+              "Account":[
+                 {
+                    "Account":{
+                       "SecondaryIdentification":"00021",
+                       "SchemeName":"BBAN",
+                       "Identification":"10203345",
+                       "Name":"Mr Tom"
+                    },
+                    "AccountId":"34568",
+                    "Currency":"EURO",
+                    "Nickname":"Bills"
+                 }
+              ]
+           },
+           "Links":{
+              "self":"/accounts/34568"
+           },
+           "Meta":{
+              "copyright":"open-banking copyright",
+              "totalPages":1
+           }
+        }
+           

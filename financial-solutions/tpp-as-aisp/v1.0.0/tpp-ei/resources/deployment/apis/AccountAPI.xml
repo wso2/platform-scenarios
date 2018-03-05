@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><api xmlns="http://ws.apache.org/ns/synapse" name="AccountAPI" context="/account-api">
+    <resource methods="DELETE OPTIONS POST GET" uri-template="/*" faultSequence="fault">
+        <inSequence>
+            <property xmlns:ns2="http://org.apache.synapse/xsd" xmlns:ns="http://org.apache.synapse/xsd" name="x-bank-code" expression="$trp:x-bank-code" scope="default" type="STRING"/>
+            <switch source="get-property('x-bank-code')">
+                <case regex="SILVER">
+                    <log>
+                        <property name="----- INFO -----" value="Calling Silver Bank API's"/>
+                    </log>
+                    <call-template target="SILVER_BANK_GET_TOKEN">
+                        <with-param name="tokenEP" value="https://api.silverbank.com:8243/token"/>
+                        <with-param name="clientId" value="GnR5ld7kceKttT8dY8c840vs1cEa"/>
+                        <with-param name="clientSecret" value="DTgPKHtH_a3ZkYXDufjVjIeNBG0a"/>
+                    </call-template>
+                    <send>
+                        <endpoint>
+                            <http uri-template="https://api.silverbank.com:8243/account-api/1.0.0"/>
+                        </endpoint>
+                    </send>
+                </case>
+                <case regex="GOLD">
+                    <log>
+                        <property name="----- INFO -----" value="Calling Gold Bank API's"/>
+                    </log>
+                    <property xmlns:ns2="http://org.apache.synapse/xsd" xmlns:ns="http://org.apache.synapse/xsd" name="credentials" expression="base64Encode('username:password')" scope="default" type="STRING"/>
+                    <property xmlns:ns2="http://org.apache.synapse/xsd" xmlns:ns="http://org.apache.synapse/xsd" name="Authorization" expression="fn:concat('Basic ',get-property('credentials'))" scope="transport" type="STRING"/>
+                    <property xmlns:ns2="http://org.apache.synapse/xsd" xmlns:ns="http://org.apache.synapse/xsd" name="REST_URL_POSTFIX_VALUE" expression="get-property('axis2','REST_URL_POSTFIX')" scope="default"/>
+                    <filter xmlns:ns="http://org.apache.synapse/xsd" source="get-property('REST_URL_POSTFIX_VALUE')" regex=".*/account-requests">
+                        <then>
+                            <log>
+                                <property name="----- INFO -----" value="Transforming Account Request for Gold API"/>
+                            </log>
+                            <sequence key="transform_gold_in"/>
+                            <send>
+                                <endpoint>
+                                    <http uri-template="https://api.goldbank.com/account-service"/>
+                                </endpoint>
+                            </send>
+                        </then>
+                        <else>
+                            <log>
+                                <property name="----- INFO -----" value="Handling other Gold API Calls"/>
+                            </log>
+                            <send>
+                                <endpoint>
+                                    <http uri-template="https://api.goldbank.com/account-service"/>
+                                </endpoint>
+                            </send>
+                        </else>
+                    </filter>
+                </case>
+                <default>
+                    <makefault version="pox">
+                        <reason value="Invalid Bank Code"/>
+                        <detail>Either Invalid Bank code provided, or Bank Code header is not present</detail>
+                    </makefault>
+                    <property name="TRANSPORT_HEADERS" scope="axis2" action="remove"/>
+                    <property name="HTTP_SC" value="400" scope="axis2"/>
+                    <property name="RESPONSE" value="true"/>
+                    <header name="To" action="remove"/>
+                    <property name="NO_ENTITY_BODY" scope="axis2" action="remove"/>
+                    <send/>
+                </default>
+            </switch>
+        </inSequence>
+        <outSequence>
+            <switch source="get-property('x-bank-code')">
+                <case regex="GOLD">
+                    <log>
+                        <property name="----- INFO -----" value="Transforming Gold API Response "/>
+                    </log>
+                    <sequence key="transform_gold_out"/>
+                    <send/>
+                </case>
+                <case regex="SILVER">
+                    <send/>
+                </case>
+            </switch>
+        </outSequence>
+    </resource>
+</api>

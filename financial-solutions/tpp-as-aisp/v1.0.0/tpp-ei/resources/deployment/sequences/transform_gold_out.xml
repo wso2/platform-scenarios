@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="transform_gold_out" xmlns="http://ws.apache.org/ns/synapse">
+    <filter regex=".*/account-requests.*"
+            source="get-property('REST_URL_POSTFIX_VALUE')" xmlns:ns="http://org.apache.synapse/xsd">
+        <then>
+            <log>
+                <property name="----- INFO -----" value="Creating account-requests reponse for Gold Bank"/>
+            </log>
+            <payloadFactory media-type="json">
+                <format>{
+                    "Data": {
+                    "AccountRequestId": "$1",
+                    "Status": "$2",
+                    "CreationDateTime": "$3",
+                    "Permissions": $4,
+                    "self": "/account-requests/$1"
+                    },
+                    "Meta": {
+                    "copyright": "open-banking copyright",
+                    "totalPages": 1
+                    }}</format>
+                <args>
+                    <arg evaluator="json"
+                         expression="$.AccessInformation.AccessId" literal="false"/>
+                    <arg evaluator="json"
+                         expression="$.AccessInformation.Status" literal="false"/>
+                    <arg evaluator="json"
+                         expression="$.AccessInformation.CreatedOn" literal="false"/>
+                    <arg evaluator="json"
+                         expression="$.AccessInformation.AccessPermissions" literal="false"/>
+                </args>
+            </payloadFactory>
+        </then>
+        <else>
+            <filter regex=".*/accounts" source="get-property('REST_URL_POSTFIX_VALUE')">
+                <then>
+                    <log level="full"/>
+                    <log>
+                        <property name="----- INFO -----" value="Creating accounts reponse for Gold Bank"/>
+                    </log>
+                    <payloadFactory media-type="json">
+                        <format>{
+                            "Data": {
+                            "Account": $1
+                            },
+                            "Links": {
+                            "self": "/accounts/"
+                            },
+                            "Meta": {
+                            "copyright": "open-banking copyright",
+                            "totalPages": 1
+                            }
+                            }</format>
+                        <args>
+                            <arg evaluator="json"
+                                 expression="$.Accounts" literal="false"/>
+                        </args>
+                    </payloadFactory>
+                </then>
+                <else>
+                    <log>
+                        <property name="----- INFO -----" value="Creating account reponse for Gold Bank"/>
+                    </log>
+                    <payloadFactory media-type="json">
+                        <format>{
+                            "Data": {
+                            "Account": [
+                            $1
+                            ]
+                            },
+                            "Links": {
+                            "self": "$2"
+                            },
+                            "Meta": {
+                            "copyright": "open-banking copyright",
+                            "totalPages": 1
+                            }
+                            }</format>
+                        <args>
+                            <arg evaluator="json" expression="$.Account" literal="false"/>
+                            <arg evaluator="xml"
+                                 expression="get-property('REST_URL_POSTFIX_VALUE')" literal="true"/>
+                        </args>
+                    </payloadFactory>
+                </else>
+            </filter>
+        </else>
+    </filter>
+</sequence>

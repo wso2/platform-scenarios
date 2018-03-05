@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><sequence xmlns="http://ws.apache.org/ns/synapse" name="transform_gold_in">
+    <payloadFactory media-type="json">
+        <format>{  
+   "AccessInformation":{  
+      "RequestedPermissions":$1,
+      "Expiration":"$2",
+      "TransactionFrom":"$3",
+      "TransactionTo":"$4"
+   }
+}</format>
+        <args>
+            <arg evaluator="json" expression="$.Data.Permissions"/>
+            <arg evaluator="json" expression="$.Data.ExpirationDateTime"/>
+            <arg evaluator="json" expression="$.Data.TransactionFromDateTime"/>
+            <arg evaluator="json" expression="$.Data.TransactionToDateTime"/>
+        </args>
+    </payloadFactory>
+</sequence>
