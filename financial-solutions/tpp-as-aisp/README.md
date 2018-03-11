@@ -94,7 +94,7 @@ There are two backend APIs as described in the above image. Silver Banks API is 
 Both these can be invoked from the TPP API Store which can be accessed by https://api.tpp.com/store 
  (i.e AccountInformationAPI - 1.0.0). 
  
-**Note:** You will have to generate a new access token for the AISP_APP before invoking the APIs
+**Note:** You can use the token generated in the login flow (displayed in User Info page) to invoke the APIs 
 
 ### Sample values to be used in API Calls
 
