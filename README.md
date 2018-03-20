@@ -7,6 +7,7 @@ The following repository contains the dockerized version of most commonly used p
 * [API Manager Analytics setup](apim-analytics)
 * [EI - MB - Analytics - setup](ei-mb-analytics)
 * [EI Quick Start Guide setup](ei-quick-start-guide)
+* [EI Distributed Transactions setup](ei-distributed-transactions)
 
 
 ## How to dockerize your demo

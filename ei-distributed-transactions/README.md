@@ -1,4 +1,4 @@
-##EI Distributed Transactions setup
+## EI Distributed Transactions setup
 
 This docker setup demonstrates performing distributed transactions in EI. The demo setup covers following aspects.
 
@@ -6,11 +6,11 @@ This docker setup demonstrates performing distributed transactions in EI. The de
 -  Rollback XA transactions on fault occurences.
 -  Final response to client includes a URL, which can be invoked to retrieve the current transaction status ranging from "Begin"/"End"/"Fault".
 
-##Versions
+## Versions
 
 * [**v1.0.0**](v1.0.0) - Setup using Mysql 5.7.21,ActiveMQ 5.8.0 and WSO2ei- 6.1.1
 
-##How to run
+## How to run
 
 1. Install docker into your setup environment.
 2. Clone this Git repository. If you need to download only this demo scenario follow this blog.
@@ -57,7 +57,7 @@ To access the web console of activemq, use the docker host IP and port 8161.
 
 In here, [DOCKER_HOST] refers to hostname or IP of the host machine on top of which containers are spawned.
 
-##Setup
+## Setup
 
-![Sequence Diagram](v1.0.0/other-resources/diagrams/distributedTransactions.png "Sequence Diagram")
+![Sequence Diagram](v1.0.0/other-resources/distributedTransactions.png "Sequence Diagram")
 
