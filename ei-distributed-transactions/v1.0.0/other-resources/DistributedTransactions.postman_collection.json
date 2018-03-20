@@ -1,0 +1,73 @@
+{
+	"info": {
+		"name": "DistributedTransactions",
+		"_postman_id": "8638e970-9646-ef79-ce93-db945cd9c4f6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "storeStockQuote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n<m0:return xmlns:m0=\"http://services.samples/xsd\">\n    <m0:symbol>SUN</m0:symbol>\n    <m0:price>20</m0:price>\n</m0:return>\n</soapenv:Body>\n</soapenv:Envelope>\n\n\n    \n   "
+				},
+				"url": {
+					"raw": "http://localhost:8280/quote/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+						
+					],
+					"port": "8280",
+					"path": [
+						"quote",
+						"store"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8280/transaction/status/urn:uuid:35f71a16-459a-4961-839d-b4dea6bd9459",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8280",
+					"path": [
+						"transaction",
+						"status",
+						"urn:uuid:35f71a16-459a-4961-839d-b4dea6bd9459"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
