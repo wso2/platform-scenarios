@@ -94,7 +94,7 @@
                             <div class="form-group">
                                 <p><strong>
                                     <%=Encode.forHtml(request.getParameter("application"))%>
-                                </strong> requests access to your profile information </p>
+                                </strong> requests access to your profile information under following scopes</p>
                                 <%
                                     if (displayScopes && scopeString != null) {
                                 %>
@@ -103,9 +103,6 @@
                                         String[] scopes = scopeString.split(" ");
                                         for (String scopeID : scopes) {
 
-                                            if ("openid".equals(scopeID)) {
-                                                continue;
-                                            }
                                 %>
                                         <li><%=Encode.forHtml(scopeID)%></li>
                                 <%
