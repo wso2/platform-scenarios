@@ -43,10 +43,11 @@ The following diagram illustrates the solution architecture of this POC:
 
 ## Getting Started
 
-1. Clone this repository and switch to the latest tag. Refer this folder as [wso2-microservices-poc]:
+1. Clone this repository, switch to the latest tag and change the directory to apim-microservices-kubernetes. Refer this folder as [apim-microservices-kubernetes]:
 
    ````bash
-   git clone https://github.com/imesh/wso2-microservices-poc.git
+   git clone https://github.com/wso2/platform-scenarios.git
+   cd platform-scenarios/apim-microservices-kubernetes/
    ````
    
 2. Install [Minishift](https://docs.openshift.org/latest/minishift/getting-started/index.html) or use an existing 
@@ -142,11 +143,11 @@ as [wso2-apim-cli]:
     ````
 
 14. Copy ```CustomersAPI-v1.0.zip``` and ```LoanApplicationsAPI-v1.0.zip``` zip files found in 
-```[wso2-microservices-poc]\apis\``` folder to the ```[wso2-apim-cli]\export\``` folder and execute the following 
+```[apim-microservices-kubernetes]\apis\``` folder to the ```[wso2-apim-cli]\export\``` folder and execute the following 
 command to import those to the WSO2 API Manager:
 
     ````bash
-    cp [wso2-microservices-poc]/apis/*.zip [wso2-apim-cli]/export/
+    cp [apim-microservices-kubernetes]/apis/*.zip [wso2-apim-cli]/export/
     cd [wso2-apim-cli]
     ./wso2-apim-cli import
     ````
@@ -162,7 +163,7 @@ command to import those to the WSO2 API Manager:
 
 15. Download and install [Postman](https://www.getpostman.com/) API client application.
 
-16. Import the Postman project and the oauth environment found in the ```[wso2-microservices-poc]/postman/``` folder 
+16. Import the Postman project and the oauth environment found in the ```[apim-microservices-kubernetes]/postman/``` folder 
 into Postman.
 
 17. Log into API Store using the URL [https://wso2apim/store](https://wso2apim/store) and default credentials 
