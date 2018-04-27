@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="credit_service_validate_ep">
+   <http method="GET"
+         uri-template="{uri.var.credit_service_domain}/{uri.var.customerId}"/>
+</endpoint>

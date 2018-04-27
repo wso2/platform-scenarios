@@ -1,0 +1,64 @@
+# Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mysql
+        tier: mysql
+    spec:
+      containers:
+      # OpenShift MySQL 5.7 docker image
+      # https://github.com/sclorg/mysql-container/
+      - image: centos/mysql-57-centos7
+        name: mysql
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        - name: MYSQL_MAX_CONNECTIONS
+          value: "1000"
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql/data
+        - name: post-init
+          mountPath: /usr/share/container-scripts/mysql/init/post-init.sh
+          subPath: post-init.sh
+        - name: mysql-scripts
+          mountPath: /tmp/scripts/
+      serviceAccountName: wso2svcacct
+      securityContext:
+        supplementalGroups: [0]
+      volumes:
+      - name: mysql-data
+        persistentVolumeClaim:
+          claimName: mysql-data-volume-claim
+      - name: post-init
+        configMap:
+          name: post-init
+      - name: mysql-scripts
+        configMap:
+          name: mysql-scripts

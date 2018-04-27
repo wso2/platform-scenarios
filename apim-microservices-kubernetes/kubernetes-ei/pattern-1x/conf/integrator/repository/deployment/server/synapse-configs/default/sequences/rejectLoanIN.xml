@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="rejectLoanIN">
+   <sequence key="setEndpointsSeq"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="uri.var.referenceNumber"
+             expression="get-property('uri.var.referenceNumber')"/>
+   <log level="custom">
+      <property name="status"
+                value="HTTP POST /reject/{referenceNumber} resource invoked"/>
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="status"
+                expression="fn:concat('Invoking: HTTP POST ',get-property('uri.var.loan_service_domain'),'/reject/',get-property('uri.var.referenceNumber'))"/>
+   </log>
+   <send>
+      <endpoint key="loan_service_reject_ep"/>
+   </send>
+</sequence>

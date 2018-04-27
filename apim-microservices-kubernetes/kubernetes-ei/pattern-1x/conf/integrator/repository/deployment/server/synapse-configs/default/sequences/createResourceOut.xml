@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="createResourceOut">
+   <sequence key="logResponseMessageBody"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="customer_credit_response_status"
+             expression="$axis2:HTTP_SC"/>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('customer_credit_response_status')!='200')">
+      <then>
+         <property name="invalid_response_credit_balance"
+                   expression="fn:concat('Error occurred while checking credit balance, HTTP status code: ',get-property('customer_credit_response_status'))"
+                   scope="default"
+                   type="STRING"/>
+         <log level="custom">
+            <property name="error_message"
+                      expression="get-property('invalid_response_credit_balance')"/>
+         </log>
+         <send/>
+      </then>
+      <else/>
+   </filter>
+   <send/>
+</sequence>

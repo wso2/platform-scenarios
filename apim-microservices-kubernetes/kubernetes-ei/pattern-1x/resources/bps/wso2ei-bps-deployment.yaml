@@ -1,0 +1,90 @@
+# Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wso2ei-bps
+  labels:
+    app: wso2ei-bps
+    pattern: wso2ei-pattern-1x
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wso2ei-bps
+        pattern: wso2ei-pattern-1x
+    spec:
+      containers:
+      - name: wos2ei-bps
+        image: imesh/wso2-microservices-poc-wso2ei-bps:6.1.1-v2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9765
+          protocol: TCP
+        - containerPort: 9445
+          protocol: TCP
+        volumeMounts:
+        -
+          name: wso2ei-bps-storage-volume
+          mountPath: /home/wso2user/wso2ei-6.1.1/wso2/business-process/repository/deployment/server
+        - name: wso2ei-bps-conf
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf
+        - name: wso2ei-bps-conf-axis2
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf-axis2
+        - name: wso2ei-bps-conf-datasources
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf-datasources
+        - name: wso2ei-bps-conf-tomcat
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf-tomcat
+        - name: wso2ei-bps-conf-epr
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf-epr
+        - name: wso2ei-bps-conf-bpmn-explorer
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf-bpmn-explorer
+        - name: wso2ei-bps-conf-humantask-explorer
+          mountPath: /home/wso2user/wso2ei-6.1.1-conf/bps/conf-humantask-explorer
+        livenessProbe:
+          tcpSocket:
+            port: 9445
+          initialDelaySeconds: 300
+          periodSeconds: 20
+      serviceAccountName: wso2svcacct
+      securityContext:
+        supplementalGroups: [0]
+      volumes:
+      - name: wso2ei-bps-storage-volume
+        persistentVolumeClaim:
+          claimName: wso2ei-bps-volume-claim
+      - name: wso2ei-bps-conf
+        configMap:
+          name: wso2ei-bps-conf
+      - name: wso2ei-bps-conf-axis2
+        configMap:
+          name: wso2ei-bps-conf-axis2
+      - name: wso2ei-bps-conf-datasources
+        configMap:
+          name: wso2ei-bps-conf-datasources
+      - name: wso2ei-bps-conf-tomcat
+        configMap:
+          name: wso2ei-bps-conf-tomcat
+      - name: wso2ei-bps-conf-epr
+        configMap:
+          name: wso2ei-bps-conf-epr
+      - name: wso2ei-bps-conf-bpmn-explorer
+        configMap:
+          name: wso2ei-bps-conf-bpmn-explorer
+      - name: wso2ei-bps-conf-humantask-explorer
+        configMap:
+          name: wso2ei-bps-conf-humantask-explorer

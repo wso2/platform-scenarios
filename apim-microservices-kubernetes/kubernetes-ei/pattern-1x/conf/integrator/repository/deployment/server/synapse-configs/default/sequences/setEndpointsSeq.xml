@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="setEndpointsSeq">
+   <property name="uri.var.customer_service_domain"
+             value="http://customers:8080"/>
+   <property name="uri.var.credit_service_domain"
+             value="http://credits:8080"/>
+   <property name="uri.var.loan_service_domain"
+             value="http://loans:8080"/>
+</sequence>

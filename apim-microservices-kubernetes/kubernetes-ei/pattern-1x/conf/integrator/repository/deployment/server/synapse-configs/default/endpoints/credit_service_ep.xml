@@ -1,0 +1,11 @@
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="credit_service_ep">
+   <http uri-template="{uri.var.credit_service_domain}/" method="post">
+      <suspendOnFailure>
+         <progressionFactor>1.0</progressionFactor>
+      </suspendOnFailure>
+      <markForSuspension>
+         <retriesBeforeSuspension>0</retriesBeforeSuspension>
+         <retryDelay>0</retryDelay>
+      </markForSuspension>
+   </http>
+</endpoint>

@@ -1,0 +1,290 @@
+{
+	"variables": [],
+	"info": {
+		"name": "WSO2 Microservices POC",
+		"_postman_id": "3a7600df-aff3-1647-017c-07e78125c3b4",
+		"description": "https://github.com/imesh/wso2-microservices-poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Loan Application",
+			"request": {
+				"url": "https://wso2apim-gw/loan-applications/v1.0/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"Personal\",\n\t\"customerId\":\"1\",\n\t\"amount\":10000.00,\n\t\"income\":200000.00,\n\t\"period\":12\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Check Loan Application Status",
+			"request": {
+				"url": "https://wso2apim-gw/loan-applications/v1.0/status/PERSONAL2017000002",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Loan Application",
+			"request": {
+				"url": "https://wso2apim-gw/loan-applications/v1.0/approve/PERSONAL2017000002",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Loan Application",
+			"request": {
+				"url": "https://wso2apim-gw/loan-applications/v1.0/reject/Personal2017000001",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Loan Applications",
+			"request": {
+				"url": "https://wso2apim-gw/loan-applications/v1.0/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fname\":\"Shane\",\n\t\"lname\":\"Smith\",\n\t\"type\":\"Personal\",\n\t\"customerId\":\"1\",\n\t\"amount\":10000.00,\n\t\"income\":200000.00,\n\t\"period\":12\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"request": {
+				"url": "https://wso2apim-gw/customers/v1.0/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"url": "https://wso2apim-gw/customers/v1.0/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth-header}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fname\": \"Shane\",\n    \"lname\": \"Smith\",\n    \"address\": \"First Street\",\n    \"state\": \"NY\",\n    \"postalCode\": \"12345\",\n    \"country\": \"United States\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Token",
+			"request": {
+				"url": {
+					"raw": "https://wso2apim-gw/token?grant_type=password&username=org3user2&password=org3user2",
+					"protocol": "https",
+					"host": [
+						"wso2apim-gw"
+					],
+					"path": [
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "org3user2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "org3user2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UXFtbzdTUlBUa21qbEFmZk11SzJnaHc4bnE4YTo1Y1lNUlFRSllOX2h3YjNDUEpxNVNaT3Bzbk1h",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"url": {
+					"raw": "https://wso2apim-gw/token?grant_type=password&username=org3user2&password=org3user2",
+					"protocol": "https",
+					"host": [
+						"wso2apim-gw"
+					],
+					"path": [
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "org3user2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "org3user2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UXFtbzdTUlBUa21qbEFmZk11SzJnaHc4bnE4YTo1Y1lNUlFRSllOX2h3YjNDUEpxNVNaT3Bzbk1h",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Revoke Token",
+			"request": {
+				"url": "https://wso2apim-gw/revoke",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UXFtbzdTUlBUa21qbEFmZk11SzJnaHc4bnE4YTo1Y1lNUlFRSllOX2h3YjNDUEpxNVNaT3Bzbk1h",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "670da304-1e64-3041-95bb-5987b47e2cc4",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="createResourceIN">
+   <sequence key="setEndpointsSeq"/>
+   <enrich>
+      <source type="body" clone="true"/>
+      <target type="property" property="ORIGINAL_PAYLOAD"/>
+   </enrich>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="ORIGINAL_JWT"
+             expression="$trp:X-JWT-Assertion"/>
+   <log level="custom">
+      <property name="status" value="HTTP POST / resource invoked"/>
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="ORIGINAL_PAYLOAD"
+                expression="get-property('ORIGINAL_PAYLOAD')"/>
+   </log>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="uri.var.customerId"
+             expression="json-eval($.customerId)"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="income"
+             expression="json-eval($.income)"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="loanAmount"
+             expression="json-eval($.amount)"/>
+   <property name="percentage" value="40"/>
+
+   <!-- Validate customer -->
+   <log level="custom">
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="status"
+                expression="fn:concat('Find customer: HTTP GET ',get-property('uri.var.customer_service_domain'),'/',get-property('uri.var.customerId'))"/>
+   </log>
+   <call>
+      <endpoint key="customer_validation_EP"/>
+   </call>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="customer_validation_response_status"
+             expression="$axis2:HTTP_SC"/>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('customer_validation_response_status')!='200')">
+      <then>
+         <property name="customer_error"
+                   expression="fn:concat('Could not find a customer with id ',get-property('uri.var.customerId'))"
+                   scope="default"
+                   type="STRING"/>
+         <log level="custom">
+            <property name="error_message"
+                      expression="get-property('customer_error')"/>
+         </log>
+         <payloadFactory media-type="json">
+            <format>{ "error": "$1"}</format>
+            <args>
+               <arg evaluator="xml"
+                    expression="get-property('customer_error')"/>
+            </args>
+         </payloadFactory>
+         <respond/>
+      </then>
+      <else/>
+   </filter>
+   <sequence key="logResponseMessageBody"/>
+
+   <!-- Validate available credit -->
+   <log level="custom">
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="status"
+                expression="fn:concat('Find credits of customer: HTTP GET ',get-property('uri.var.credit_service_domain'),'/',get-property('uri.var.customerId'))"/>
+   </log>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="X-JWT-Assertion"
+             expression="get-property('ORIGINAL_JWT')"
+             scope="transport"/>
+   <call>
+      <endpoint key="credit_service_validate_ep"/>
+   </call>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="loan_amount_check_status"
+             expression="$axis2:HTTP_SC"/>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('loan_amount_check_status')!='200')">
+      <then>
+         <property name="credit_error"
+                   expression="fn:concat('Error occurred while checking credit balance')"
+                   scope="default"
+                   type="STRING"/>
+         <log level="custom">
+            <property name="error_message"
+                      expression="get-property('credit_error')"/>
+         </log>
+         <payloadFactory media-type="json">
+            <format>{ "error": "$1"}</format>
+            <args>
+               <arg evaluator="xml"
+                    expression="get-property('credit_error')"/>
+            </args>
+         </payloadFactory>
+         <respond/>
+      </then>
+      <else/>
+   </filter>
+   <sequence key="logResponseMessageBody"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="totalCreditAmount"
+             expression="json-eval($.totalCreditAmount)"/>
+   <script language="js">var income, percentage, totalCreditAmount, totalAvailableAmount, availableCreditAmount;
+totalCreditAmount = mc.getProperty("totalCreditAmount");
+income = mc.getProperty("income");
+percentage = mc.getProperty("percentage");
+totalAvailableAmount = (income * percentage)/100;
+availableCreditAmount = totalAvailableAmount - totalCreditAmount;
+mc.setProperty("totalAvailableAmount", totalAvailableAmount);
+mc.setProperty("availableCreditAmount", availableCreditAmount);</script>
+   <log level="custom">
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="Total Available Credit Amount"
+                expression="get-property('totalAvailableAmount')"/>
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="Total Credit Amount"
+                expression="get-property('totalCreditAmount')"/>
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="Available Credit Amount"
+                expression="get-property('availableCreditAmount')"/>
+   </log>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('loanAmount') &gt; fn:get-property('availableCreditAmount'))">
+      <then>
+         <property name="invalid_response_loan_amount"
+                   expression="fn:concat('Loan amount is greater than available credit amount ',get-property('availableCreditAmount'))"
+                   scope="default"
+                   type="STRING"/>
+         <log level="custom">
+            <property name="error_message"
+                      expression="get-property('invalid_response_loan_amount')"/>
+         </log>
+         <payloadFactory media-type="json">
+            <format>{ "referenceNumber": "$1"}</format>
+            <args>
+               <arg evaluator="xml"
+                    expression="get-property('invalid_response_loan_amount')"/>
+            </args>
+         </payloadFactory>
+         <property name="HTTP_SC" value="403" scope="axis2"/>
+         <respond/>
+      </then>
+      <else/>
+   </filter>
+
+   <!-- Create loan application -->
+   <log level="custom">
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="status"
+                expression="fn:concat('Create loan application: HTTP POST ',get-property('uri.var.loan_service_domain'))"/>
+   </log>
+   <enrich>
+      <source type="property" clone="true" property="ORIGINAL_PAYLOAD"/>
+      <target type="body"/>
+   </enrich>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="X-JWT-Assertion"
+             expression="get-property('ORIGINAL_JWT')"
+             scope="transport"/>
+   <call>
+      <endpoint key="loan_service_ep"/>
+   </call>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="loan_service_response_status"
+             expression="$axis2:HTTP_SC"/>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('loan_service_response_status')!='200')">
+      <then>
+         <log level="custom">
+            <property name="status" value="Loan application created successfully"/>
+         </log>
+         <respond/>
+      </then>
+      <else/>
+   </filter>
+   <sequence key="logResponseMessageBody"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="referenceNumber"
+             expression="json-eval($.referenceNumber)"/>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('referenceNumber'))">
+      <then>
+         <log level="custom">
+            <property name="loan_application_status"
+                      value="Loan application created successfully, and received a refernce number"/>
+            <property name="loan_application_referenceNumber"
+                      expression="get-property('referenceNumber')"/>
+         </log>
+      </then>
+      <else>
+         <payloadFactory media-type="json">
+            <format>{ "error": "No refernce number found"}</format>
+            <args/>
+         </payloadFactory>
+         <property name="HTTP_SC" value="403" scope="axis2"/>
+         <respond/>
+      </else>
+   </filter>
+
+   <!-- Create a credit record -->
+   <log level="custom">
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="status"
+                expression="fn:concat('Create customer credit: HTTP POST ',get-property('uri.var.loan_service_domain'))"/>
+   </log>
+   <payloadFactory media-type="json">
+      <format>{ "customerId": $1, "referenceNumber": $2, "amount": $3}</format>
+      <args>
+         <arg xmlns:ns="http://org.apache.synapse/xsd"
+              evaluator="xml"
+              expression="get-property('uri.var.customerId')"/>
+         <arg xmlns:ns="http://org.apache.synapse/xsd"
+              evaluator="xml"
+              expression="get-property('referenceNumber')"/>
+         <arg xmlns:ns="http://org.apache.synapse/xsd"
+              evaluator="xml"
+              expression="get-property('loanAmount')"/>
+      </args>
+   </payloadFactory>
+   <property name="X-JWT-Assertion" scope="transport" action="remove"/>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="X-JWT-Assertion"
+             expression="get-property('ORIGINAL_JWT')"
+             scope="transport"/>
+   <call>
+      <endpoint key="credit_service_ep"/>
+   </call>
+   <property xmlns:ns="http://org.apache.synapse/xsd"
+             name="customer_credit_response_status"
+             expression="$axis2:HTTP_SC"/>
+   <filter xmlns:ns="http://org.apache.synapse/xsd"
+           xpath="boolean(fn:get-property('customer_credit_response_status')!='200')">
+      <then>
+         <property name="invalid_response_credit_balance"
+                   expression="fn:concat('Error occurred while checking credit balance, HTTP status code: ',get-property('customer_credit_response_status'))"
+                   scope="default"
+                   type="STRING"/>
+         <log level="custom">
+            <property name="error_message"
+                      expression="get-property('invalid_response_credit_balance')"/>
+         </log>
+         <payloadFactory media-type="json">
+            <format>{ "error": "$1"}</format>
+            <args>
+               <arg evaluator="xml"
+                    expression="get-property('invalid_response_credit_balance')"/>
+            </args>
+         </payloadFactory>
+         <respond/>
+      </then>
+      <else/>
+   </filter>
+
+   <payloadFactory media-type="json">
+            <format>{ "referenceNumber": "$1"}</format>
+            <args>
+               <arg evaluator="xml"
+                    expression="get-property('referenceNumber')"/>
+            </args>
+         </payloadFactory>
+   <respond/>
+</sequence>

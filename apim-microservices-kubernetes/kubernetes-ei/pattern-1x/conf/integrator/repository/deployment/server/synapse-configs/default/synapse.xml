@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://ws.apache.org/ns/synapse">
+   <taskManager provider="org.wso2.carbon.mediation.ntask.NTaskTaskManager"/>
+   <endpoint name="credit_service_validate_ep">
+      <http method="GET"
+            uri-template="{uri.var.credit_service_domain}/{uri.var.customerId}"/>
+   </endpoint>
+   <endpoint name="credit_service_ep">
+      <http method="POST" uri-template="{uri.var.credit_service_domain}"/>
+   </endpoint>
+   <!-- You can add any flat sequences, endpoints, etc.. to this synapse.xml file if you do
+    *not* want to keep the artifacts in several files --></definitions>

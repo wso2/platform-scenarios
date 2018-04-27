@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="loan_service_status_ep">
+   <http method="GET"
+         uri-template="{uri.var.loan_service_domain}/status/{referenceNumber}"/>
+</endpoint>
