@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="LoanApplicationFault">
+   <log level="custom">
+      <property name="status" value="Inside Loan Application Fault Seq"/>
+   </log>
+   <log level="full">
+      <property name="MESSAGE" value="Executing default 'fault' sequence"/>
+      <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+                xmlns:ns="http://org.apache.synapse/xsd"
+                xmlns:ns3="http://org.apache.synapse/xsd"
+                name="ERROR_CODE"
+                expression="get-property('ERROR_CODE')"/>
+      <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+                xmlns:ns="http://org.apache.synapse/xsd"
+                xmlns:ns3="http://org.apache.synapse/xsd"
+                name="ERROR_MESSAGE"
+                expression="get-property('ERROR_MESSAGE')"/>
+   </log>
+   <drop/>
+</sequence>

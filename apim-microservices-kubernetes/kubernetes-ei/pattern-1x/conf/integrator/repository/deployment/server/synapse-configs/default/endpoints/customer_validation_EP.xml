@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse" name="customer_validation_EP">
+   <http method="GET"
+         uri-template="{uri.var.customer_service_domain}/{uri.var.customerId}"/>
+</endpoint>

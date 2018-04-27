@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="logResponseMessageBody">
+   <enrich>
+      <source type="body" clone="true"/>
+      <target type="property" property="MESSAGE_PAYLOAD"/>
+   </enrich>
+   <log level="custom">
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="RESPONSE_MESSAGE_PAYLOAD"
+                expression="get-property('MESSAGE_PAYLOAD')"/>
+   </log>
+</sequence>

@@ -1,0 +1,115 @@
+# Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the License);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an AS IS BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wso2apim
+  labels:
+    app: wso2apim
+    node: manager-worker
+    pattern: wso2apim-pattern-1x
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wso2apim
+        node: manager-worker
+        pattern: wso2apim-pattern-1x
+    spec:
+      containers:
+      -
+        image: imesh/wso2-microservices-poc-wso2apim:2.1.0-v2
+        name: wso2apim
+        imagePullPolicy: IfNotPresent
+        ports:
+        -
+          containerPort: 8280
+          protocol: TCP
+        -
+          containerPort: 8243
+          protocol: TCP
+        -
+          containerPort: 9763
+          protocol: TCP
+        -
+          containerPort: 9443
+          protocol: TCP
+        -
+          containerPort: 5672
+          protocol: TCP
+        -
+          containerPort: 9711
+          protocol: TCP
+        -
+          containerPort: 9611
+          protocol: TCP
+        -
+          containerPort: 7711
+          protocol: TCP
+        -
+          containerPort: 7611
+          protocol: TCP
+        volumeMounts:
+        - name: apim-mgt-storage-volume
+          mountPath: /home/wso2user/wso2am-2.1.0/repository/deployment/server
+        - name: apim-bin
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/bin/
+        - name: apim-conf
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/conf/
+        - name: apim-identity
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/conf-identity/
+        - name: apim-axis2
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/conf-axis2/
+        - name: apim-datasources
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/conf-datasources/
+        - name: apim-tomcat
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/conf-tomcat/
+        - name: apim-site-conf
+          mountPath: /home/wso2user/wso2am-2.1.0-conf/conf-site-conf/
+        livenessProbe:
+          tcpSocket:
+            port: 9443
+          initialDelaySeconds: 300
+          periodSeconds: 20
+      serviceAccountName: wso2svcacct
+      securityContext:
+        supplementalGroups: [0]
+      volumes:
+      - name: apim-mgt-storage-volume
+        persistentVolumeClaim:
+          claimName: wso2apim-volume-claim
+      - name: apim-bin
+        configMap:
+          name: apim-bin
+      - name: apim-conf
+        configMap:
+          name: apim-conf
+      - name: apim-identity
+        configMap:
+          name: apim-identity
+      - name: apim-axis2
+        configMap:
+          name: apim-axis2
+      - name: apim-datasources
+        configMap:
+          name: apim-datasources
+      - name: apim-tomcat
+        configMap:
+          name: apim-tomcat
+      - name: apim-site-conf
+        configMap:
+          name: apim-site-conf

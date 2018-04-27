@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="getAllResourceIN">
+   <sequence key="setEndpointsSeq"/>
+   <log level="custom">
+      <property name="status" value="HTTP GET / resource invoked"/>
+      <property xmlns:ns="http://org.apache.synapse/xsd"
+                name="status"
+                expression="fn:concat('Invoking: HTTP GET ',get-property('uri.var.loan_service_domain'),'/')"/>
+   </log>
+   <send>
+      <endpoint key="loan_service_ep"/>
+   </send>
+</sequence>

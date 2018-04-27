@@ -1,0 +1,72 @@
+# Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wso2ei-integrator
+  labels:
+    app: wso2ei-integrator
+    pattern: wso2ei-pattern-1x
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wso2ei-integrator
+        pattern: wso2ei-pattern-1x
+    spec:
+      containers:
+      - name: wos2ei-integrator
+        image: imesh/wso2-microservices-poc-wso2ei-integrator:6.1.1-v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9763
+          protocol: TCP
+        - containerPort: 9443
+          protocol: TCP
+        - containerPort: 8280
+          protocol: TCP
+        - containerPort: 8243
+          protocol: TCP
+        volumeMounts:
+        -
+          name: wso2ei-integrator-synapse-conf-api
+          mountPath: /home/wso2user/wso2ei-6.1.1/repository/deployment/server/synapse-configs/default/api/
+        -
+          name: wso2ei-integrator-synapse-conf-endpoints
+          mountPath: /home/wso2user/wso2ei-6.1.1/repository/deployment/server/synapse-configs/default/endpoints/
+        -
+          name: wso2ei-integrator-synapse-conf-sequences
+          mountPath: /home/wso2user/wso2ei-6.1.1/repository/deployment/server/synapse-configs/default/sequences/
+        livenessProbe:
+          tcpSocket:
+            port: 9443
+          initialDelaySeconds: 300
+          periodSeconds: 20
+      serviceAccountName: wso2svcacct
+      securityContext:
+        supplementalGroups: [0]
+      volumes:
+      - name: wso2ei-integrator-synapse-conf-api
+        configMap:
+          name: wso2ei-integrator-synapse-conf-api
+      - name: wso2ei-integrator-synapse-conf-endpoints
+        configMap:
+          name: wso2ei-integrator-synapse-conf-endpoints
+      - name: wso2ei-integrator-synapse-conf-sequences
+        configMap:
+          name: wso2ei-integrator-synapse-conf-sequences
+      

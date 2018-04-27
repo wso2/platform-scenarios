@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="LoanApplicationService"
+     context="/loan-applications">
+   <resource methods="GET"
+             uri-template="/"
+             inSequence="getAllResourceIN"
+             outSequence="getAllResourceOUT"
+             faultSequence="LoanApplicationFault"/>
+   <resource methods="POST"
+             uri-template="/"
+             inSequence="createResourceIN"
+             outSequence="createResourceOut"
+             faultSequence="LoanApplicationFault"/>
+   <resource methods="GET"
+             uri-template="/status/{referenceNumber}"
+             inSequence="getLoanStatusIN"
+             outSequence="generalLoanOUT"
+             faultSequence="LoanApplicationFault"/>
+   <resource methods="POST"
+             uri-template="/approve/{referenceNumber}"
+             inSequence="approveLoanIN"
+             outSequence="generalLoanOUT"
+             faultSequence="LoanApplicationFault"/>
+   <resource methods="POST"
+             uri-template="/reject/{referenceNumber}"
+             inSequence="rejectLoanIN"
+             outSequence="generalLoanOUT"
+             faultSequence="LoanApplicationFault"/>
+</api>
