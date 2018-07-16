@@ -42,10 +42,12 @@
    ```
    Access the servers using following credentials.
 
+    ```
    * Username: admin <br>
    * Password: admin
+    ```
 
 5.To stop the services execute the following command.
-    ```bash
+    ```
     docker-compose down
     ```
