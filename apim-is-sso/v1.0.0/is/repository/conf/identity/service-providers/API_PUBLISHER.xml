@@ -43,13 +43,12 @@
             <AttributeStep>true</AttributeStep>
         </AuthenticationStep>
     </AuthenticationSteps>
-    <subjectClaimUri> <!--selected URI --> </subjectClaimUri>
-</LocalAndOutBoundAuthenticationConfig>
+    </LocalAndOutBoundAuthenticationConfig>
     <RequestPathAuthenticatorConfigs></RequestPathAuthenticatorConfigs>
     <InboundProvisioningConfig></InboundProvisioningConfig>
     <OutboundProvisioningConfig></OutboundProvisioningConfig>
     <ClaimConfig>
-        <AlwaysSendMappedLocalSubjectId>true</AlwaysSendMappedLocalSubjectId>
-        <LocalClaimDialect>true</LocalClaimDialect><ClaimMappings><ClaimMapping><LocalClaim><ClaimUri>http://wso2.org/claims/givenname</ClaimUri></LocalClaim><RemoteClaim><ClaimUri>http://wso2.org/claims/givenName</ClaimUri>ClaimUri></RemoteClaim><RequestClaim>true</RequestClaim></ClaimMapping></ClaimMappings></ClaimConfig>
+        <AlwaysSendMappedLocalSubjectId>false</AlwaysSendMappedLocalSubjectId>
+    </ClaimConfig>
     <PermissionAndRoleConfig></PermissionAndRoleConfig>
 </ServiceProvider>
