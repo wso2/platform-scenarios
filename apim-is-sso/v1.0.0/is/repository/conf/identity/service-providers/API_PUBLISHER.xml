@@ -1,0 +1,54 @@
+<ServiceProvider>
+    <ApplicationID>3</ApplicationID>
+    <ApplicationName>API_PUBLISHER</ApplicationName>
+    <Description>API_PUBLISHER Service Provider</Description>
+    <IsSaaSApp>true</IsSaaSApp>
+    <InboundAuthenticationConfig>
+        <InboundAuthenticationRequestConfigs>
+            <InboundAuthenticationRequestConfig>
+                <InboundAuthKey>API_PUBLISHER</InboundAuthKey>
+                <InboundAuthType>samlsso</InboundAuthType>
+                <Properties></Properties>
+            </InboundAuthenticationRequestConfig>
+        </InboundAuthenticationRequestConfigs>
+    </InboundAuthenticationConfig>
+
+    <LocalAndOutBoundAuthenticationConfig>
+    <AuthenticationSteps>
+        <AuthenticationStep>
+            <StepOrder>1</StepOrder>
+            <LocalAuthenticatorConfigs>
+                <LocalAuthenticatorConfig>
+                    <Name>BasicAuthenticator</Name>
+                    <DisplayName>basicauth</DisplayName>
+                    <IsEnabled>true</IsEnabled>
+                </LocalAuthenticatorConfig>
+            </LocalAuthenticatorConfigs>
+            <!--FederatedIdentityProviders>
+                <IdentityProvider>
+                    <IdentityProviderName>identityProviderIDP_IS</IdentityProviderName>
+                    <IsEnabled>true</IsEnabled>
+                    <DefaultAuthenticatorConfig>
+                        <FederatedAuthenticatorConfigs>
+                            <FederatedAuthenticatorConfig>
+                                <Name>SAMLSSOAuthenticator</Name>
+                                <DisplayName>samlsso</DisplayName>
+                                <IsEnabled>true</IsEnabled>
+                            </FederatedAuthenticatorConfig>
+                        </FederatedAuthenticatorConfigs>
+                    </DefaultAuthenticatorConfig>
+                </IdentityProvider>
+            </FederatedIdentityProviders-->
+            <SubjectStep>true</SubjectStep>
+            <AttributeStep>true</AttributeStep>
+        </AuthenticationStep>
+    </AuthenticationSteps>
+    </LocalAndOutBoundAuthenticationConfig>
+    <RequestPathAuthenticatorConfigs></RequestPathAuthenticatorConfigs>
+    <InboundProvisioningConfig></InboundProvisioningConfig>
+    <OutboundProvisioningConfig></OutboundProvisioningConfig>
+    <ClaimConfig>
+        <AlwaysSendMappedLocalSubjectId>false</AlwaysSendMappedLocalSubjectId>
+    </ClaimConfig>
+    <PermissionAndRoleConfig></PermissionAndRoleConfig>
+</ServiceProvider>
