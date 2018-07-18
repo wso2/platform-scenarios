@@ -15,9 +15,9 @@
   <br><br>
 ## Quick Start Guide
 
-1. Clone WSO2 API Manager Docker git repository.
+1. Clone this git repository.
     ```
-    git clone https://github.com/wso2/platform-scenarios
+    git clone https://github.com/wso2/platform-scenarios.git
     ```
     > If you are to try out an already released zip of this repo, please ignore this 1st step.
 
@@ -42,12 +42,12 @@
    ```
    Access the servers using following credentials.
 
-    ```
+
    * Username: admin <br>
    * Password: admin
-    ```
 
-5.To stop the services execute the following command.
+
+5. To stop the services execute the following command.
     ```
     docker-compose down
     ```
