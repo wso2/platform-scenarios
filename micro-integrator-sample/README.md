@@ -20,7 +20,7 @@ This docker setup demonstrates WSO2 Micro Integrator usage as explained in [EI D
 9. Copy above msf4j distribution into  **micro-integrator-setup/vX.X.X/msf4j-setup/** location.
 10.Go to micro-integrator-setup/vX.X.X/ location and run the following commands.
 
- ```bash
+  ```bash
     ## Below command will build and run the full setup.
     docker-compose build
     docker-compose up
