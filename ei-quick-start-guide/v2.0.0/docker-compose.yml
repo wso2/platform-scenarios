@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  bps-service:
+    image: bps-img
+    container_name: bps-svc
+    build:
+      context: ./bps-setup
+    ports:
+      - 9445:9445
+      - 9765:9765
+  ei-service:
+    image: ei-img
+    container_name: ei-svc
+    build: ./ei-setup
+    depends_on:
+      - analytics-service
+    ports:
+      - 9443:9443
+      - 9446:9446
+      - 8243:8243
+      - 8280:8280
+      - 5675:5675
+      - 9090:9090
+  analytics-service:
+    image: analytics-img
+    container_name: analytics-svc
+    build: ./ei-analytics-setup
+    ports:
+      - 9444:9444
+      - 9091:9091
+      - 9643:9643
+
+
