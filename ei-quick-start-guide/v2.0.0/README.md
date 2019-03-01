@@ -41,4 +41,4 @@ This docker setup demonstrate the EI quick start guide setup.
    docker-compose down
    ``` 
 ## Setup 
-![Sequence Diagram](v2.0.0/other-resources/diagrams/sequence-diagram.png "Sequence Diagram")
+![Sequence Diagram](other-resources/diagrams/sequence-diagram.png "Sequence Diagram")
