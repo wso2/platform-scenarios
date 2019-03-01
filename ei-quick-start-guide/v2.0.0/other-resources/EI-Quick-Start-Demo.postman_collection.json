@@ -1,0 +1,74 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EI-Quick-Start-Demo",
+		"_postman_id": "f1dec97a-813b-b528-f4a9-b783da16ef1a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Make Appointment",
+			"request": {
+				"url": "http://localhost:8280/healthcare/categories/surgery/reserve",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"name\": \"Amal Gunatilake\",\n  \"dob\": \"1790-03-19\",\n  \"ssn\": \"234-23-525\",\n  \"address\": \"California\",\n  \"phone\": \"8770586755\",\n  \"email\": \"amalg@wso2.com\",\n  \"doctor\": \"thomas collins\",\n  \"hospital\": \"grand oak community hospital\",\n  \"cardNo\": \"7844481124110331\",\n  \"appointment_date\": \"2025-05-02\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctors",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8280/services/DOCTORS_DataService/getDoctors?SPECIALITY=surgery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8280",
+					"path": [
+						"services",
+						"DOCTORS_DataService",
+						"getDoctors"
+					],
+					"query": [
+						{
+							"key": "SPECIALITY",
+							"value": "surgery",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Docs",
+			"request": {
+				"url": "http://localhost:8280/services/DOCTORS_DataService/getAllDoctors",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
