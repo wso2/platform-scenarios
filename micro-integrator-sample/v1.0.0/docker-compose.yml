@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  microei-service:
+    image: microei-img
+    container_name: microei-svc
+    build: ./micro-integrator-setup
+    depends_on:
+      - msf4j-service
+    ports:
+      - 8290:8290
+      - 8253:8253
+  msf4j-service:
+    image: msf4j-img
+    container_name: msf4j-svc
+    build:
+      context: ./msf4j-setup
+    ports:
+      - 9090:9090
