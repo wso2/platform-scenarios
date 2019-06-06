@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.server" label="WSO2 Carbon Kernel - Server Feature" provider-name="%providerName" version="5.2.8">
+  <description>This feature contains the carbon kernel launcher and tools core artifacts.</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <require/>
+</feature>

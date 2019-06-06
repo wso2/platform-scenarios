@@ -1,0 +1,41 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Dashboards - Samples - Carbon Feature
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Customers By Product (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.customers-by-product:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Customers Per Year (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.customers-per-year:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - OverallRevenueInfo (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.overall-revenue-info:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Overall Product Info (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.product-info:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Publisher (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.publisher:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Revenue By Country (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.revenue-by-country:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Revenue By Product (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.revenue-by-product:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Revenue By Product with user preferences (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.revenue-by-product-with-user-preferences:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Revenue By Region (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.revenue-by-region:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Revenue Per Year (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.revenue-per-year:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Revenue Percentage (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.revenue-percentage:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Subscriber (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.subscriber:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - User Info (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.user-info:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Samples - Widgets - Widget State (http://wso2.org) org.wso2.carbon.dashboards.samples.widgets:org.wso2.carbon.dashboards.samples.widgets.widget-state:pom:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

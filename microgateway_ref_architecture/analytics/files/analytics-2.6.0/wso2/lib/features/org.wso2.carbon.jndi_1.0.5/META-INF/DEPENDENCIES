@@ -1,0 +1,15 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon JNDI - Feature
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon JNDI - Implementation (http://wso2.com) org.wso2.carbon.jndi:org.wso2.carbon.jndi:bundle:1.0.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

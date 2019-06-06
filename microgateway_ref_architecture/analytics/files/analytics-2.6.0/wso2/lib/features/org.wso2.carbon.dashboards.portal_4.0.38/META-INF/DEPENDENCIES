@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Dashboards - Portal Feature
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon Dashboards - Web Component (http://www.wso2.org/carbon-dashboards/components/dashboards-web-component/) org.wso2.carbon.dashboards:dashboards-web-component:jar:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Dashboards - Universal Widget (http://www.wso2.org/carbon-dashboards/components/universal-widget/) org.wso2.carbon.dashboards:universal-widget:jar:4.0.38
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

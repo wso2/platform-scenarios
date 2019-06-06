@@ -1,0 +1,31 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon - Identity OAuth 2.0 Endpoints
+
+
+From: 'an unknown organization'
+  - Gson (https://github.com/google/gson/gson) com.google.code.gson:gson:jar:2.6.2
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - CORS-Filter Orbit Bundle (http://wso2.org) com.thetransactioncompany.wso2:cors-filter:bundle:1.7.0.wso2v1
+
+  - commons.codec.wso2 (http://wso2.org) commons-codec.wso2:commons-codec:bundle:1.4.0.wso2v1
+
+  - httpcore.wso2 (http://wso2.org) org.apache.httpcomponents.wso2:httpcore:bundle:4.3.3.wso2v1
+
+  - HttpClient (http://www.wso2.com) org.wso2.orbit.org.apache.httpcomponents:httpclient:bundle:4.3.6.wso2v1
+
+
+From: 'The Transaction Company' (http://software.dzhuvinov.com)
+  - CORS Filter (http://software.dzhuvinov.com/cors-filter.html) com.thetransactioncompany:cors-filter:jar:1.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Transaction Company' (http://software.dzhuvinov.com/)
+  - Java Property Utility (http://software.dzhuvinov.com/) com.thetransactioncompany:java-property-utils:jar:1.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

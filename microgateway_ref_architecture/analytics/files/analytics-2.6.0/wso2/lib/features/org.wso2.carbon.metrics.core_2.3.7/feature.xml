@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.metrics.core" label="WSO2 Carbon Metrics Core Feature" provider-name="%providerName" version="2.3.7">
+  <description>This feature contains the core bundles required by the Metrics</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="io.dropwizard.metrics.core" unpack="false" version="3.2.5"/>
+  <plugin id="org.wso2.carbon.metrics.core" unpack="false" version="2.3.7"/>
+  <plugin id="org.hdrhistogram.HdrHistogram" unpack="false" version="2.1.10"/>
+  <plugin id="io.dropwizard.metrics.jvm" unpack="false" version="3.2.5"/>
+  <require>
+    <import feature="org.wso2.carbon.runtime" match="compatible" version="5.2.0"/>
+  </require>
+</feature>

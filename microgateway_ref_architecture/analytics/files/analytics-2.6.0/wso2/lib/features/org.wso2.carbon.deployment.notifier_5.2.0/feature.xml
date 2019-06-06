@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.deployment.notifier" label="WSO2 Carbon Deployment Notifier - Feature" provider-name="%providerName" version="5.2.0">
+  <description>This feature contains the core bundles required by the Deployment feature</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="commons-pool" unpack="false" version="1.5.6.wso2v1"/>
+  <plugin id="org.apache.geronimo.specs.geronimo-jms_1.1_spec" unpack="false" version="1.1.1"/>
+  <plugin id="org.wso2.carbon.deployment.notifier" unpack="false" version="5.2.0"/>
+  <require/>
+</feature>

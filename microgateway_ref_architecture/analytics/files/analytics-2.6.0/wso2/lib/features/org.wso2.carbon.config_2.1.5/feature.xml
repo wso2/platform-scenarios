@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.config" label="Carbon Configuration Feature" provider-name="%providerName" version="2.1.5">
+  <description>WSO2 is an open source application development software company focused on providing service-oriented
+        architecture solutions for professional developers.</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.config" unpack="false" version="2.1.5"/>
+  <require>
+    <import feature="org.wso2.carbon.secvault" match="compatible" version="5.0.8"/>
+  </require>
+</feature>

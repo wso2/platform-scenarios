@@ -1,0 +1,36 @@
+[2019-03-21 21:07:11,450]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION","Application/admin_paymentSvcMicroGwAppl_PRODUCTION"]} Outcome=Success 
+[2019-03-21 21:08:56,042]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:08:56,041-0400] 
+[2019-03-21 21:11:00,163]  INFO -  {"performedBy":"admin","action":"created","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StaffrecruitserviceAPI\",\"context\":\"\\\/staffrecruitservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-21 21:11:00,255]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:11:00,255-0400] 
+[2019-03-21 21:11:00,386]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StaffrecruitserviceAPI\",\"context\":\"\\\/staffrecruitservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-21 21:11:00,425]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:11:00,424-0400] 
+[2019-03-21 21:13:02,965]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:02,964-0400] 
+[2019-03-21 21:13:03,060]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StaffrecruitserviceAPI\",\"context\":\"\\\/staffrecruitservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-21 21:13:03,088]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:03,086-0400] 
+[2019-03-21 21:13:26,960]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:26,959-0400] 
+[2019-03-21 21:13:27,038]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StaffrecruitserviceAPI\",\"context\":\"\\\/staffrecruitservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-21 21:13:27,066]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:27,065-0400] 
+[2019-03-21 21:13:27,151]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:27,150-0400] 
+[2019-03-21 21:13:27,525]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:27,524-0400] 
+[2019-03-21 21:13:55,569]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:13:55,568-0400] 
+[2019-03-21 21:14:23,330]  INFO -  {"performedBy":"admin","action":"created","typ":"Subscription","info":"{\"application_name\":\"admissionSvcMicroGwAppl\",\"tier\":\"Bronze\",\"provider\":\"admin\",\"api_name\":\"StaffrecruitserviceAPI\",\"application_id\":4}"} 
+[2019-03-21 21:14:23,344]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:14:23,344-0400] 
+[2019-03-21 21:14:25,027]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:14:25,027-0400] 
+[2019-03-21 21:15:00,056]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:15:00,056-0400] 
+[2019-03-21 21:18:51,374]  INFO -  {"performedBy":"admin","action":"deleted","typ":"Subscription","info":"{\"application_name\":\"admissionSvcMicroGwAppl\",\"provider\":\"admin\",\"api_name\":\"StaffrecruitserviceAPI\",\"application_id\":4}"} 
+[2019-03-21 21:18:51,390]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:18:51,389-0400] 
+[2019-03-21 21:26:56,923]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:26:56,922-0400] 
+[2019-03-21 21:26:56,974]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StaffrecruitserviceAPI\",\"context\":\"\\\/staffrecruitservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-21 21:26:57,002]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:26:57,001-0400] 
+[2019-03-21 21:26:57,055]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:26:57,054-0400] 
+[2019-03-21 21:26:57,218]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:26:57,218-0400] 
+[2019-03-21 21:26:57,267]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:26:57,266-0400] 
+[2019-03-21 21:26:57,287]  INFO -  Initiator=admin@carbon.super Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION","Application/admin_paymentSvcMicroGwAppl_PRODUCTION"]} Outcome=Success 
+[2019-03-21 21:35:05,249]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:35:05,249-0400] 
+[2019-03-21 21:35:20,832]  INFO -  {"performedBy":"admin","action":"created","typ":"Subscription","info":"{\"application_name\":\"admissionSvcMicroGwAppl\",\"tier\":\"Bronze\",\"provider\":\"admin\",\"api_name\":\"StaffrecruitserviceAPI\",\"application_id\":4}"} 
+[2019-03-21 21:35:20,845]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 21:35:20,844-0400] 
+[2019-03-21 21:53:10,115]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION","Application/admin_paymentSvcMicroGwAppl_PRODUCTION"]} Outcome=Success 
+[2019-03-21 23:03:09,906]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION","Application/admin_paymentSvcMicroGwAppl_PRODUCTION"]} Outcome=Success 
+[2019-03-21 23:03:44,442]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 23:03:44,441-0400] 
+[2019-03-21 23:05:46,400]  INFO -  'admin@carbon.super [-1234]' logged out at [2019-03-21 23:05:46,0399] 
+[2019-03-21 23:05:51,106]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-21 23:05:51,105-0400] 

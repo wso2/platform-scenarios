@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.sp.distributed.resource.core" label="WSO2 Stream Processor - Distributed Resource Feature" provider-name="%providerName" version="2.0.423">
+  <description>This feature contains the bundles related to Resource of a distributed deployment</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="okio" unpack="false" version="1.13.0.wso2v1"/>
+  <plugin id="okhttp" unpack="false" version="3.8.0.wso2v2"/>
+  <plugin id="org.wso2.carbon.sp.distributed.resource.core" unpack="false" version="2.0.423"/>
+  <require/>
+</feature>

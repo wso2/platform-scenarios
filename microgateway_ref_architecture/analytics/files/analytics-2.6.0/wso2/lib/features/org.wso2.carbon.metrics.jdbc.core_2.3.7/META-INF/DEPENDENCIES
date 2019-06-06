@@ -1,0 +1,49 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Metrics JDBC Core Feature
+
+
+From: 'an unknown organization'
+  - H2 Database Engine (http://www.h2database.com) com.h2database:h2:jar:1.4.196
+    License: MPL 2.0 or EPL 1.0  (http://h2database.com/html/license.html)
+  - Metrics Core (http://metrics.dropwizard.io/metrics-core/) io.dropwizard.metrics:metrics-core:bundle:3.2.5
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - JVM Integration for Metrics (http://metrics.dropwizard.io/metrics-jvm/) io.dropwizard.metrics:metrics-jvm:bundle:3.2.5
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - HdrHistogram (http://hdrhistogram.github.io/HdrHistogram/) org.hdrhistogram:HdrHistogram:bundle:2.1.10
+    License: Public Domain, per Creative Commons CC0  (http://creativecommons.org/publicdomain/zero/1.0/)    License: BSD-2-Clause  (https://opensource.org/licenses/BSD-2-Clause)
+  - org.eclipse.osgi  org.wso2.eclipse.osgi:org.eclipse.osgi:jar:3.11.0.v20160603-1336
+
+  - org.eclipse.osgi.services  org.wso2.eclipse.osgi:org.eclipse.osgi.services:jar:3.5.100.v20160504-1419
+
+  - SnakeYAML (http://www.snakeyaml.org) org.yaml:snakeyaml:bundle:1.17
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.25
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon Kernel - Core (http://wso2.com) org.wso2.carbon:org.wso2.carbon.core:bundle:5.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Carbon Configuration (http://wso2.com) org.wso2.carbon.config:org.wso2.carbon.config:bundle:2.1.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Metrics Core (http://wso2.com/components/org.wso2.carbon.metrics.core) org.wso2.carbon.metrics:org.wso2.carbon.metrics.core:bundle:2.3.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Metrics JDBC Core (http://wso2.com/components/org.wso2.carbon.metrics.jdbc.core) org.wso2.carbon.metrics:org.wso2.carbon.metrics.jdbc.core:bundle:2.3.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Metrics JDBC Reporter (http://wso2.com/components/org.wso2.carbon.metrics.jdbc.reporter) org.wso2.carbon.metrics:org.wso2.carbon.metrics.jdbc.reporter:bundle:2.3.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon - Utils (http://wso2.com) org.wso2.carbon.utils:org.wso2.carbon.utils:bundle:2.0.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Zaxxer.com' (https://github.com/brettwooldridge)
+  - HikariCP (https://github.com/brettwooldridge/HikariCP) com.zaxxer:HikariCP:bundle:2.7.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

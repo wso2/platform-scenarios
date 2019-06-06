@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.msf4j" label="WSO2 MSF4J Feature" provider-name="%providerName" version="2.6.4">
+  <description>This feature contains the core bundles required by the MSF4J feature</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="com.fasterxml.jackson.core.jackson-annotations" unpack="false" version="2.9.6"/>
+  <plugin id="javax.validation.api" unpack="false" version="1.1.0.Final"/>
+  <plugin id="reflections" unpack="false" version="0.9.11.wso2v1"/>
+  <plugin id="io.swagger.jaxrs" unpack="false" version="1.5.16"/>
+  <plugin id="io.netty.common" unpack="false" version="4.1.16.Final"/>
+  <plugin id="com.fasterxml.jackson.core.jackson-core" unpack="false" version="2.9.6"/>
+  <plugin id="commons-io" unpack="false" version="2.4.0.wso2v1"/>
+  <plugin id="javax.ws.rs-api" unpack="false" version="2.0"/>
+  <plugin id="io.netty.buffer" unpack="false" version="4.1.16.Final"/>
+  <plugin id="io.swagger.annotations" unpack="false" version="1.5.16"/>
+  <plugin id="javax.websocket-api" unpack="false" version="1.1"/>
+  <plugin id="io.netty.resolver" unpack="false" version="4.1.16.Final"/>
+  <plugin id="io.netty.transport" unpack="false" version="4.1.16.Final"/>
+  <plugin id="com.fasterxml.jackson.dataformat.jackson-dataformat-yaml" unpack="false" version="2.9.6"/>
+  <plugin id="io.netty.codec-http" unpack="false" version="4.1.16.Final"/>
+  <plugin id="jaxrs-delegates" unpack="false" version="2.6.4"/>
+  <plugin id="io.netty.codec-socks" unpack="false" version="4.1.16.Final"/>
+  <plugin id="io.swagger.core" unpack="false" version="1.5.16"/>
+  <plugin id="io.netty.handler" unpack="false" version="4.1.16.Final"/>
+  <plugin id="msf4j-core" unpack="false" version="2.6.4"/>
+  <plugin id="javassist" unpack="false" version="3.19.0.GA"/>
+  <plugin id="commons-pool" unpack="false" version="1.5.6.wso2v1"/>
+  <plugin id="msf4j-swagger" unpack="false" version="2.6.4"/>
+  <plugin id="org.apache.servicemix.bundles.commons-beanutils" unpack="false" version="1.8.3.2"/>
+  <plugin id="msf4j-analytics" unpack="false" version="2.6.4"/>
+  <plugin id="com.fasterxml.jackson.core.jackson-databind" unpack="false" version="2.9.6"/>
+  <plugin id="io.netty.codec" unpack="false" version="4.1.16.Final"/>
+  <plugin id="io.netty.handler-proxy" unpack="false" version="4.1.16.Final"/>
+  <plugin id="org.wso2.transport.http.netty" unpack="false" version="6.0.163"/>
+  <plugin id="javax.servlet-api" unpack="false" version="3.1.0"/>
+  <plugin id="io.netty.codec-http2" unpack="false" version="4.1.16.Final"/>
+  <plugin id="org.wso2.carbon.messaging" unpack="false" version="3.0.2"/>
+  <plugin id="com.google.gson" unpack="false" version="2.2.4"/>
+  <plugin id="org.apache.commons.lang3" unpack="false" version="3.4.0"/>
+  <plugin id="com.google.guava" unpack="false" version="20.0.0"/>
+  <plugin id="io.swagger.models" unpack="false" version="1.5.16"/>
+  <require>
+    <import feature="org.wso2.carbon.deployment.engine" match="compatible" version="5.1.9"/>
+    <import feature="org.wso2.carbon.metrics.jdbc.core" match="compatible" version="2.3.2"/>
+    <import feature="org.wso2.carbon.metrics.das.core" match="compatible" version="2.3.2"/>
+  </require>
+</feature>

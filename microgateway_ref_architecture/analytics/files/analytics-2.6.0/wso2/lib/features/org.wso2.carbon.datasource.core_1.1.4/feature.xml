@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.datasource.core" label="WSO2 Carbon Datasources - Feature" provider-name="%providerName" version="1.1.4">
+  <description>Generates a feature from data source bundle by encapsulating it's core dependencies</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="commons-io" unpack="false" version="2.4.0.wso2v1"/>
+  <plugin id="org.wso2.carbon.datasource.core" unpack="false" version="1.1.4"/>
+  <plugin id="com.zaxxer.HikariCP" unpack="false" version="2.4.1"/>
+  <require/>
+</feature>

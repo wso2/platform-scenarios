@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.caching" label="WSO2 Carbon Caching - Feature" provider-name="%providerName" version="1.1.3">
+  <description>This feature contains the core bundles required by the Caching feature</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.caching" unpack="false" version="1.1.3"/>
+  <require/>
+</feature>

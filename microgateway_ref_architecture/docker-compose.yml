@@ -1,0 +1,134 @@
+version: '3.5'
+services:
+    analytics260:
+        container_name: analytics260
+        hostname: analytics260
+        build:
+            context: ./analytics
+            dockerfile: Dockerfile
+        image: 'analytics260:v2.6.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9091:9091'
+            - '9444:9444'
+            - '7071:7071'
+            - '7444:7444'
+            - '9713:9713'
+            - '9613:9613'
+            - '7712:7712'
+            - '7612:7612'
+    wso2am260:
+        container_name: wso2am260
+        hostname: wso2am260
+        build:
+            context: ./wso2am260
+            dockerfile: Dockerfile
+        image: 'wso2am260:v2.6.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9443:9443'
+            - '8243:8243'
+            - '8280:8280'        
+    coursecatalogueservice:
+        container_name: coursecatalogueservice
+        hostname: coursecatalogueservice
+        build:
+            context: ./ballerinaServices/CourseCatalogueService
+        image: 'coursecatalogueservice:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9093:9093'
+    coursecataloguesvcmgw:
+        container_name: coursecataloguesvcmgw
+        hostname: coursecataloguesvcmgw
+        build:
+            context: ./microgateways/course-catalogue-dept-mgw
+            dockerfile: Dockerfile
+        image: 'docker.wso2.com/coursecataloguesvc:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9090:9090'
+            - '9097:9097'
+    registerstudentservice:
+        container_name: registerstudentservice
+        hostname: registerstudentservice
+        build:
+            context: ./ballerinaServices/RegisterStudentsService
+        image: 'registerstudentservice:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9092:9092'
+    registerstudentsvcmgw:
+        container_name: registerstudentsvcmgw
+        hostname: registerstudentsvcmgw
+        build:
+            context: ./microgateways/registrar-dept-mgw
+            dockerfile: Dockerfile
+        image: 'docker.wso2.com/registerstudentsvc:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9089:9089'
+            - '9098:9098'
+    studentadmissionservice:
+        container_name: studentadmissionservice
+        hostname: studentadmissionservice
+        build:
+            context: ./ballerinaServices/StudentAdmissionService
+        image: 'studentadmissionservice:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9102:9102'
+    admissionservicemgw:
+        container_name: admissionservicemgw
+        hostname: admissionservicemgw
+        build:
+            context: ./microgateways/admission-dept-mgw
+            dockerfile: Dockerfile
+        image: 'docker.wso2.com/admissionsvc:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9087:9087'
+            - '9100:9100'  
+    paymentrecordservice:
+        container_name: paymentrecordservice
+        hostname: paymentrecordservice
+        build:
+            context: ./ballerinaServices/PaymentRecordsService
+        image: 'paymentrecordservice:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9094:9094'
+    bursarservicemgw:
+        container_name: bursarservicemgw
+        hostname: bursarservicemgw
+        build:
+            context: ./microgateways/bursar-dept-mgw
+            dockerfile: Dockerfile
+        image: 'docker.wso2.com/paymentrecordsvc:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9086:9086'
+            - '9101:9101' 
+    staffrecruitservice:
+        container_name: staffrecruitservice
+        hostname: staffrecruitservice
+        build:
+            context: ./ballerinaServices/StaffRecruitService
+        image: 'staffrecruitservice:v1.0'
+        networks:
+            - universityNwk
+        ports:
+            - '9095:9095'                                                     
+networks:
+  universityNwk:
+    name: university

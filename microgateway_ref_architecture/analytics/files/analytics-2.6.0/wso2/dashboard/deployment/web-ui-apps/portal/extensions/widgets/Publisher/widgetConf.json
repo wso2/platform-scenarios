@@ -1,0 +1,11 @@
+{
+    "name": "Publisher",
+    "id": "Publisher",
+    "thumbnailURL": "",
+    "configs": {
+        "pubsub": {
+            "types": ["publisher"]
+        },
+        "userPrefs": true
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.secvault.tools" label="WSO2 Carbon Secure Vault - Tool Feature" provider-name="%providerName" version="5.0.12">
+  <description>Secure vault Feature</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <require/>
+</feature>

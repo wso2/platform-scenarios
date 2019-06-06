@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.uiserver" label="WSO2 Carbon UI Server - Core - Feature" provider-name="%providerName" version="0.19.5">
+  <description>This feature contains the Carbon UI Server core bundles</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.antlr.antlr4-runtime-osgi" unpack="false" version="4.5.1.1"/>
+  <plugin id="org.wso2.carbon.uiserver" unpack="false" version="0.19.5"/>
+  <plugin id="handlebars" unpack="false" version="4.0.3.wso2v1"/>
+  <plugin id="org.apache.commons.lang3" unpack="false" version="3.1.0"/>
+  <plugin id="com.google.gson" unpack="false" version="2.7.0"/>
+  <plugin id="com.google.guava" unpack="false" version="21.0.0"/>
+  <plugin id="org.yaml.snakeyaml" unpack="false" version="1.19.0"/>
+  <require/>
+</feature>

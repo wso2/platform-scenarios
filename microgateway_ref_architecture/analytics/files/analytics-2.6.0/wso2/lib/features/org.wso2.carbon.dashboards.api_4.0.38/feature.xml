@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.dashboards.api" label="WSO2 Carbon Dashboards - Core Feature" provider-name="%providerName" version="4.0.38">
+  <description>This feature contains the bundles which contains Dashboard core ans REST API backend.</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="h2-database-engine" unpack="false" version="1.2.140.wso2v3"/>
+  <plugin id="org.wso2.carbon.dashboards.api" unpack="false" version="4.0.38"/>
+  <plugin id="org.wso2.carbon.database.query.manager" unpack="false" version="6.0.70"/>
+  <plugin id="org.wso2.carbon.dashboards.core" unpack="false" version="4.0.38"/>
+  <require/>
+</feature>

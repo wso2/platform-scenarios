@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.sp.jobmanager.core" label="WSO2 Stream Processor - Job Manager Feature" provider-name="%providerName" version="2.0.423">
+  <description>This feature contains the bundles related to Job Manager</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.cluster.coordinator.commons" unpack="false" version="2.0.18"/>
+  <plugin id="org.wso2.carbon.cluster.coordinator.rdbms" unpack="false" version="2.0.18"/>
+  <plugin id="org.apache.commons.text" unpack="false" version="1.1.0"/>
+  <plugin id="org.wso2.carbon.sp.jobmanager.core" unpack="false" version="2.0.423"/>
+  <plugin id="okio" unpack="false" version="1.13.0.wso2v1"/>
+  <plugin id="org.apache.commons.collections4" unpack="false" version="4.1.0"/>
+  <plugin id="okhttp" unpack="false" version="3.8.0.wso2v2"/>
+  <plugin id="org.wso2.carbon.cluster.coordinator.service" unpack="false" version="2.0.18"/>
+  <require/>
+</feature>

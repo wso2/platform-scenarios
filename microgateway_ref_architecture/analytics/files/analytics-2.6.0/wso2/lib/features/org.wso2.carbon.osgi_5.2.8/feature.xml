@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.osgi" label="WSO2 Carbon Kernel - OSGI Feature" provider-name="%providerName" version="5.2.8">
+  <description>This feature contains the core OSGI runtime related bundles and their dependencies
+        Eg : (OSGi Runtime, Declarative Service Runtime, OSGi Console, etc)</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" unpack="false" version="2.0.200.v20160504-1450"/>
+  <plugin id="org.ops4j.pax.logging.pax-logging-api" unpack="false" version="1.10.0"/>
+  <plugin id="org.eclipse.osgi" unpack="false" version="3.11.0.v20160603-1336"/>
+  <plugin id="org.eclipse.equinox.simpleconfigurator" unpack="false" version="1.1.200.v20160504-1450"/>
+  <plugin id="org.ops4j.pax.logging.pax-logging-log4j2" unpack="false" version="1.10.0"/>
+  <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86" unpack="false" version="1.1.400.v20160518-1444"/>
+  <plugin id="org.eclipse.equinox.frameworkadmin" unpack="false" version="2.0.300.v20160504-1450"/>
+  <plugin id="org.eclipse.equinox.ds" unpack="false" version="1.4.400.v20160226-2036"/>
+  <plugin id="org.apache.felix.gogo.runtime" unpack="false" version="0.10.0.v201209301036"/>
+  <plugin id="org.eclipse.equinox.preferences" unpack="false" version="3.6.0.v20160120-1756"/>
+  <plugin id="org.eclipse.equinox.cm" unpack="false" version="1.1.200.v20160324-1850"/>
+  <plugin id="org.eclipse.osgi.compatibility.state" unpack="false" version="1.0.200.v20160504-1419"/>
+  <plugin id="org.eclipse.equinox.frameworkadmin.equinox" unpack="false" version="1.0.700.v20160102-2223"/>
+  <plugin id="org.apache.felix.gogo.command" unpack="false" version="0.10.0.v201209301215"/>
+  <plugin id="org.apache.felix.gogo.shell" unpack="false" version="0.10.0.v201212101605"/>
+  <plugin id="org.eclipse.equinox.launcher" unpack="false" version="1.3.200.v20160318-1642"/>
+  <plugin id="org.eclipse.equinox.console" unpack="false" version="1.1.200.v20150929-1405"/>
+  <plugin id="org.eclipse.equinox.concurrent" unpack="false" version="1.1.0.v20130327-1442"/>
+  <plugin id="org.eclipse.osgi.services" unpack="false" version="3.5.100.v20160504-1419"/>
+  <plugin id="org.eclipse.equinox.common" unpack="false" version="3.8.0.v20160509-1230"/>
+  <plugin id="org.eclipse.equinox.util" unpack="false" version="1.0.500.v20130404-1337"/>
+  <require/>
+</feature>

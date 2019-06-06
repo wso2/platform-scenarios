@@ -1,0 +1,228 @@
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIRESPATHPERAPP_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiResPathPerApp_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERPERAPPAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiUserPerAppAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIEXETIME_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiExeTime_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GEOLOCATIONAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM GeoLocationAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERPERAPPAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiUserPerAppAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIPERDESTINATIONAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiPerDestinationAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIVERSIONPERAPPAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiVersionPerAppAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIPERDESTINATIONAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiPerDestinationAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIEXETIME_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiExeTime_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIPERDESTINATIONAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiPerDestinationAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERBROWSERAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiUserBrowserAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APILASTACCESSSUMMARY" not found; SQL statement:
+SELECT 1 FROM ApiLastAccessSummary LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIVERSIONPERAPPAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiVersionPerAppAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIPERDESTINATIONAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiPerDestinationAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIRESPATHPERAPP_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiResPathPerApp_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERBROWSERAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiUserBrowserAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GEOLOCATIONAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM GeoLocationAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIRESPATHPERAPP_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiResPathPerApp_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIPERDESTINATIONAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiPerDestinationAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERBROWSERAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiUserBrowserAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIVERSIONPERAPPAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiVersionPerAppAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GEOLOCATIONAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM GeoLocationAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIEXETIME_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiExeTime_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIEXETIME_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiExeTime_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERPERAPPAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiUserPerAppAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERPERAPPAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiUserPerAppAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERBROWSERAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiUserBrowserAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIPERDESTINATIONAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiPerDestinationAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERBROWSERAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiUserBrowserAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GEOLOCATIONAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM GeoLocationAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIRESPATHPERAPP_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiResPathPerApp_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GEOLOCATIONAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM GeoLocationAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIVERSIONPERAPPAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiVersionPerAppAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIRESPATHPERAPP_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiResPathPerApp_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERPERAPPAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiUserPerAppAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERPERAPPAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiUserPerAppAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIUSERBROWSERAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiUserBrowserAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIRESPATHPERAPP_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiResPathPerApp_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GEOLOCATIONAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM GeoLocationAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIVERSIONPERAPPAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiVersionPerAppAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIEXETIME_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiExeTime_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIEXETIME_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiExeTime_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIVERSIONPERAPPAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiVersionPerAppAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMALLALERT" not found; SQL statement:
+SELECT 1 FROM ApimAllAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMALERTSTAKEHOLDERINFO" not found; SQL statement:
+SELECT 1 FROM ApimAlertStakeholderInfo LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMABNORMALBACKENDTIMEALERT" not found; SQL statement:
+SELECT 1 FROM ApimAbnormalBackendTimeAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMTIERLIMITHITTINGALERT" not found; SQL statement:
+SELECT 1 FROM ApimTierLimitHittingAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APISUBALERTCONF" not found; SQL statement:
+SELECT 1 FROM ApiSubAlertConf LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APICREATORALERTCONFIGURATION" not found; SQL statement:
+SELECT 1 FROM ApiCreatorAlertConfiguration LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIFAULTYINVOCATIONAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiFaultyInvocationAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIFAULTYINVOCATIONAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiFaultyInvocationAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIFAULTYINVOCATIONAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiFaultyInvocationAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIFAULTYINVOCATIONAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiFaultyInvocationAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIFAULTYINVOCATIONAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiFaultyInvocationAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIFAULTYINVOCATIONAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiFaultyInvocationAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APITHROTTLEDOUTAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM ApiThrottledOutAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APITHROTTLEDOUTAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM ApiThrottledOutAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APITHROTTLEDOUTAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM ApiThrottledOutAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIM_REQCOUNTAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM APIM_ReqCountAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APITHROTTLEDOUTAGG_MINUTES" not found; SQL statement:
+SELECT 1 FROM ApiThrottledOutAgg_MINUTES LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIM_REQCOUNTAGG_HOURS" not found; SQL statement:
+SELECT 1 FROM APIM_ReqCountAgg_HOURS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APITHROTTLEDOUTAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM ApiThrottledOutAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIM_REQCOUNTAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM APIM_ReqCountAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIM_REQCOUNTAGG_SECONDS" not found; SQL statement:
+SELECT 1 FROM APIM_ReqCountAgg_SECONDS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APITHROTTLEDOUTAGG_YEARS" not found; SQL statement:
+SELECT 1 FROM ApiThrottledOutAgg_YEARS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIM_REQCOUNTAGG_MONTHS" not found; SQL statement:
+SELECT 1 FROM APIM_ReqCountAgg_MONTHS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIM_REQCOUNTAGG_DAYS" not found; SQL statement:
+SELECT 1 FROM APIM_ReqCountAgg_DAYS LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMAPIHEALTHMONITORALERT" not found; SQL statement:
+SELECT 1 FROM ApimApiHealthMonitorAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMALERTTABLERESPONSEINFO" not found; SQL statement:
+SELECT 1 FROM ApimAlertTableResponseInfo LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMAPIAVAILABILITYINFO" not found; SQL statement:
+SELECT 1 FROM ApimApiAvailabilityInfo LIMIT 1 [42102-196]
+2019-03-25 15:52:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMABNORMALREQALERT" not found; SQL statement:
+SELECT 1 FROM ApimAbnormalReqAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMIPACCESSABNORMALITYALERT" not found; SQL statement:
+SELECT 1 FROM ApimIPAccessAbnormalityAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMIPACCESSALERTCOUNT" not found; SQL statement:
+SELECT 1 FROM ApimIPAccessAlertCount LIMIT 1 [42102-196]
+2019-03-25 15:52:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMIPACCESSSUMMARY" not found; SQL statement:
+SELECT 1 FROM ApimIPAccessSummary LIMIT 1 [42102-196]
+2019-03-25 15:52:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMREQUESTPATTERNCHANGEDALERT" not found; SQL statement:
+SELECT 1 FROM ApimRequestPatternChangedAlert LIMIT 1 [42102-196]
+2019-03-25 15:52:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "APIMABNORMALRESPONSETIMEALERT" not found; SQL statement:
+SELECT 1 FROM ApimAbnormalResponseTimeAlert LIMIT 1 [42102-196]
