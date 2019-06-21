@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "6c6199cf-6dca-475e-be90-146e50ec3291",
+		"name": "UniMicrogateways",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "coursecataloguesvcmgw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UQXhabU14TkRNeVpEZzNNVFUxWkdNME16RXpPREpoWldJNE5ETmxaRFUxT0dGa05qRmlNUSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiY291cnNlY2F0YWxvZ3Vlc2VydmljZU1HVyIsInRpZXIiOiIxMFBlck1pbiIsIm93bmVyIjoiYWRtaW4ifSwic2NvcGUiOiJhbV9hcHBsaWNhdGlvbl9zY29wZSBzZWFyY2hfY291cnNlIiwiaXNzIjoiaHR0cHM6XC9cL2xvY2FsaG9zdDo5NDQzXC9vYXV0aDJcL3Rva2VuIiwia2V5dHlwZSI6IlBST0RVQ1RJT04iLCJzdWJzY3JpYmVkQVBJcyI6W3sibmFtZSI6IkNvdXJzZUNhdGFsb2d1ZVNlcnZpY2VBUEkiLCJjb250ZXh0IjoiXC9jb3Vyc2VjYXRhbG9ndWVzdmNcLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiQnJvbnplIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9XSwiY29uc3VtZXJLZXkiOiI5ZkdyeHoweUd0ODhlNkZYZkgyTGYzOXh5SXdhIiwiZXhwIjoxNTU5ODU5Njc2LCJpYXQiOjE1NTk4NTYwNzYyODcsImp0aSI6ImFiZDliMmRlLTY4OTQtNGZjYy1hZWYxLWNiYTczNTA3Y2Y4NSJ9.lUMCjZM6mYhCOXwIl2epFHuBMR1hhqV401B1kFl0E86hRpCQHyu-5KymjvXf7ePmwttR0zaA-hlOAUAvEOx225pSX7GMdykhxyWjZOJvA4wwIQBw-m9xK_CnCTducGDTvjif2MPXDU0luQ3PKCAD9-ElJYZtdAAPAlP90FffLfG3mx9kyt5fki9WiEKfK5U57PzE4zLRMujDLiYlCdiW-vyz_dWgPGP8BchbhZK6kQdF4mf8PS1PAdCRMwTEp0Ornx3XUjUPDZgOiRLNiRG53RNTZGVE1klAQEMqzFecxn-Bv8OVX7WsZmq2w9n1J6fLIJzDIvo_2XKn0LfBudZzZQ==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"courseIds\":[\"CS202\",\"CS201\"]}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/coursecataloguesvc/1.0.0/searchCourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"coursecataloguesvc",
+						"1.0.0",
+						"searchCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CourseCatalogueServiceAPI OAuth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e71806a4-7b0b-3e28-a0fc-e1dd59b7033f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"courseIds\":[\"CS202\",\"CS203\"]}"
+				},
+				"url": {
+					"raw": "https://localhost:8243/coursecataloguesvc/1.0.0/searchCourses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"coursecataloguesvc",
+						"1.0.0",
+						"searchCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerstudentsvcmgw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UQXhabU14TkRNeVpEZzNNVFUxWkdNME16RXpPREpoWldJNE5ETmxaRFUxT0dGa05qRmlNUSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7ImlkIjozLCJuYW1lIjoicmVnaXN0ZXJTdmNNaWNyb0d3QXBwbCIsInRpZXIiOiIxMFBlck1pbiIsIm93bmVyIjoiYWRtaW4ifSwic2NvcGUiOiJhbV9hcHBsaWNhdGlvbl9zY29wZSByZWdpc3Rlcl9jb3Vyc2UiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJuYW1lIjoiUmVnaXN0ZXJTdHVkZW50U2VydmljZUFQSSIsImNvbnRleHQiOiJcL3JlZ2lzdGVyc3R1ZGVudHN2Y1wvMS4wLjAiLCJ2ZXJzaW9uIjoiMS4wLjAiLCJwdWJsaXNoZXIiOiJhZG1pbiIsInN1YnNjcmlwdGlvblRpZXIiOiJCcm9uemUiLCJzdWJzY3JpYmVyVGVuYW50RG9tYWluIjoiY2FyYm9uLnN1cGVyIn1dLCJjb25zdW1lcktleSI6IkdPaXlaUnJ3Z0VsWkRVU2x2ZVU3V0pfdVZ4OGEiLCJleHAiOjE1NTk4MzYxMjYsImlhdCI6MTU1OTgzMjUyNjIxMCwianRpIjoiN2QxMDAxMmQtYThiZS00YWUwLTkyYmYtN2E3NjQ0MmUxZWQ0In0=.knb6F3yArp2hhQI9MH_4H9stMUezA5l9-ti_KhhbqU4bSvTzXAe_JjjyywnMdofcRKttOvf6Cke-dvOQ5l8yKaTSJu91pCMb2edT4i_YW0AyBC7IuflVrAn25CSKRxwwUBgWZRkuWNehB1oDfkFxiW6W9Wqbn_lKKntTXdS573OoDhVZoKTNxrJfWRtgkckYTuUCY4nWYBUYH0867PZfAx9Em25ypIOTmwNrpqFAHf88XLcj4Zixyb-LESGwh3D7glrM0h9NydlC6ImfYB7ZtgRFB0GxVXWsbU_u0oYapJ--5_h9iP3oNE8FLxD5DusM73fvtjRMPd2xvwrKlR3QLQ==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"studentId\":\"UG34564H\",\n  \"courseIds\":[\"CS203\",\"CS204\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9089/registerstudentsvc/1.0.0/registerForCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9089",
+					"path": [
+						"registerstudentsvc",
+						"1.0.0",
+						"registerForCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterStudentServiceAPI OAuth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8cb002ff-849d-3343-99c6-94b3c26918db",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"studentId\":\"UG34564H\",\n  \"courseIds\":[\"CS203\",\"CS204\"]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8243/registerstudentsvc/1.0.0/registerForCourse",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"registerstudentsvc",
+						"1.0.0",
+						"registerForCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admissionsvcmgw/processAdmission",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "200308bc-d5d8-426f-afb6-39ccd43f5f60",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UQXhabU14TkRNeVpEZzNNVFUxWkdNME16RXpPREpoWldJNE5ETmxaRFUxT0dGa05qRmlNUSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7ImlkIjo0LCJuYW1lIjoiYWRtaXNzaW9uU3ZjTWljcm9Hd0FwcGwiLCJ0aWVyIjoiMTBQZXJNaW4iLCJvd25lciI6ImFkbWluIn0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgcHJvY2Vzc19hZG1pc3Npb24gcHJvY2Vzc19zdGFmZl9hZG1pc3Npb24gdmVyaWZ5X2FkbWlzc2lvbiIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7Im5hbWUiOiJTdHVkZW50QWRtaXNzaW9uU2VydmljZUFQSSIsImNvbnRleHQiOiJcL3N0dWRlbnRhZG1pc3Npb25zdmNcLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiQnJvbnplIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9LHsibmFtZSI6IlN0YWZmcmVjcnVpdHNlcnZpY2VBUEkiLCJjb250ZXh0IjoiXC9zdGFmZnJlY3J1aXRzZXJ2aWNlXC8xLjAuMCIsInZlcnNpb24iOiIxLjAuMCIsInB1Ymxpc2hlciI6ImFkbWluIiwic3Vic2NyaXB0aW9uVGllciI6IkJyb256ZSIsInN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIifV0sImNvbnN1bWVyS2V5IjoiYW15Rmg4TmhVdUZjWmU3TDBkbU1IX3BCZTdZYSIsImV4cCI6MTU1OTgzNjE4NiwiaWF0IjoxNTU5ODMyNTg2NzQxLCJqdGkiOiJiY2E1Y2IzYy1jODY0LTRlOTAtOTQ0Zi1hMTBiYmU5OWNlMGMifQ==.XmbbyZUZ8bpseQ1Dathnd3gYqdbr67blG7fnB08WaJsfnQ0M28z_Dze44p6FMV19eYCAkUrnD7KEOe_AHRAfifkVNT5Vue27gANOgWDSN12XiS6NqnWOnV04LRWKQe-EI8G9-6f_5h8iQHzkpGpZ-EPaRsXsUAtkj4qznv8OPKLgSiWIzBnHAzQbCGey2GWjeUMpHlOi3v84J2zLfiAvQv7bzh5dMkyNhqYbj9O94SvJBw2ZCinw-xX66j4uwE-VMccvbIYPVvXGM2ARL0iL8-lBmutq0eB_2kBrzds-KPX_Ceif4IHXPec_2xdob8qBbiUBEVYrEKCSkMJHTVvCXw==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"studentId\":\"UG34564C\",\n      \"courseIds\":[\"CS204\",\"CS203\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9087/studentadmissionsvc/1.0.0/processAdmission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9087",
+					"path": [
+						"studentadmissionsvc",
+						"1.0.0",
+						"processAdmission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StudentAdmissionServiceAPI OAuth",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "200308bc-d5d8-426f-afb6-39ccd43f5f60",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "096817bd-4322-3a25-8871-64d38c7b24fa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"studentId\":\"UG34564C\",\n      \"courseIds\":[\"CS204\",\"CS203\"]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8243/studentadmissionsvc/1.0.0/processAdmission",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"studentadmissionsvc",
+						"1.0.0",
+						"processAdmission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admissionsvcmgw/verifyAdmission",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "200308bc-d5d8-426f-afb6-39ccd43f5f60",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UQXhabU14TkRNeVpEZzNNVFUxWkdNME16RXpPREpoWldJNE5ETmxaRFUxT0dGa05qRmlNUSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7ImlkIjo0LCJuYW1lIjoiYWRtaXNzaW9uU3ZjTWljcm9Hd0FwcGwiLCJ0aWVyIjoiMTBQZXJNaW4iLCJvd25lciI6ImFkbWluIn0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgcHJvY2Vzc19zdGFmZl9hZG1pc3Npb24gdmVyaWZ5X2FkbWlzc2lvbiIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7Im5hbWUiOiJTdHVkZW50QWRtaXNzaW9uU2VydmljZUFQSSIsImNvbnRleHQiOiJcL3N0dWRlbnRhZG1pc3Npb25zdmNcLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiQnJvbnplIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9LHsibmFtZSI6IlN0YWZmcmVjcnVpdHNlcnZpY2VBUEkiLCJjb250ZXh0IjoiXC9zdGFmZnJlY3J1aXRzZXJ2aWNlXC8xLjAuMCIsInZlcnNpb24iOiIxLjAuMCIsInB1Ymxpc2hlciI6ImFkbWluIiwic3Vic2NyaXB0aW9uVGllciI6IkJyb256ZSIsInN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIifV0sImNvbnN1bWVyS2V5IjoiYW15Rmg4TmhVdUZjWmU3TDBkbU1IX3BCZTdZYSIsImV4cCI6MTU1OTgzOTQ2MCwiaWF0IjoxNTU5ODM1ODYwOTM5LCJqdGkiOiJjOTU1ZTJiOS02MTdmLTQ4OGItYjZiZi04OWQ3NTZhOGRhNWMifQ==.NZBxEueC3Xtzu8x5E2M1NmwJ20d322doc5Pkh0XsqkAKq7yMd5uxG6dwSTgaWNKToTBxnRK2ZNBq_BL20sNtPO3kNqdwXX-T1LHiqrD5bUgEz8qwyamwHIu9NaN0yC-zS37EsZpntzF0O0GEECsS9CUzGLtW1Mlc2efEfXpNsurPbY_0MTu6eaxA64kCS_4gvTQj7qQbw_vc9y6L0l4PzvQv4A93pnNov6r_YHxHvs8veG3IDckrYAuGS_W-3OJm0WYKubzJfdunhZ8BeClDhquHjPPK1yXu38n335MhwYTpHZV5kG2rV-07CbkJ4KDGP9LRazUHGLfAbyvzg4iJgQ==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9087/studentadmissionsvc/1.0.0/verifyAdmission?studentId=UG34561S",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9087",
+					"path": [
+						"studentadmissionsvc",
+						"1.0.0",
+						"verifyAdmission"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "UG34561S"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admissionsvcmgw/processStaffAdmission",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UQXhabU14TkRNeVpEZzNNVFUxWkdNME16RXpPREpoWldJNE5ETmxaRFUxT0dGa05qRmlNUSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7ImlkIjo0LCJuYW1lIjoiYWRtaXNzaW9uU3ZjTWljcm9Hd0FwcGwiLCJ0aWVyIjoiMTBQZXJNaW4iLCJvd25lciI6ImFkbWluIn0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgcHJvY2Vzc19zdGFmZl9hZG1pc3Npb24gdmVyaWZ5X2FkbWlzc2lvbiIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7Im5hbWUiOiJTdHVkZW50QWRtaXNzaW9uU2VydmljZUFQSSIsImNvbnRleHQiOiJcL3N0dWRlbnRhZG1pc3Npb25zdmNcLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiQnJvbnplIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9LHsibmFtZSI6IlN0YWZmcmVjcnVpdHNlcnZpY2VBUEkiLCJjb250ZXh0IjoiXC9zdGFmZnJlY3J1aXRzZXJ2aWNlXC8xLjAuMCIsInZlcnNpb24iOiIxLjAuMCIsInB1Ymxpc2hlciI6ImFkbWluIiwic3Vic2NyaXB0aW9uVGllciI6IkJyb256ZSIsInN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIifV0sImNvbnN1bWVyS2V5IjoiYW15Rmg4TmhVdUZjWmU3TDBkbU1IX3BCZTdZYSIsImV4cCI6MTU1OTgzOTQ2MCwiaWF0IjoxNTU5ODM1ODYwOTM5LCJqdGkiOiJjOTU1ZTJiOS02MTdmLTQ4OGItYjZiZi04OWQ3NTZhOGRhNWMifQ==.NZBxEueC3Xtzu8x5E2M1NmwJ20d322doc5Pkh0XsqkAKq7yMd5uxG6dwSTgaWNKToTBxnRK2ZNBq_BL20sNtPO3kNqdwXX-T1LHiqrD5bUgEz8qwyamwHIu9NaN0yC-zS37EsZpntzF0O0GEECsS9CUzGLtW1Mlc2efEfXpNsurPbY_0MTu6eaxA64kCS_4gvTQj7qQbw_vc9y6L0l4PzvQv4A93pnNov6r_YHxHvs8veG3IDckrYAuGS_W-3OJm0WYKubzJfdunhZ8BeClDhquHjPPK1yXu38n335MhwYTpHZV5kG2rV-07CbkJ4KDGP9LRazUHGLfAbyvzg4iJgQ==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeId\":\"A32500\",\n    \"employeeName\":\"Jane Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9087/staffrecruitservice/1.0.0/processAdmission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9087",
+					"path": [
+						"staffrecruitservice",
+						"1.0.0",
+						"processAdmission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentrecordservicemgw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UQXhabU14TkRNeVpEZzNNVFUxWkdNME16RXpPREpoWldJNE5ETmxaRFUxT0dGa05qRmlNUSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJhZG1pbiIsImFwcGxpY2F0aW9uIjp7ImlkIjo2LCJuYW1lIjoicGF5bWVudFN2Y01pY3JvR3dBcHBsIiwidGllciI6IjEwUGVyTWluIiwib3duZXIiOiJhZG1pbiJ9LCJzY29wZSI6ImFtX2FwcGxpY2F0aW9uX3Njb3BlIHVwZGF0ZV9yZWNvcmRzIiwiaXNzIjoiaHR0cHM6XC9cL2xvY2FsaG9zdDo5NDQzXC9vYXV0aDJcL3Rva2VuIiwia2V5dHlwZSI6IlBST0RVQ1RJT04iLCJzdWJzY3JpYmVkQVBJcyI6W3sibmFtZSI6IlBheW1lbnRyZWNvcmRzZXJ2aWNlQVBJIiwiY29udGV4dCI6IlwvcGF5bWVudHJlY29yZHNlcnZpY2VcLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiQnJvbnplIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9XSwiY29uc3VtZXJLZXkiOiJRSjNQeHc1WktFc0RLS3lBNlVYTFR4elRsV3dhIiwiZXhwIjoxNTU5ODQzNTEwLCJpYXQiOjE1NTk4MzYwMTA0NTAsImp0aSI6IjNhOWFjZDk5LTg1ZDktNDI5Ny04ZGUyLTVmYTc2Y2U3OTZmYyJ9.lAUPPx0QCyQsY7oMXJFTXHka10JyOqZsL03UZ_aLAQ5yN_GK62G5Zjgl14kt1BUEWYN6uPP4CTYZmWuyjKXEf47gGcNyh9KuOXlqCfZP2Q4Cnp-njEx-0Nqs1rqfK7zAj_YszVhucTrJoOV4HBRSd5joh4VWEj1rG0Z3uu9YbZ1NTZRCxTmr5_Of9yrR28QXYxSxwAwH_NtLEvMVhLIrW0lxkLrVdZ5LY53NDmM61Q1LMxWQCw5ZbiN183BgYRPOaxI8tPTgF9Z6uxwOMRhCBTbb7q-NskxoIxgEEhJ17GTCAs2AYCvZB3aZRnkrWOCqnr5TRn3cKFDM0f1-fbv1YA==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/paymentrecordservice/1.0.0/updatePaymentRecords?studentId=UG34568C",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"paymentrecordservice",
+						"1.0.0",
+						"updatePaymentRecords"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "UG34568C"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
