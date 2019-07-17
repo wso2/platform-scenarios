@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="RegisterStudentServiceAPI--v1.0.0_APIproductionEndpoint">
+   <http uri-template="http://registerstudentservice:9092/registerstudentservice">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="http://registerstudentservice:9092/registerstudentservice"/>
+</endpoint>

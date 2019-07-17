@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.runtime" label="WSO2 Carbon Kernel - Runtime Feature" provider-name="%providerName" version="5.2.8">
+  <description>This feature contains the carbon core bundle and its dependents.</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.core" unpack="false" version="5.2.8"/>
+  <require>
+    <import feature="org.wso2.carbon.config" match="compatible" version="2.1.0"/>
+  </require>
+</feature>

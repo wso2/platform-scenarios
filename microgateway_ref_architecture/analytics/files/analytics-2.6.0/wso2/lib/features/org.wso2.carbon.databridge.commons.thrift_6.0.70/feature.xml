@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.databridge.commons.thrift" label="WSO2 Carbon Databridge Commons Thrift Feature" provider-name="%providerName" version="6.0.70">
+  <description>This feature contains the bundles common jars
+        for both thrift transport publisher and receiver</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="libthrift" unpack="false" version="0.9.2.wso2v1"/>
+  <plugin id="org.wso2.carbon.databridge.commons.thrift" unpack="false" version="6.0.70"/>
+  <require/>
+</feature>

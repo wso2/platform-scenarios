@@ -1,0 +1,23 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon - Carbon Touchpoint Feature
+
+
+From: 'an unknown organization'
+  - org.eclipse.equinox.common  org.wso2.eclipse.equinox:org.eclipse.equinox.common:jar:3.8.0.v20160509-1230
+
+  - org.eclipse.equinox.p2.engine  org.wso2.eclipse.equinox:org.eclipse.equinox.p2.engine:jar:2.3.0.v20140506-1720
+
+  - org.eclipse.equinox.p2.metadata  org.wso2.eclipse.equinox:org.eclipse.equinox.p2.metadata:jar:2.2.0.v20131211-1531
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon - Carbon Touchpoint (http://wso2.com) org.wso2.carbon.touchpoint:org.wso2.carbon.extensions.touchpoint:bundle:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

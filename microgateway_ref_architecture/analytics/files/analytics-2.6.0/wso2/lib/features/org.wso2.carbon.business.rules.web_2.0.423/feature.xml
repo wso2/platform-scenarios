@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.business.rules.web" label="WSO2 Stream Processor Business Rule Web Component" provider-name="%providerName" version="2.0.423">
+  <description>WSO2 is an open source application development software company focused on providing service-oriented
+        architecture solutions for professional developers.</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <require/>
+</feature>

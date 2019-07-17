@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.event.simulator.core" label="WSO2 Stream Processor - Event Simulator Feature" provider-name="%providerName" version="2.0.423">
+  <description>This feature contains the bundles related to Event Simulator</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="antlr4-runtime" unpack="false" version="4.5.1.wso2v1"/>
+  <plugin id="json" unpack="false" version="3.0.0.wso2v1"/>
+  <plugin id="generex" unpack="false" version="1.0.0.wso2v1"/>
+  <plugin id="com.google.gson" unpack="false" version="2.5"/>
+  <plugin id="org.apache.commons.fileupload" unpack="false" version="1.3.2"/>
+  <plugin id="org.wso2.carbon.database.query.manager" unpack="false" version="6.0.70"/>
+  <plugin id="org.wso2.carbon.event.simulator.core" unpack="false" version="2.0.423"/>
+  <plugin id="fabricator_2.10" unpack="false" version="2.1.4.wso2v1"/>
+  <plugin id="org.apache.commons.csv" unpack="false" version="1.4.0"/>
+  <require/>
+</feature>

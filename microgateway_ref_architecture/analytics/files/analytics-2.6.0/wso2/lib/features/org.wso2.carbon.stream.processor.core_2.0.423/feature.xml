@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.stream.processor.core" label="WSO2 Stream Processor - Core Feature" provider-name="%providerName" version="2.0.423">
+  <description>This feature contains the bundles related to Stream Processor Core</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="antlr4-runtime" unpack="false" version="4.5.1.wso2v1"/>
+  <plugin id="tapestry-json" unpack="false" version="5.4.1.wso2v1"/>
+  <plugin id="org.apache.geronimo.specs.geronimo-activation_1.1_spec" unpack="false" version="1.1"/>
+  <plugin id="org.wso2.carbon.stream.processor.core" unpack="false" version="2.0.423"/>
+  <plugin id="org.apache.james.apache-mime4j-core" unpack="false" version="0.7.2"/>
+  <plugin id="jaxen" unpack="false" version="1.1.6"/>
+  <plugin id="org.wso2.carbon.database.query.manager" unpack="false" version="6.0.70"/>
+  <plugin id="Saxon-HE" unpack="false" version="9.7.0.wso2v1"/>
+  <plugin id="org.apache.ws.commons.axiom.axiom-api" unpack="false" version="1.2.20"/>
+  <plugin id="org.apache.commons.logging" unpack="false" version="1.2.0"/>
+  <plugin id="com.google.gson" unpack="false" version="2.5"/>
+  <plugin id="com.jayway.jsonpath.json-path" unpack="false" version="2.2.0"/>
+  <plugin id="org.apache.ws.commons.axiom.axiom-impl" unpack="false" version="1.2.20"/>
+  <require/>
+</feature>

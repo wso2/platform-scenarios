@@ -1,0 +1,62 @@
+{
+  "name": "Revenue By Product With User Preferences",
+  "id": "RevenueByProductWithUserPreferences",
+  "thumbnailURL": "",
+  "configs": {
+    "pubsub": {
+      "types": [
+        "subscriber"
+      ]
+    },
+    "options": [
+      {
+        "id": "xLabel",
+        "title": "X Label",
+        "type": {
+          "name": "ENUM",
+          "possibleValues": [
+            "Country",
+            "Country Code",
+            "Region",
+            "Product",
+            "Revenue",
+            "Downloads",
+            "Customers"
+          ]
+        },
+        "defaultValue": "Product"
+      },
+      {
+        "id": "yLabel",
+        "title": "Y Label",
+        "type": {
+          "name": "ENUM",
+          "possibleValues": [
+            "Country",
+            "Country Code",
+            "Region",
+            "Product",
+            "Revenue",
+            "Downloads",
+            "Customers"
+          ]
+        },
+        "defaultValue": "Revenue"
+      },
+      {
+        "id": "chartColour",
+        "title": "Chart Colour",
+        "type": {
+          "name": "ENUM",
+          "possibleValues": [
+            "Red",
+            "Green",
+            "Yellow",
+            "Blue"
+          ]
+        },
+        "defaultValue": "Green"
+      }
+    ]
+  }
+}

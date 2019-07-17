@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="CourseCatalogueServiceAPI--v1.0.0_APIproductionEndpoint">
+   <http uri-template="http://coursecatalogueservice:9093/coursecatalogueservice">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="http://coursecatalogueservice:9093/coursecatalogueservice"/>
+</endpoint>

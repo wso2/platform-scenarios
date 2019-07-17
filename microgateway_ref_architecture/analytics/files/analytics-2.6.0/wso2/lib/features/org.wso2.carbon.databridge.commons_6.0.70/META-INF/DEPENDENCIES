@@ -1,0 +1,31 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Databridge Commons Feature
+
+
+From: 'an unknown organization'
+  - Apache log4j  org.apache.log4j.wso2:log4j:bundle:1.2.17.wso2v1
+
+  - JSON in Java (https://github.com/douglascrockford/JSON-java) org.json:json:jar:20140107
+    License: The JSON License  (http://json.org/license.html)
+  - WSO2 Carbon Orbit - JSON (org.json) (http://wso2.org) org.json.wso2:json:bundle:3.0.0.wso2v1
+
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - Apache Log4j (http://logging.apache.org/log4j/1.2/) log4j:log4j:bundle:1.2.17
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Google, Inc.' (http://www.google.com)
+  - Gson (https://github.com/google/gson) com.google.code.gson:gson:jar:2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon - Data Bridge Commons (http://wso2.org) org.wso2.carbon.analytics-common:org.wso2.carbon.databridge.commons:bundle:6.0.70
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

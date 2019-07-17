@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.stream.processor.common" label="WSO2 Stream Processor - Common Feature" provider-name="%providerName" version="2.0.423">
+  <description>This feature contains the bundles related to Stream Processor Common</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.stream.processor.common" unpack="false" version="2.0.423"/>
+  <plugin id="siddhi-query-compiler" unpack="false" version="4.2.20"/>
+  <plugin id="siddhi-query-api" unpack="false" version="4.2.20"/>
+  <plugin id="siddhi-annotations" unpack="false" version="4.2.20"/>
+  <plugin id="siddhi-core" unpack="false" version="4.2.20"/>
+  <require/>
+</feature>

@@ -1,0 +1,8 @@
+<%
+jagg.initializer("users-api", {
+
+    preInitialize:function () {
+        jagg.addFooterJS("users-api", "users-api", "templates/users-api/js/subscriptions.js");
+    }
+});
+%>

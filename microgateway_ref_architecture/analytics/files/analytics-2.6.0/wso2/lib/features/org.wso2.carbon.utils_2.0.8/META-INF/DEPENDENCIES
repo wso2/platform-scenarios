@@ -1,0 +1,15 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon - Utils Feature
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon - Utils (http://wso2.com) org.wso2.carbon.utils:org.wso2.carbon.utils:bundle:2.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

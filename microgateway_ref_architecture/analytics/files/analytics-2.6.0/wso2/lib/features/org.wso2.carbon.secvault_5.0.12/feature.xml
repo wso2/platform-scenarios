@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.secvault" label="WSO2 Carbon Secure Vault - Feature" provider-name="%providerName" version="5.0.12">
+  <description>Secure vault Feature</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.secvault" unpack="false" version="5.0.12"/>
+  <plugin id="org.yaml.snakeyaml" unpack="false" version="1.21.0"/>
+  <require>
+    <import feature="org.wso2.carbon.utils" match="compatible" version="2.0.1"/>
+  </require>
+</feature>

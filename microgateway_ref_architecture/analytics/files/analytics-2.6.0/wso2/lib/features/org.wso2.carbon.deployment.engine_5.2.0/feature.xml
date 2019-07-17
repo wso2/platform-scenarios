@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.deployment.engine" label="WSO2 Carbon Deployment Engine - Feature" provider-name="%providerName" version="5.2.0">
+  <description>This feature contains the core bundles required by the Deployment feature</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.deployment.engine" unpack="false" version="5.2.0"/>
+  <require/>
+</feature>

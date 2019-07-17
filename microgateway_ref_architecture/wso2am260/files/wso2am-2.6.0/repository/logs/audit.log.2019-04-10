@@ -1,0 +1,16 @@
+[2019-04-10 22:42:56,648]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION","Application/admin_paymentSvcMicroGwAppl_PRODUCTION"]} Outcome=Success 
+[2019-04-10 22:43:55,151]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:43:55,150-0400] 
+[2019-04-10 22:44:14,405]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:14,404-0400] 
+[2019-04-10 22:44:14,672]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-04-10 22:44:14,711]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:14,710-0400] 
+[2019-04-10 22:44:14,797]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:14,796-0400] 
+[2019-04-10 22:44:15,238]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:15,237-0400] 
+[2019-04-10 22:44:15,323]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:15,322-0400] 
+[2019-04-10 22:44:15,337]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:15,336-0400] 
+[2019-04-10 22:44:18,629]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:18,626-0400] 
+[2019-04-10 22:44:18,702]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-04-10 22:44:18,735]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:18,734-0400] 
+[2019-04-10 22:44:18,800]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:18,800-0400] 
+[2019-04-10 22:44:18,950]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:18,947-0400] 
+[2019-04-10 22:44:19,025]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:19,024-0400] 
+[2019-04-10 22:44:19,038]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-04-10 22:44:19,037-0400] 

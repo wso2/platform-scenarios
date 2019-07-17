@@ -1,0 +1,57 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Kernel - OSGI Feature
+
+
+From: 'an unknown organization'
+  - org.apache.felix.gogo.command  org.apache.felix:org.apache.felix.gogo.command:jar:0.10.0.v201209301215
+
+  - org.apache.felix.gogo.runtime  org.apache.felix:org.apache.felix.gogo.runtime:jar:0.10.0.v201209301036
+
+  - org.apache.felix.gogo.shell  org.apache.felix:org.apache.felix.gogo.shell:jar:0.10.0.v201212101605
+
+  - org.eclipse.equinox.cm  org.wso2.eclipse.equinox:org.eclipse.equinox.cm:jar:1.1.200.v20160324-1850
+
+  - org.eclipse.equinox.common  org.wso2.eclipse.equinox:org.eclipse.equinox.common:jar:3.8.0.v20160509-1230
+
+  - org.eclipse.equinox.concurrent  org.wso2.eclipse.equinox:org.eclipse.equinox.concurrent:jar:1.1.0.v20130327-1442
+
+  - org.eclipse.equinox.console  org.wso2.eclipse.equinox:org.eclipse.equinox.console:jar:1.1.200.v20150929-1405
+
+  - org.eclipse.equinox.ds  org.wso2.eclipse.equinox:org.eclipse.equinox.ds:jar:1.4.400.v20160226-2036
+
+  - org.eclipse.equinox.frameworkadmin  org.wso2.eclipse.equinox:org.eclipse.equinox.frameworkadmin:jar:2.0.300.v20160504-1450
+
+  - org.eclipse.equinox.frameworkadmin.equinox  org.wso2.eclipse.equinox:org.eclipse.equinox.frameworkadmin.equinox:jar:1.0.700.v20160102-2223
+
+  - org.eclipse.equinox.launcher  org.wso2.eclipse.equinox:org.eclipse.equinox.launcher:jar:1.3.200.v20160318-1642
+
+  - org.eclipse.equinox.launcher.gtk.linux.x86  org.wso2.eclipse.equinox:org.eclipse.equinox.launcher.gtk.linux.x86:jar:1.1.400.v20160518-1444
+
+  - org.eclipse.equinox.preferences  org.wso2.eclipse.equinox:org.eclipse.equinox.preferences:jar:3.6.0.v20160120-1756
+
+  - org.eclipse.equinox.simpleconfigurator  org.wso2.eclipse.equinox:org.eclipse.equinox.simpleconfigurator:jar:1.1.200.v20160504-1450
+
+  - org.eclipse.equinox.simpleconfigurator.manipulator  org.wso2.eclipse.equinox:org.eclipse.equinox.simpleconfigurator.manipulator:jar:2.0.200.v20160504-1450
+
+  - org.eclipse.equinox.util  org.wso2.eclipse.equinox:org.eclipse.equinox.util:jar:1.0.500.v20130404-1337
+
+  - org.eclipse.osgi  org.wso2.eclipse.osgi:org.eclipse.osgi:jar:3.11.0.v20160603-1336
+
+  - org.eclipse.osgi.compatibility.state  org.wso2.eclipse.osgi:org.eclipse.osgi.compatibility.state:jar:1.0.200.v20160504-1419
+
+  - org.eclipse.osgi.services  org.wso2.eclipse.osgi:org.eclipse.osgi.services:jar:3.5.100.v20160504-1419
+
+
+From: 'OPS4J - Open Participation Software for Java' (http://www.ops4j.org/)
+  - OPS4J Pax Logging - API (http://www.ops4j.org/projects/pax/logging/pax-logging-api) org.ops4j.pax.logging:pax-logging-api:bundle:1.10.0
+    License: ALv2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - OPS4J Pax Logging - Log4j v2 (http://www.ops4j.org/projects/pax/logging/pax-logging-log4j2) org.ops4j.pax.logging:pax-logging-log4j2:bundle:1.10.0
+    License: ALv2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+
+
+

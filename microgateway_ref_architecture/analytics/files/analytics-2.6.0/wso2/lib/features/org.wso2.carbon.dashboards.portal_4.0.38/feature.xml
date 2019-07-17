@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.dashboards.portal" label="WSO2 Carbon Dashboards - Portal Feature" provider-name="%providerName" version="4.0.38">
+  <description>This feature contains the dashboard portal webapp</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <require/>
+</feature>

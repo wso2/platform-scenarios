@@ -1,0 +1,117 @@
+[2019-03-20 09:10:36,141]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION"]} Outcome=Success 
+[2019-03-20 09:10:53,998]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 09:10:53,997-0400] 
+[2019-03-20 14:32:40,000]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION"]} Outcome=Success 
+[2019-03-20 14:36:01,544]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:36:01,543-0400] 
+[2019-03-20 14:38:19,922]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:19,919-0400] 
+[2019-03-20 14:38:20,188]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 14:38:20,226]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:20,225-0400] 
+[2019-03-20 14:38:20,305]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:20,304-0400] 
+[2019-03-20 14:38:20,752]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:20,751-0400] 
+[2019-03-20 14:38:20,836]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:20,835-0400] 
+[2019-03-20 14:38:20,851]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:20,850-0400] 
+[2019-03-20 14:38:23,377]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:23,377-0400] 
+[2019-03-20 14:38:23,451]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 14:38:23,490]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:23,489-0400] 
+[2019-03-20 14:38:23,554]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:23,553-0400] 
+[2019-03-20 14:38:23,708]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:23,707-0400] 
+[2019-03-20 14:38:23,783]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:23,783-0400] 
+[2019-03-20 14:38:23,793]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:23,793-0400] 
+[2019-03-20 14:38:47,395]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:47,392-0400] 
+[2019-03-20 14:38:47,457]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 14:38:47,491]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:47,491-0400] 
+[2019-03-20 14:38:47,548]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:47,548-0400] 
+[2019-03-20 14:38:47,728]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:47,728-0400] 
+[2019-03-20 14:38:47,789]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:47,788-0400] 
+[2019-03-20 14:38:47,797]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:38:47,797-0400] 
+[2019-03-20 14:39:14,169]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:14,169-0400] 
+[2019-03-20 14:39:14,268]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 14:39:14,301]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:14,301-0400] 
+[2019-03-20 14:39:14,350]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:14,349-0400] 
+[2019-03-20 14:39:14,483]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:14,483-0400] 
+[2019-03-20 14:39:14,546]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:14,545-0400] 
+[2019-03-20 14:39:14,555]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:14,555-0400] 
+[2019-03-20 14:39:16,644]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:16,643-0400] 
+[2019-03-20 14:39:16,712]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 14:39:16,747]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:16,746-0400] 
+[2019-03-20 14:39:16,800]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:16,800-0400] 
+[2019-03-20 14:39:17,238]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:17,237-0400] 
+[2019-03-20 14:39:17,295]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:17,294-0400] 
+[2019-03-20 14:39:17,303]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:17,303-0400] 
+[2019-03-20 14:39:59,244]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:59,244-0400] 
+[2019-03-20 14:39:59,296]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"StudentAdmissionServiceAPI\",\"context\":\"\\\/studentadmissionsvc\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 14:39:59,326]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:59,326-0400] 
+[2019-03-20 14:39:59,375]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:59,374-0400] 
+[2019-03-20 14:39:59,506]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:59,506-0400] 
+[2019-03-20 14:39:59,560]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:59,560-0400] 
+[2019-03-20 14:39:59,569]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:39:59,568-0400] 
+[2019-03-20 14:40:25,747]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:40:25,747-0400] 
+[2019-03-20 14:40:31,473]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:40:31,473-0400] 
+[2019-03-20 14:40:41,535]  INFO -  {"performedBy":"admin","action":"updated","typ":"Application","info":"{\"Re-Generated Keys for application with client Id\":\"amyFh8NhUuFcZe7L0dmMH_pBe7Ya\"}"} 
+[2019-03-20 14:41:58,031]  INFO -  {"performedBy":"admin","action":"updated","typ":"Application","info":"{\"Re-Generated Keys for application with client Id\":\"amyFh8NhUuFcZe7L0dmMH_pBe7Ya\"}"} 
+[2019-03-20 14:44:14,559]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 14:44:14,557-0400] from IP address  
+[2019-03-20 14:49:09,652]  INFO -  Initiator=admin@carbon.super Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION"]} Outcome=Success 
+[2019-03-20 14:51:36,559]  INFO -  {"performedBy":"admin","action":"created","typ":"Application","info":"{\"tier\":\"10PerMin\",\"name\":\"StudentadmissionsvcOauth\",\"callbackURL\":null}"} 
+[2019-03-20 14:51:48,977]  INFO -  {"performedBy":"admin","action":"created","typ":"Subscription","info":"{\"application_name\":\"StudentadmissionsvcOauth\",\"tier\":\"Bronze\",\"provider\":\"admin\",\"api_name\":\"StudentAdmissionServiceAPI\",\"application_id\":5}"} 
+[2019-03-20 14:51:57,850]  INFO -  Initiator : admin@carbon.super | Action : create | Target : 6 | Data : { admin_StudentadmissionsvcOauth_PRODUCTION } | Result : Success  
+[2019-03-20 14:51:57,893]  INFO -  Initiator=admin@carbon.super Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION"]} Outcome=Success 
+[2019-03-20 14:51:57,894]  INFO -  Initiator : admin@carbon.super | Action : update | Target : 6 | Data : { admin_StudentadmissionsvcOauth_PRODUCTION } | Result : Success  
+[2019-03-20 14:51:57,941]  INFO -  {"performedBy":"admin","action":"updated","typ":"Application","info":"{\"Generated keys for application\":\"StudentadmissionsvcOauth\"}"} 
+[2019-03-20 14:52:03,973]  INFO -  {"performedBy":"admin","action":"updated","typ":"Application","info":"{\"Re-Generated Keys for application with client Id\":\"Qqj1ILZp9to83dca8Ok_aDBqHFoa\"}"} 
+[2019-03-20 15:02:01,469]  INFO -  {"performedBy":"admin","action":"created","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:02:01,526]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:02:01,525-0400] 
+[2019-03-20 15:02:01,594]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:02:01,625]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:02:01,625-0400] 
+[2019-03-20 15:02:53,658]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:02:53,658-0400] 
+[2019-03-20 15:02:53,731]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:02:53,761]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:02:53,761-0400] 
+[2019-03-20 15:03:02,830]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:03:02,829-0400] 
+[2019-03-20 15:03:02,913]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:03:02,944]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:03:02,943-0400] 
+[2019-03-20 15:03:03,010]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:03:03,010-0400] 
+[2019-03-20 15:03:03,146]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:03:03,146-0400] 
+[2019-03-20 15:04:10,287]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:10,286-0400] 
+[2019-03-20 15:04:10,356]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:04:10,388]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:10,388-0400] 
+[2019-03-20 15:04:10,441]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:10,441-0400] 
+[2019-03-20 15:04:10,615]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:10,615-0400] 
+[2019-03-20 15:04:10,677]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:10,676-0400] 
+[2019-03-20 15:04:12,806]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:12,806-0400] 
+[2019-03-20 15:04:12,890]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:04:12,920]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:12,920-0400] 
+[2019-03-20 15:04:12,970]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:12,970-0400] 
+[2019-03-20 15:04:13,093]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:13,093-0400] 
+[2019-03-20 15:04:13,154]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:13,154-0400] 
+[2019-03-20 15:04:29,099]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:29,098-0400] 
+[2019-03-20 15:04:29,112]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:04:29,112-0400] 
+[2019-03-20 15:08:51,878]  INFO -  Initiator=admin@carbon.super Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION"]} Outcome=Success 
+[2019-03-20 15:10:05,435]  INFO -  {"performedBy":"admin","action":"created","typ":"Application","info":"{\"tier\":\"10PerMin\",\"name\":\"paymentSvcMicroGwAppl\",\"callbackURL\":null}"} 
+[2019-03-20 15:10:18,217]  INFO -  {"performedBy":"admin","action":"created","typ":"Subscription","info":"{\"application_name\":\"paymentSvcMicroGwAppl\",\"tier\":\"Bronze\",\"provider\":\"admin\",\"api_name\":\"PaymentrecordserviceAPI\",\"application_id\":6}"} 
+[2019-03-20 15:10:40,859]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:10:40,858-0400] 
+[2019-03-20 15:10:40,942]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:10:40,971]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:10:40,971-0400] 
+[2019-03-20 15:10:41,026]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:10:41,026-0400] 
+[2019-03-20 15:10:41,138]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:10:41,138-0400] 
+[2019-03-20 15:10:41,193]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:10:41,193-0400] 
+[2019-03-20 15:11:30,927]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:11:30,927-0400] 
+[2019-03-20 15:13:39,928]  INFO -  Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION"]} Outcome=Success 
+[2019-03-20 15:14:28,105]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:14:28,103-0400] 
+[2019-03-20 15:15:45,415]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:15:45,414-0400] 
+[2019-03-20 15:16:03,524]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:16:03,523-0400] 
+[2019-03-20 15:16:03,560]  INFO -  Initiator : admin@carbon.super | Action : create | Target : 7 | Data : { admin_paymentSvcMicroGwAppl_PRODUCTION } | Result : Success  
+[2019-03-20 15:16:03,610]  INFO -  Initiator=admin@carbon.super Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Application/admin_registerSvcMicroGwAppl_PRODUCTION","Internal/subscriber","Internal/creator","Application/admin_DefaultApplication_PRODUCTION","Application/admin_Micro Gateway Cli","Application/admin_admissionSvcMicroGwAppl_PRODUCTION","Internal/publisher","Internal/everyone","Application/admin_StudentadmissionsvcOauth_PRODUCTION","admin","Application/admin_coursecatalogueserviceMGW_PRODUCTION","Application/admin_paymentSvcMicroGwAppl_PRODUCTION"]} Outcome=Success 
+[2019-03-20 15:16:03,615]  INFO -  Initiator : admin@carbon.super | Action : update | Target : 7 | Data : { admin_paymentSvcMicroGwAppl_PRODUCTION } | Result : Success  
+[2019-03-20 15:16:04,020]  INFO -  {"performedBy":"admin","action":"updated","typ":"Application","info":"{\"Generated keys for application\":\"paymentSvcMicroGwAppl\"}"} 
+[2019-03-20 15:17:14,739]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:17:14,736-0400] from IP address  
+[2019-03-20 15:19:06,133]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:19:06,133-0400] 
+[2019-03-20 15:20:11,874]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:11,872-0400] 
+[2019-03-20 15:20:12,094]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:20:12,130]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:12,130-0400] 
+[2019-03-20 15:20:12,197]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:12,196-0400] 
+[2019-03-20 15:20:12,559]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:12,559-0400] 
+[2019-03-20 15:20:12,644]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:12,641-0400] 
+[2019-03-20 15:20:19,725]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:19,725-0400] 
+[2019-03-20 15:20:19,800]  INFO -  {"performedBy":"admin","action":"updated","typ":"API","info":"{\"provider\":\"admin\",\"name\":\"PaymentrecordserviceAPI\",\"context\":\"\\\/paymentrecordservice\\\/1.0.0\",\"version\":\"1.0.0\"}"} 
+[2019-03-20 15:20:19,833]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:19,833-0400] 
+[2019-03-20 15:20:19,887]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:19,887-0400] 
+[2019-03-20 15:20:20,023]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:20,023-0400] 
+[2019-03-20 15:20:20,093]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-03-20 15:20:20,093-0400] 

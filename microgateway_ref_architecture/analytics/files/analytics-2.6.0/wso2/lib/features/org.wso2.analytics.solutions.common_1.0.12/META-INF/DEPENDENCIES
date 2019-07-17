@@ -1,0 +1,15 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Analytics Solution - Common - Feature
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 SP Solutions - Common - Widgets - Date Time Range Picker (http://wso2.org) org.wso2.analytics.solutions:org.wso2.analytics.solutions.common.widgets.date-time-range-picker:pom:1.0.12
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

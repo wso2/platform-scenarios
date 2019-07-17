@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "6c6199cf-6dca-475e-be90-146e50ec3291",
+		"name": "UniMicrogateways",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "coursecataloguesvcmgw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"courseIds\":[\"CS202\",\"CS201\"]}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/coursecataloguesvc/1.0.0/searchCourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"coursecataloguesvc",
+						"1.0.0",
+						"searchCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CourseCatalogueServiceAPI OAuth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"courseIds\":[\"CS202\",\"CS203\"]}"
+				},
+				"url": {
+					"raw": "https://localhost:8243/coursecataloguesvc/1.0.0/searchCourses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"coursecataloguesvc",
+						"1.0.0",
+						"searchCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerstudentsvcmgw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"studentId\":\"UG34564H\",\n  \"courseIds\":[\"CS203\",\"CS204\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9089/registerstudentsvc/1.0.0/registerForCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9089",
+					"path": [
+						"registerstudentsvc",
+						"1.0.0",
+						"registerForCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterStudentServiceAPI OAuth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"studentId\":\"UG34564H\",\n  \"courseIds\":[\"CS203\",\"CS204\"]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8243/registerstudentsvc/1.0.0/registerForCourse",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"registerstudentsvc",
+						"1.0.0",
+						"registerForCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admissionsvcmgw/processAdmission",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "200308bc-d5d8-426f-afb6-39ccd43f5f60",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"studentId\":\"UG34564C\",\n      \"courseIds\":[\"CS204\",\"CS203\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9087/studentadmissionsvc/1.0.0/processAdmission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9087",
+					"path": [
+						"studentadmissionsvc",
+						"1.0.0",
+						"processAdmission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StudentAdmissionServiceAPI OAuth",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "200308bc-d5d8-426f-afb6-39ccd43f5f60",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"studentId\":\"UG34564C\",\n      \"courseIds\":[\"CS204\",\"CS203\"]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8243/studentadmissionsvc/1.0.0/processAdmission",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"studentadmissionsvc",
+						"1.0.0",
+						"processAdmission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admissionsvcmgw/verifyAdmission",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "200308bc-d5d8-426f-afb6-39ccd43f5f60",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9087/studentadmissionsvc/1.0.0/verifyAdmission?studentId=UG34561S",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9087",
+					"path": [
+						"studentadmissionsvc",
+						"1.0.0",
+						"verifyAdmission"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "UG34561S"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admissionsvcmgw/processStaffAdmission",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeId\":\"A32500\",\n    \"employeeName\":\"Jane Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9087/staffrecruitservice/1.0.0/processAdmission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9087",
+					"path": [
+						"staffrecruitservice",
+						"1.0.0",
+						"processAdmission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentrecordservicemgw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/paymentrecordservice/1.0.0/updatePaymentRecords?studentId=UG34568C",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"paymentrecordservice",
+						"1.0.0",
+						"updatePaymentRecords"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "UG34568C"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

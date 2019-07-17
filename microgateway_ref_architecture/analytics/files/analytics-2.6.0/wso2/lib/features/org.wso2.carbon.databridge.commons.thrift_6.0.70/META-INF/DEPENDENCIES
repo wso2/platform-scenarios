@@ -1,0 +1,45 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Databridge Commons Thrift Feature
+
+
+From: 'an unknown organization'
+  - libthrift.wso2 (http://wso2.org) libthrift.wso2:libthrift:bundle:0.9.2.wso2v1
+
+  - Apache log4j  org.apache.log4j.wso2:log4j:bundle:1.2.17.wso2v1
+
+  - Apache Thrift (http://thrift.apache.org) org.apache.thrift:libthrift:pom:0.9.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - org.eclipse.osgi  org.wso2.eclipse.osgi:org.eclipse.osgi:jar:3.11.0.v20160603-1336
+
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - Apache Log4j (http://logging.apache.org/log4j/1.2/) log4j:log4j:bundle:1.2.17
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.12
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+  - SLF4J LOG4J-12 Binding (http://www.slf4j.org) org.slf4j:slf4j-log4j12:jar:1.7.12
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Codec (http://commons.apache.org/codec/) commons-codec:commons-codec:jar:1.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Logging (http://commons.apache.org/logging) commons-logging:commons-logging:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - HttpClient (http://hc.apache.org/httpcomponents-client) org.apache.httpcomponents:httpclient:jar:4.2.5
+    License: Apache License  (LICENSE.txt)
+  - HttpCore (http://hc.apache.org/httpcomponents-core-ga) org.apache.httpcomponents:httpcore:jar:4.2.4
+    License: Apache License  (LICENSE.txt)
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon - Data Bridge Thrift Commons (http://wso2.org) org.wso2.carbon.analytics-common:org.wso2.carbon.databridge.commons.thrift:bundle:6.0.70
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

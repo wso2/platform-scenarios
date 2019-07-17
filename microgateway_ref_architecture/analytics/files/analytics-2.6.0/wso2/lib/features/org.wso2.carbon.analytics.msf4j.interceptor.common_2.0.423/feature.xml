@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.analytics.msf4j.interceptor.common" label="WSO2 Stream Processor - Interceptor Feature" provider-name="%providerName" version="2.0.423">
+  <description>This feature contains the bundles related to Micro services Interceptor</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.analytics.msf4j.interceptor.common" unpack="false" version="2.0.423"/>
+  <require/>
+</feature>

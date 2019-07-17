@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.databridge.commons" label="WSO2 Carbon Databridge Commons Feature" provider-name="%providerName" version="6.0.70">
+  <description>This feature contains the bundles related to databridge commons</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.databridge.commons" unpack="false" version="6.0.70"/>
+  <plugin id="json" unpack="false" version="3.0.0.wso2v1"/>
+  <plugin id="com.google.gson" unpack="false" version="2.5"/>
+  <require/>
+</feature>

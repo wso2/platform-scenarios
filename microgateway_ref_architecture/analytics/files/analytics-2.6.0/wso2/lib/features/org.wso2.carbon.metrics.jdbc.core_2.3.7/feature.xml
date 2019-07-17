@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.metrics.jdbc.core" label="WSO2 Carbon Metrics JDBC Core Feature" provider-name="%providerName" version="2.3.7">
+  <description>This feature contains the core bundles required by the Metrics JDBC Reporter</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.metrics.jdbc.reporter" unpack="false" version="2.3.7"/>
+  <plugin id="org.wso2.carbon.metrics.jdbc.core" unpack="false" version="2.3.7"/>
+  <plugin id="org.h2" unpack="false" version="1.4.196"/>
+  <require>
+    <import feature="org.wso2.carbon.jndi" match="compatible" version="1.0.5"/>
+    <import feature="org.wso2.carbon.metrics.core" match="compatible" version="2.3.7"/>
+    <import feature="org.wso2.carbon.datasource.core" match="compatible" version="1.1.4"/>
+  </require>
+</feature>

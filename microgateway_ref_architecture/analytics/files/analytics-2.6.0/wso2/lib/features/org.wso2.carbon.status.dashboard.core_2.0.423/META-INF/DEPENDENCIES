@@ -1,0 +1,91 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon - Status Dashboard Core Feature
+
+
+From: 'an unknown organization'
+  - OkHttp (https://github.com/square/okhttp/okhttp) com.squareup.okhttp3:okhttp:jar:3.2.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Okio (https://github.com/square/okio/okio) com.squareup.okio:okio:jar:1.6.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Metrics Core (http://metrics.dropwizard.io/metrics-core/) io.dropwizard.metrics:metrics-core:bundle:3.2.5
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - JVM Integration for Metrics (http://metrics.dropwizard.io/metrics-jvm/) io.dropwizard.metrics:metrics-jvm:bundle:3.2.5
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - swagger-annotations (https://github.com/swagger-api/swagger-core/modules/swagger-annotations) io.swagger:swagger-annotations:bundle:1.5.16
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - swagger-models (https://github.com/swagger-api/swagger-core/modules/swagger-models) io.swagger:swagger-models:bundle:1.5.10
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - HdrHistogram (http://hdrhistogram.github.io/HdrHistogram/) org.hdrhistogram:HdrHistogram:bundle:2.1.10
+    License: Public Domain, per Creative Commons CC0  (http://creativecommons.org/publicdomain/zero/1.0/)    License: BSD-2-Clause  (https://opensource.org/licenses/BSD-2-Clause)
+  - Annotation for JDK requirements  org.jvnet:animal-sniffer-annotation:jar:1.0
+    License: Common Development and Distribution License  (http://www.opensource.org/licenses/cddl1.php)
+  - org.eclipse.osgi  org.wso2.eclipse.osgi:org.eclipse.osgi:jar:3.11.0.v20160603-1336
+
+  - org.eclipse.osgi.services  org.wso2.eclipse.osgi:org.eclipse.osgi.services:jar:3.4.0.v20140312-2051
+
+  - WSO2 Carbon Orbit - swagger-codegen (io.swagger) (http://wso2.org) org.wso2.orbit.io.swagger:swagger-codegen:bundle:2.2.0.wso2v2
+
+  - SnakeYAML (http://www.snakeyaml.org) org.yaml:snakeyaml:bundle:1.17
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-datatype-Joda (http://wiki.fasterxml.com/JacksonModuleJoda) com.fasterxml.jackson.datatype:jackson-datatype-joda:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-JAXRS-base (http://github.com/FasterXML/jackson-jaxrs-providers/jackson-jaxrs-base) com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-JAXRS-JSON (http://github.com/FasterXML/jackson-jaxrs-providers/jackson-jaxrs-json-provider) com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson module: JAXB Annotations (https://github.com/FasterXML/jackson-modules-base) com.fasterxml.jackson.module:jackson-module-jaxb-annotations:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'GlassFish Community' (https://glassfish.dev.java.net)
+  - Java Servlet API (http://servlet-spec.java.net) javax.servlet:javax.servlet-api:jar:3.1.0
+    License: CDDL + GPLv2 with classpath exception  (https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html)
+
+From: 'Google, Inc.' (http://www.google.com)
+  - Gson (https://github.com/google/gson) com.google.code.gson:gson:jar:2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Joda.org' (http://www.joda.org)
+  - Joda-Time (http://www.joda.org/joda-time/) joda-time:joda-time:jar:2.7
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'OpenFeign' (https://github.com/openfeign)
+  - Feign Core (https://github.com/openfeign/feign/feign-core) io.github.openfeign:feign-core:jar:9.3.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Feign Gson (https://github.com/openfeign/feign/feign-gson) io.github.openfeign:feign-gson:jar:9.3.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Feign OkHttp (https://github.com/openfeign/feign/feign-okhttp) io.github.openfeign:feign-okhttp:jar:9.3.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Feign SLF4J (https://github.com/openfeign/feign/feign-slf4j) io.github.openfeign:feign-slf4j:jar:9.3.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.12
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon Kernel - Core (http://wso2.com) org.wso2.carbon:org.wso2.carbon.core:bundle:5.2.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Carbon Configuration (http://wso2.com) org.wso2.carbon.config:org.wso2.carbon.config:bundle:2.1.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Metrics Core (http://wso2.com/components/org.wso2.carbon.metrics.core) org.wso2.carbon.metrics:org.wso2.carbon.metrics.core:bundle:2.3.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Secure Vault - Component (http://wso2.com) org.wso2.carbon.secvault:org.wso2.carbon.secvault:bundle:5.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon - Utils (http://wso2.com) org.wso2.carbon.utils:org.wso2.carbon.utils:bundle:2.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

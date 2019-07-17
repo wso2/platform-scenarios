@@ -1,0 +1,113 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+org.wso2.carbon.consent.mgt.endpoint
+
+
+From: 'an unknown organization'
+  - AOP alliance (http://aopalliance.sourceforge.net) aopalliance:aopalliance:jar:1.0
+    License: Public Domain 
+  - Guava: Google Core Libraries for Java (https://github.com/google/guava/guava) com.google.guava:guava:bundle:20.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - swagger-annotations (https://github.com/swagger-api/swagger-core/modules/swagger-annotations) io.swagger:swagger-annotations:bundle:1.5.20
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - swagger-core (https://github.com/swagger-api/swagger-core/modules/swagger-core) io.swagger:swagger-core:bundle:1.5.20
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - swagger-jaxrs (https://github.com/swagger-api/swagger-core/modules/swagger-jaxrs) io.swagger:swagger-jaxrs:bundle:1.5.20
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - swagger-models (https://github.com/swagger-api/swagger-core/modules/swagger-models) io.swagger:swagger-models:bundle:1.5.20
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Bean Validation API (http://beanvalidation.org) javax.validation:validation-api:jar:1.1.0.Final
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Reflections (http://github.com/ronmamo/reflections) org.reflections:reflections:jar:0.9.11
+    License: WTFPL  (http://www.wtfpl.net/)    License: The New BSD License  (http://www.opensource.org/licenses/bsd-license.html)
+  - SnakeYAML (http://code.google.com/p/snakeyaml/) org.yaml:snakeyaml:jar:1.6
+    License: Apache License Version 2.0  (LICENSE.txt)
+
+From: 'Codehaus' (http://www.codehaus.org/)
+  - Woodstox (http://woodstox.codehaus.org) org.codehaus.woodstox:woodstox-core-asl:jar:4.4.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'FasterXML' (http://fasterxml.com)
+  - Jackson (http://jackson.codehaus.org) org.codehaus.jackson:jackson-core-asl:jar:1.8.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JAX-RS provider for JSON content type (http://jackson.codehaus.org) org.codehaus.jackson:jackson-jaxrs:jar:1.8.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)    License: GNU Lesser General Public License (LGPL), Version 2.1  (http://www.fsf.org/licensing/licenses/lgpl.txt)
+  - Data Mapper for Jackson (http://jackson.codehaus.org) org.codehaus.jackson:jackson-mapper-asl:jar:1.8.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-dataformat-YAML (https://github.com/FasterXML/jackson-dataformats-text) com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-JAXRS-base (http://github.com/FasterXML/jackson-jaxrs-providers/jackson-jaxrs-base) com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-JAXRS-JSON (http://github.com/FasterXML/jackson-jaxrs-providers/jackson-jaxrs-json-provider) com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson module: JAXB Annotations (https://github.com/FasterXML/jackson-modules-base) com.fasterxml.jackson.module:jackson-module-jaxb-annotations:bundle:2.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'fasterxml.com' (http://fasterxml.com)
+  - Stax2 API (http://wiki.fasterxml.com/WoodstoxStax2) org.codehaus.woodstox:stax2-api:bundle:3.1.4
+    License: The BSD License  (http://www.opensource.org/licenses/bsd-license.php)
+
+From: 'GlassFish Community' (https://glassfish.java.net)
+  - javax.annotation API (http://jcp.org/en/jsr/detail?id=250) javax.annotation:javax.annotation-api:jar:1.2
+    License: CDDL + GPLv2 with classpath exception  (https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html)
+
+From: 'Oracle Corporation' (http://www.oracle.com/)
+  - javax.ws.rs-api (http://jax-rs-spec.java.net) javax.ws.rs:javax.ws.rs-api:jar:2.0.1
+    License: CDDL 1.1  (http://glassfish.java.net/public/CDDL+GPL_1_1.html)    License: GPL2 w/ CPE  (http://glassfish.java.net/public/CDDL+GPL_1_1.html)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.6.1
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'Shigeru Chiba, www.javassist.org'
+  - Javassist (http://www.javassist.org/) org.javassist:javassist:bundle:3.21.0-GA
+    License: MPL 1.1  (http://www.mozilla.org/MPL/MPL-1.1.html)    License: LGPL 2.1  (http://www.gnu.org/licenses/lgpl-2.1.html)    License: Apache License 2.0  (http://www.apache.org/licenses/)
+
+From: 'Spring IO' (http://projects.spring.io/spring-framework)
+  - Spring AOP (https://github.com/spring-projects/spring-framework) org.springframework:spring-aop:jar:4.1.6.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Beans (https://github.com/spring-projects/spring-framework) org.springframework:spring-beans:jar:4.1.6.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Context (https://github.com/spring-projects/spring-framework) org.springframework:spring-context:jar:4.1.6.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Core (https://github.com/spring-projects/spring-framework) org.springframework:spring-core:jar:4.1.6.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Expression Language (SpEL) (https://github.com/spring-projects/spring-framework) org.springframework:spring-expression:jar:4.1.6.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Web (https://github.com/spring-projects/spring-framework) org.springframework:spring-web:jar:4.1.6.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Sun Microsystems, Inc' (http://www.sun.com/)
+  - jsr311-api (https://jsr311.dev.java.net) javax.ws.rs:jsr311-api:jar:1.1.1
+    License: CDDL License  (http://www.opensource.org/licenses/cddl1.php)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Commons Logging (http://commons.apache.org/proper/commons-logging/) commons-logging:commons-logging:jar:1.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Lang (http://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Core (http://cxf.apache.org) org.apache.cxf:cxf-core:bundle:3.1.16
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime JAX-RS Frontend (http://cxf.apache.org) org.apache.cxf:cxf-rt-frontend-jaxrs:bundle:3.1.16
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF JAX-RS Service Description (http://cxf.apache.org) org.apache.cxf:cxf-rt-rs-service-description:bundle:3.1.16
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime HTTP Transport (http://cxf.apache.org) org.apache.cxf:cxf-rt-transports-http:bundle:3.1.16
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XmlSchema Core (http://ws.apache.org/commons/xmlschema20/xmlschema-core/) org.apache.ws.xmlschema:xmlschema-core:bundle:2.2.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

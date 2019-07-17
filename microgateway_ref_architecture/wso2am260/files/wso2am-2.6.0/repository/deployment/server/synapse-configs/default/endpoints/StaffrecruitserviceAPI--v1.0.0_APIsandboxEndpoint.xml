@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="StaffrecruitserviceAPI--v1.0.0_APIsandboxEndpoint">
+   <http uri-template="http://staffrecruitservice:9095/staffrecruitservice">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="http://staffrecruitservice:9095/staffrecruitservice"/>
+</endpoint>

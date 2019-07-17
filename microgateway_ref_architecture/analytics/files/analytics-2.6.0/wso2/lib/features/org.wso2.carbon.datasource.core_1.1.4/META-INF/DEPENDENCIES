@@ -1,0 +1,43 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon Datasources - Feature
+
+
+From: 'an unknown organization'
+  - commons.io.wso2 (http://wso2.org) commons-io.wso2:commons-io:bundle:2.4.0.wso2v1
+
+  - org.eclipse.osgi  org.wso2.eclipse.osgi:org.eclipse.osgi:jar:3.10.2.v20150203-1939
+
+  - org.eclipse.osgi.services  org.wso2.eclipse.osgi:org.eclipse.osgi.services:jar:3.4.0.v20140312-2051
+
+  - SnakeYAML (http://www.snakeyaml.org) org.yaml:snakeyaml:bundle:1.17
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.12
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon Kernel - Core (http://wso2.com) org.wso2.carbon:org.wso2.carbon.core:bundle:5.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Carbon Configuration (http://wso2.com) org.wso2.carbon.config:org.wso2.carbon.config:bundle:2.1.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Datasources - Implementation (http://www.wso2.org/carbon-datasources/components/org.wso2.carbon.datasource.core/) org.wso2.carbon.datasources:org.wso2.carbon.datasource.core:bundle:1.1.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon JNDI - Implementation (http://wso2.com) org.wso2.carbon.jndi:org.wso2.carbon.jndi:bundle:1.0.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon Secure Vault - Component (http://wso2.com) org.wso2.carbon.secvault:org.wso2.carbon.secvault:bundle:5.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - WSO2 Carbon - Utils (http://wso2.com) org.wso2.carbon.utils:org.wso2.carbon.utils:bundle:2.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Zaxxer.com' (https://github.com/brettwooldridge)
+  - HikariCP (https://github.com/brettwooldridge/HikariCP) com.zaxxer:HikariCP:bundle:2.4.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
