@@ -11,8 +11,9 @@ The demo artefacts are stored under each demo scenario name and any other suppor
 ## Demo Scenarios
 
 ## Contribution
-1) Clone the repository
-2) Add your demo content
+1) Fork the repository to your github account
+2) Clone the forked repository
+3) Add your demo content and push that to your repository
 3) Send a PR to this repository
 4) Review will be done by community members and merged.
 
