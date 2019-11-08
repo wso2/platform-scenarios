@@ -1,36 +1,26 @@
-# Compiled class file
-*.class
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Log file
-*.log
+# Icon must end with two \r
+Icon
 
-# BlueJ files
-*.ctxt
+# Thumbnails
+._*
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-# Package Files #
-*.zip
-*.tar.gz
-*.rar
-
-# Ignore everything in this directory
-target
-.classpath
-.settings
-.project
-*.iml
-*.iws
-*.ipr
-.idea/
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-target/
-dependency-reduced-pom.xml
-*.balx
-*.prefs
-*.jar
-**/docker/images/*
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
