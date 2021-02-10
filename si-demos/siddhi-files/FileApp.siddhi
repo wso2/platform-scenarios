@@ -1,0 +1,61 @@
+@App:name("FileApp")
+@App:statistics(reporter = 'prometheus')
+@App:description('Publish and receive data events processed within Siddhi to files in CSV custom format.')
+
+@source(type='file',
+dir.uri='file://home/wso2carbon/order_directory',
+action.after.process='NONE',
+tailing='true', mode='line',
+@map(type='csv', @attributes(batchNumber='0', lowTotal='1')))
+define stream InputStream (batchNumber long, lowTotal double);
+
+@source(type='fileeventlistener',dir.uri='file://home/wso2carbon/order_directory')
+define stream FileListenerStream (filepath string, filename string, status string);
+
+@source(
+    type = 'file',
+    file.uri = "file://home/wso2carbon/xml_directory/complexData.xml",
+    mode = "line",
+    tailing = "true",
+    action.after.process='keep',
+    @map(type='xml',
+        enclosing.element="/root/child",
+        enable.streaming.xml.content="true",
+        enclosing.element.as.event="true",
+        extract.leaf.node.data="true",
+        fail.on.missing.attribute="false",
+        @attributes(id = "/child/@id", timestamp = "/child/@timestamp",
+                    key = "/child/detail/@key",
+                    value = "/child/detail/@value")))
+define stream xmlInputStream (id string, timestamp string, key string, value string);
+
+@sink(type='log')
+define stream FooStream (filepath string, filename string, status string);
+
+@sink(type='log', prefix='Received events from file changes in order_directory: ', @map(type='csv', @payload(batchNumber='1', lowTotal='0')))
+define stream OutputStream (batchNumber long, lowTotal double);
+
+@sink(type='kafka',
+      topic='order_topic',
+      bootstrap.servers='localhost:9092',
+      @map(type='json'))
+define stream KafkaFileOutputStream (batchNumber long, lowTotal double);
+
+@sink(type='log', prefix='Received events from complexData.xml file ')
+define stream xmlOutputStream (id string, timestamp string, key string, value string);
+
+from InputStream
+select *
+insert into OutputStream;
+
+from InputStream
+select *
+insert into KafkaFileOutputStream;
+
+from FileListenerStream
+select *
+insert into FooStream;
+
+from xmlInputStream
+select *
+insert into xmlOutputStream;
