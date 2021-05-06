@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+
+  monitor:
+    image: gcr.io/cadvisor/cadvisor
+    ports:
+        - "8001:8080"
+    volumes:
+      - "/:/rootfs:ro"
+      - "/var/run:/var/run:ro"
+      - "/sys:/sys:ro"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+      - "/dev/disk/:/dev/disk:ro"
+
+  logspout:
+    image: gliderlabs/logspout
+    command:
+        - "syslog+tcp://oklog:7651"
+    ports:
+        - "8000:80"
+    volumes:
+        - "/var/run/docker.sock:/var/run/docker.sock"
+    depends_on:
+        - oklog
+
+  oklog:
+      image: oklog/oklog
+      ports:
+          - 7650:7650
+      command: ingeststore -store.segment-replication-factor 1

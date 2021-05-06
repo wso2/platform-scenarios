@@ -1,0 +1,83 @@
+version: "3"
+services:
+
+  # Startup Worker
+  boostrap:
+    image: busybox:1.32
+    volumes:
+      - mysql-connector-jar:/mysql-connector-jar
+      - ../sample-apps:/sample-apps # these wars need to sync to the file system in order to modify the .properties files
+    command:
+      - "sh"
+      - "-c"
+      - |
+          wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.17/mysql-connector-java-8.0.17.jar -P /mysql-connector-jar/;
+          wget https://github.com/wso2/samples-is/releases/download/v4.3.0/pickup-dispatch.war -P /sample-apps/;
+          wget https://github.com/wso2/samples-is/releases/download/v4.3.0/pickup-manager.war -P /sample-apps/;
+
+  # Database
+  wso2is-mysql-db-service:
+    image: mysql:5.7
+    ports:
+      - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: wso2carbon
+      MYSQL_PASSWORD: wso2carbon
+    volumes:
+      - ../config-volumes/mysql/initdb:/docker-entrypoint-initdb.d
+      - ../config-volumes/mysql/my.cnf:/etc/mysql/my.cnf
+      - mysql-datavolume:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-proot"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+
+  # Local Mailserver
+  mailserver:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
+  # Identity Server
+  identity-server:
+    image: docker.wso2.com/wso2is:5.11.0.0 #5.11.0.0 is the latest 5.11 version alias
+    ports:
+      - "9763:9763"
+      - "9443:9443"
+    entrypoint:
+      - "sh"
+      - "-c"
+      - |
+          wget -qO- https://raw.githubusercontent.com/eficode/wait-for/v2.1.0/wait-for | 
+          sh -s -- wso2is-mysql-db-service:3306 --timeout=80 -- $${WORKING_DIRECTORY}/docker-entrypoint.sh
+    healthcheck:
+      test: ["CMD", "curl", "-k", "-v", "https://localhost:9443/api/health-check/v1.0/health"]
+      interval: 5s
+      timeout: 120s
+      start_period: 100s
+    volumes:
+      - ../config-volumes/identity-server:/home/wso2carbon/wso2-config-volume/repository/conf/
+      - mysql-connector-jar:/home/wso2carbon/wso2-artifact-volume/repository/components/dropins/
+    depends_on:
+      - boostrap
+      - wso2is-mysql-db-service
+      - mailserver
+
+  # Web aplications
+  sample-apps:
+    image: tomcat
+    ports: 
+      - "8080:8080"
+    volumes:
+      - ../sample-apps:/usr/local/tomcat/webapps
+    depends_on:
+      - boostrap
+
+volumes:
+  # Downloaded mysql jar
+  mysql-connector-jar:
+  # Persistant mysql data
+  mysql-datavolume:
