@@ -5,15 +5,20 @@ services:
   boostrap:
     image: busybox:1.32
     volumes:
-      - mysql-connector-jar:/mysql-connector-jar
+      - ../config-volumes/dropins:/dropins/
+      - ../config-volumes/plugins:/plugins/
+      - dropins-jars:/dropins-jars
+      - plugins-jars:/plugins-jars
       - ../sample-apps:/sample-apps # these wars need to sync to the file system in order to modify the .properties files
     command:
       - "sh"
       - "-c"
       - |
-          wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.17/mysql-connector-java-8.0.17.jar -P /mysql-connector-jar/;
+          wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.17/mysql-connector-java-8.0.17.jar -P /dropins-jars/;
           wget https://github.com/wso2/samples-is/releases/download/v4.3.0/pickup-dispatch.war -P /sample-apps/;
           wget https://github.com/wso2/samples-is/releases/download/v4.3.0/pickup-manager.war -P /sample-apps/;
+          cp -a /dropins/. /dropins-jars/;
+          cp -a /plugins/. /plugins-jars/;
 
   # Database
   wso2is-mysql-db-service:
@@ -60,7 +65,8 @@ services:
       start_period: 100s
     volumes:
       - ../config-volumes/identity-server:/home/wso2carbon/wso2-config-volume/repository/conf/
-      - mysql-connector-jar:/home/wso2carbon/wso2-artifact-volume/repository/components/dropins/
+      - dropins-jars:/home/wso2carbon/wso2-artifact-volume/repository/components/dropins/
+      - plugins-jars:/home/wso2carbon/wso2-artifact-volume/repository/components/plugins/
     depends_on:
       - boostrap
       - wso2is-mysql-db-service
@@ -77,7 +83,8 @@ services:
       - boostrap
 
 volumes:
-  # Downloaded mysql jar
-  mysql-connector-jar:
+  # Downloaded jars
+  dropins-jars:
+  plugins-jars:
   # Persistant mysql data
   mysql-datavolume:

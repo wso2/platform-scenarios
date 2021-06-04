@@ -23,6 +23,12 @@ This compose file aims to be a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) 
     ```shell
     docker-compose logs -f
     ```
+    alt:
+    ```shell
+    docker-compose -p logs -f compose-logs.yml up -d
+    ```
+    - view logs ui [http://localhost:7650/ui/](http://localhost:7650/ui/)
+    - view stats [http://localhost:8001/containers/docker/](http://localhost:8001/containers/docker/)
 
 1. To shutdown stack. This will allow you to make any config changes
 
