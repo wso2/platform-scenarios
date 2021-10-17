@@ -1,0 +1,51 @@
+{
+    "name": "@asgardeo/happy-pets-app",
+    "description": "Sample app showcasing Asgardeo integration with a business application using Asgardeo React SDK",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@asgardeo/auth-react": "^0.2.2",
+        "cra-template": "1.1.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-loader-spinner": "^4.0.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.3"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "rules": {
+            "react-hooks/exhaustive-deps": "off",
+            "indent": [
+                "warn",
+                4
+            ],
+            "object-curly-spacing": [ "warn", "always" ],
+            "quotes": [
+                "warn",
+                "double"
+            ]
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

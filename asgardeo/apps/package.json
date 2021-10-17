@@ -1,0 +1,15 @@
+{
+    "name": "@asgardeo/apps",
+    "description": "Mono-repo containing sample apps showcasing Asgardeo SDK integrations.",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "bootstrap": "npm install && npx lerna bootstrap",
+        "build": "npx lerna run build --stream",
+        "build:happy-pets": "npx lerna run build --stream --scope @asgardeo/happy-pets-app",
+        "start:happy-pets": "npx lerna run start --stream --scope @asgardeo/happy-pets-app"
+    },
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    }
+}
