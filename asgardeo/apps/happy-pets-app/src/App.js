@@ -23,6 +23,7 @@ import { AppLayout, DashboardView, LoginView } from "./components";
 
 function App() {
 
+    /** Use the authentication context hook from the  Asgardeo React SDK */
     const { state, signIn, signOut } = useAuthContext();
 
     return (
@@ -39,9 +40,7 @@ function App() {
 
             <DashboardView
                 isAuthenticated={ state.isAuthenticated }
-                displayName={ state.displayName }
-                username={ state.username }
-                email={ state.email }
+                username={ state.email || state.username }
                 logoutButton={
                     <button onClick={ () => signOut() }>Logout</button>
                 }

@@ -34,7 +34,7 @@ export const AppLayout = (props) => {
             { isAuthenticated && <Header/> }
             <div className="main">
                 {
-                    isLoading === false
+                    !isLoading
                         ? children
                         : (
                             <Loader

@@ -323,3 +323,12 @@ button {
 button:hover {
     box-shadow: 3px 3px 6px rgb(0 0 0 / 20%);
 }
+
+button:disabled,
+button[disabled] {
+    background: #b9b9b9;
+    border: 0;
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

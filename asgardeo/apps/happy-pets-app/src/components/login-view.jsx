@@ -51,8 +51,12 @@ export const LoginView = (props) => {
                         )
                         : (
                             <React.Fragment>
-                                <h3>No Authentication provider configured</h3>
-                            </React.Fragment>
+                            <h3>Login to your Account</h3>
+                            <p className="login-helper-text">
+                                Let's add a button bellow to enable login using{ " " }
+                                <img alt="" className="asgardeo-logo" src={ AsgardeoLogo }/>
+                            </p>
+                        </React.Fragment>
                         )
                 }
             </div>
