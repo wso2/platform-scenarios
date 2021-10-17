@@ -1,0 +1,334 @@
+/**
+ * Copyright (c) 2021, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.spacer {
+    flex: 1;
+}
+
+/*-------------------------------------------------------*/
+/*                    Container                          */
+/*-------------------------------------------------------*/
+
+.container {
+    height: 100vh; /* for shorter content */
+    display: flex;
+    flex-direction: column;
+    /*ie10*/
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.cards .card {
+    margin-right: 2em;
+}
+
+.card {
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 5%);
+}
+
+.card:hover {
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 15%);
+}
+
+/*-------------------------------------------------------*/
+/*                 Main Content                          */
+/*-------------------------------------------------------*/
+
+.main {
+    flex: 1;
+    /*ie10*/
+    -ms-flex: 1 1 auto; /*needs both shrink and grow*/
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/*-------------------------------------------------------*/
+/*                   Login View                          */
+/*-------------------------------------------------------*/
+
+.login-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.login-card-wrapper .login-card {
+    min-width: 400px;
+    min-height: 300px;
+    margin-top: 2em;
+}
+
+.login-card-wrapper .login-card:hover {
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 5%);
+}
+
+.login-card-wrapper .login-card .happy-pet-logo {
+    width: 80px;
+    margin: 15px;
+}
+
+.login-card-wrapper .login-card .asgardeo-logo {
+    width: 90px;
+    margin-left: 4px;
+}
+
+.login-card-wrapper .login-card .login-helper-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.login-card-wrapper .login-card button {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.login-card-wrapper .login-card a {
+    margin: 0 5px;
+}
+
+/*-------------------------------------------------------*/
+/*                 Dashboard View                        */
+/*-------------------------------------------------------*/
+
+.dashboard-wrapper .greeting {
+    text-align: center;
+    margin: 30px;
+}
+
+.dashboard-wrapper .greeting h1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-wrapper .greeting h1 img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.dashboard-wrapper .app-card {
+    cursor: pointer;
+    box-sizing: border-box;
+    max-width: 400px;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    min-height: 254px;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.dashboard-wrapper .cards {
+    margin: 5em 0;
+}
+
+.dashboard-wrapper .app-card .feature-card-image {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 320px;
+    height: auto;
+}
+
+.dashboard-wrapper .app-card:first-child {
+    background: #1e87da;
+}
+
+.dashboard-wrapper .app-card:nth-child(2n) {
+    background: #ab60b8;
+}
+
+.dashboard-wrapper .app-card:nth-child(3n) {
+    background: #515ea8;
+}
+
+.dashboard-wrapper .app-card .feature-card-header {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 16px 20px 20px;
+    text-shadow: 1px 1px rgb(0 0 0 / 10%);
+}
+
+.dashboard-wrapper .app-card .feature-card-header .feature-card-title {
+    color: #fff;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.dashboard-wrapper .app-card .feature-card-header .feature-card-subtitle {
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/*-------------------------------------------------------*/
+/*               Header  & Footer                        */
+/*-------------------------------------------------------*/
+
+.header,
+.footer {
+    background: #fff;
+    padding: 0.5em 8rem;
+    flex-basis: 50px;
+    /*ie10*/
+    -ms-flex-preferred-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*ie10*/
+    display: -ms-flexbox;
+    -ms-flex-align: center; /*vertical*/
+    -ms-flex-line-pack: distribute; /*or justify*/
+}
+
+.header {
+    justify-content: flex-start;
+    border-bottom: 3px solid #a548f6;
+}
+
+.header img {
+    margin: 0 16px;
+    width: 150px;
+}
+
+.footer {
+    /*ie10 short content*/
+    margin-top: auto;
+    border-top: 3px solid #a548f6;
+}
+
+.footer .copyright .asgardeo-logo {
+    width: 90px;
+}
+
+/*-------------------------------------------------------*/
+/*                     Greeting                          */
+/*-------------------------------------------------------*/
+
+.inline-code {
+    background: #424242;
+    padding: 4px 10px;
+    font-size: 0.89em;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.inline-code:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/*-------------------------------------------------------*/
+/*                     Actions                           */
+/*-------------------------------------------------------*/
+
+button {
+    color: #fff;
+    background-color: #60467e;
+    border: 1px solid #60467e;
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+}
+
+button:hover {
+    box-shadow: 3px 3px 6px rgb(0 0 0 / 20%);
+}
+
+button:disabled,
+button[disabled] {
+    background: #b9b9b9;
+    border: 0;
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

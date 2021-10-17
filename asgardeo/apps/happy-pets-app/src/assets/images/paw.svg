@@ -1,0 +1,57 @@
+<!--
+ * Copyright (c) 2021, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="203.496" height="194.46" viewBox="0 0 203.496 194.46">
+    <g id="paw" transform="matrix(0.966, 0.259, -0.259, 0.966, 36.608, -45.791)">
+        <g id="Group_2" data-name="Group 2" transform="translate(32.197 109.004)">
+            <g id="Group_1" data-name="Group 1">
+                <path id="Path_1" data-name="Path 1"
+                      d="M196.96,251.234c-13.212-15.952-29.912-24.738-47.025-24.738s-33.813,8.785-47.025,24.738c-11.876,14.339-18.965,32.409-18.965,48.339,0,7.738,2.366,13.633,7.031,17.52,4.6,3.837,10.684,5.135,17.467,5.134,7.217,0,15.231-1.47,23.1-2.914,6.88-1.262,13.379-2.454,18.388-2.454,4.323,0,10.419,1.131,16.871,2.329,15.08,2.8,32.172,5.972,42.045-2.237,4.694-3.9,7.074-9.75,7.074-17.378C215.926,283.643,208.836,265.572,196.96,251.234Z"
+                      transform="translate(-83.945 -226.496)" fill="#a660e4"/>
+            </g>
+        </g>
+        <g id="Group_4" data-name="Group 4" transform="translate(101.693 35.905)">
+            <g id="Group_3" data-name="Group 3" transform="translate(0 0)">
+                <path id="Path_2" data-name="Path 2"
+                      d="M310.011,47.121c-4.834-7.127-11.756-11.215-18.992-11.215s-14.158,4.088-18.992,11.215c-4.441,6.547-6.886,15.146-6.886,24.211S267.586,89,272.027,95.543c4.834,7.127,11.756,11.215,18.992,11.215s14.158-4.088,18.992-11.215C314.452,89,316.9,80.4,316.9,71.332S314.452,53.668,310.011,47.121Z"
+                      transform="translate(-265.141 -35.906)" fill="#a660e4"/>
+            </g>
+        </g>
+        <g id="Group_6" data-name="Group 6" transform="translate(42.925 35.905)">
+            <g id="Group_5" data-name="Group 5">
+                <path id="Path_3" data-name="Path 3"
+                      d="M156.786,47.12C151.952,39.992,145.03,35.9,137.794,35.9S123.636,39.993,118.8,47.12c-4.441,6.547-6.886,15.146-6.886,24.211s2.445,17.664,6.886,24.211c4.834,7.127,11.756,11.215,18.992,11.215s14.158-4.088,18.992-11.215c4.441-6.547,6.886-15.145,6.886-24.211S161.227,53.667,156.786,47.12Z"
+                      transform="translate(-111.916 -35.905)" fill="#a660e4"/>
+            </g>
+        </g>
+        <g id="Group_8" data-name="Group 8" transform="translate(152.4 88.069)">
+            <g id="Group_7" data-name="Group 7">
+                <path id="Path_4" data-name="Path 4"
+                      d="M440.179,186.571c-1.949-6.629-6.126-11.446-11.761-13.563a18.484,18.484,0,0,0-14.415.813c-6.56,3.07-11.923,9.409-14.711,17.392a32.068,32.068,0,0,0-.8,19.416c1.949,6.629,6.126,11.446,11.762,13.563a17.3,17.3,0,0,0,6.1,1.1,19.63,19.63,0,0,0,8.316-1.91c6.56-3.07,11.923-9.409,14.711-17.391h0A32.068,32.068,0,0,0,440.179,186.571Z"
+                      transform="translate(-397.35 -171.912)" fill="#a660e4"/>
+            </g>
+        </g>
+        <g id="Group_10" data-name="Group 10" transform="translate(0.001 88.069)">
+            <g id="Group_9" data-name="Group 9">
+                <path id="Path_5" data-name="Path 5"
+                      d="M42.031,191.213c-2.789-7.983-8.151-14.321-14.711-17.391a18.487,18.487,0,0,0-14.415-.813c-5.636,2.117-9.813,6.934-11.762,13.563a32.068,32.068,0,0,0,.8,19.416h0c2.789,7.983,8.151,14.321,14.711,17.391a19.631,19.631,0,0,0,8.316,1.91,17.308,17.308,0,0,0,6.1-1.1c5.637-2.117,9.813-6.934,11.762-13.563A32.078,32.078,0,0,0,42.031,191.213Z"
+                      transform="translate(-0.001 -171.912)" fill="#a660e4"/>
+            </g>
+        </g>
+    </g>
+</svg>
